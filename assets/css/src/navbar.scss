@@ -1,0 +1,159 @@
+body.admin-bar .navbar {
+	margin-top: 32px;
+}
+
+.navbar {
+	border: 0;
+	border-bottom: 1px solid transparentize($navbar-border-color, 0.6);
+	background-color: transparentize(white, 0.2);
+}
+
+.navbar li.menu-item.memoria {
+	a {
+		width: 80px;
+		line-height: 16px;
+		padding-top: 27px;
+		text-align: center;
+		background-color: #ec5b5f;
+		color: white;
+		transition: all ease-in 0.2s;
+		&:hover {
+			background-color: darken(#ec5b5f, 10%);
+		}
+	}
+	@media screen and (max-width: $screen-sm) {
+		a {
+			width: 100%;
+			text-align: left;
+			padding: 16px 0 16px 26px;
+		}
+	}
+}
+
+.navbar li.menu-item-305 {
+	> a {
+		width: 80px;
+		line-height: 16px;
+		padding-top: 27px;
+		text-align: center;
+	}
+	@media screen and (max-width: $screen-sm) {
+		> a {
+			width: 100%;
+			text-align: left;
+			padding: 16px 0 16px 26px;
+		}
+	}
+}
+
+.caret {
+	transition: transform linear 0.2s;
+}
+
+.dropdown.open .caret {
+	transform: rotate(180deg);
+}
+
+@media screen and (max-width: $grid-float-breakpoint) {
+	body .navbar {
+		background-color: transparentize(white, 0.05);
+	}
+}
+
+.navbar-toggle {
+	margin-right: 15px;
+	margin-top: 22px;
+	margin-bottom: 0;
+	padding: 8px;
+}
+
+#germina-menu.navbar-collapse {
+	position: relative;
+}
+
+@media screen and (min-width: $grid-float-breakpoint) {
+	#germina-menu.navbar-collapse {
+		margin-left: 150px;
+		border-top: 0;
+	}
+}
+
+.navbar-nav {
+	@media (min-width: $grid-float-breakpoint) {
+		float: left;
+		margin-left: 27px;
+
+		> li {
+			float: left;
+			> a {
+				padding-top: 32px;
+				padding-bottom: 8px;
+			}
+		}
+	}
+
+	@media (max-width: $grid-float-breakpoint) {
+		> li {
+			> a {
+				padding-top: 16px;
+				padding-bottom: 16px;
+				padding-left: 26px;
+			}
+		}
+	}
+}
+
+.navbar-nav li a {
+	text-transform: lowercase;
+	font-size: 15px;
+	font-family: $headingsfont;
+	font-weight: 400;
+}
+
+.navbar-collapse.in {
+	border-top: 1px solid $navbar-border-color;
+}
+
+.navbar-brand {
+	padding: 6px 0 0 12px;
+	//background-color: #CDC6C1;
+	width: 170px;
+}
+
+.navbar-toggle {
+	margin-top: 16px;
+	position: relative;
+	width: 36px;
+	height: 36px;
+	padding: 12px;
+	overflow: hidden;
+	i {
+		font-size: 28px;
+		color: $sandia;
+		position: absolute;
+		transition: all linear 0.5s;
+		&.fa-bars {
+			left: 5px;
+			top: 3px;
+			transform: translateX(60px);
+		}
+		&.fa-times {
+			left: 6px;
+			top: 2px;
+			transform: translateX(0);
+		}
+	}
+
+	&.collapsed {
+		i.fa-bars {
+			transform: translateX(0);
+		}
+		i.fa-times {
+			transform: translateX(60px);
+		}
+	}
+}
+
+.navbar-toggle .icon-bar {
+	height: 4px;
+}

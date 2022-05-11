@@ -1,0 +1,23 @@
+//Taxonomy Navigation Styles
+
+.tax-filter {
+	padding-bottom:12px;
+}
+
+.tax-filter .btn-group-vertical {
+	width:100%;
+}
+
+.tax-filter .btn-group-vertical .btn {
+	text-align:left;
+}
+
+button.loadmore {
+	margin-bottom:12px;
+}
+
+.filter-column.active {
+	position:fixed;
+	display:block;
+	transform:translateX(0);
+}

@@ -1,0 +1,30 @@
+//Article Item
+
+.article-item-meta-top {
+	font-size:14px;
+	color:$pelorous;
+}
+
+.articule-item-meta-bottom {
+	font-size:14px;
+	color:desaturate($sandia, 10%);
+}
+
+.article-item-small {
+	padding:12px;
+	color:desaturate($sandia, 10%);
+	margin-bottom:12px;
+	outline:1px solid #ccc;
+	transition:all ease-in 0.4s;
+}
+
+.article-item-small:hover {
+	outline:1px solid desaturate($sandia, 10%);
+}
+
+.article-item-small h4 {
+	font-size:16px;
+	margin-top:0;
+	margin-bottom:6px;
+	color:$grisoscuro;
+}

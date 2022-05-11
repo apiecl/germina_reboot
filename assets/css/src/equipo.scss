@@ -1,0 +1,207 @@
+//Equipo
+
+.page-template-equipo h1.post-title {
+	text-align:center;
+}
+
+.page-template-equipo .post-content h4 {
+	text-align:center;
+	color:$pelorous;
+}
+
+.integrante {
+	text-align: center;
+}
+
+.sub-content-equipo {
+	margin-top:24px;
+}
+
+.sub-content h3 {
+	color:$gris;
+	margin-bottom:24px;
+	text-align:center;
+}
+
+.sub-content-equipo .flex-container,
+.sub-content.colaboran .flex-container{
+	display: -webkit-box;
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: -webkit-flex;
+	display:flex;
+	flex-flow: row wrap;
+	-webkit-flex-flow: row wrap;
+	justify-content: center;
+	clear:both;
+}
+
+.equipo-item-column {
+	margin-bottom:24px;
+}
+
+
+
+.integrante .imgwrap {
+	border-radius:50%;
+	overflow:hidden;
+	width:150px;
+	height:150px;
+	//border:1px solid $sandia;
+	margin:0 auto;
+	transition:color 0.7s linear;
+
+}
+
+.integrante .imgwrap img {
+	width:150px;
+	height:150px;
+}
+
+.integrante h4 {
+	font-size:14px;
+	color:$gris;
+	transition:color 0.4s linear;
+}
+
+
+
+.integrante:hover {
+	text-decoration:none;
+}
+
+.integrante:hover .imgwrap {
+	//border-color:$pelorous;
+}
+
+.integrante:hover h4 {
+	color:$pelorous;
+}
+
+.integrante:hover .imgwrap,
+.integrante:hover h4
+ {
+	animation: pulse 0.7s;
+}
+
+.sub-content.colaboran {
+	border-top:1px dotted $gris;
+	margin-top:24px;
+}
+
+.sub-content h3 {
+	margin-top:12px;
+}
+
+//Single equipo
+
+article.integrante-equipo  header.header-equipo {
+	margin-bottom:0;
+}
+
+.ficha-equipo {
+	float:left;
+	margin-right:12px;
+	width:176px;
+	padding:0;
+	border:1px solid #ccc;
+}
+
+.ficha-equipo img {
+	margin-bottom:6px;
+}
+
+.equipo-datos {
+	font-size:14px;
+}
+
+.equipo-datos p {
+	margin-bottom:4px;
+	width:100%;
+	border-bottom:1px solid #ccc;
+	padding:4px 6px;
+}
+
+.equipo-datos p:last-child {
+	border-bottom:0;
+}
+
+
+
+@media screen and (min-width:$screen-lg) {
+	.integrante-equipo .post-content {
+		margin-left:210px;
+		margin-right:24px;
+	}
+}
+
+@media screen and (max-width:$screen-sm) {
+
+	.integrante-equipo h1.post-title {
+		font-size:24px;
+	}
+
+	.ficha-equipo {
+		width:100%;
+		float:none;
+		margin:0 auto 24px auto;
+		overflow:hidden;
+		padding:0;
+	}
+
+	.ficha-equipo img {
+		max-width:140px;;
+		height:auto;
+		float:left;
+		margin-right:12px;
+		margin-bottom:0;
+		border-right:1px solid transparentize($pelorous, 0.8);
+	}
+
+	.equipo-datos {
+
+	}
+
+	.team-nav > h3 {
+		margin-top:0;
+	}
+}
+
+//Navegador equipo
+
+
+
+.team-nav {
+	padding:6px;
+}
+
+.team-nav > h3 {
+	color:$gris;
+	font-size:16px;
+}
+
+.team-column-mini {
+	width:160px;
+	height:80px;
+	overflow:hidden;
+	float:left;
+	margin-right:10px;
+	margin-bottom:12px;
+}
+
+.team-column-mini .integrante {
+	text-align:left;
+}
+
+
+.team-column-mini .integrante .imgwrap {
+	width:60px;
+	height:60px;
+	float:left;
+	margin-right:12px;
+}
+
+.team-column-mini .integrante .imgwrap img {
+	max-width:100%;
+	height:auto;
+}

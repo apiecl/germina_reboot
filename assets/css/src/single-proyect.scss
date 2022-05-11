@@ -1,0 +1,91 @@
+//Single proyect
+
+.proyect-image {
+	margin-right:-14px;
+	padding-right:0;
+}
+
+.proyect-image img {
+	max-width:100%;
+	height:auto;
+	margin-bottom:12px;
+}
+
+@media screen and (max-width: $screen-sm) {
+  .proyect-image {
+    margin:0;
+    padding:0 15px;
+		text-align:center;
+  }
+
+	.proyect-image img {
+		margin:0 auto;
+	}
+}
+
+
+
+//Single proyecto related
+
+p.tema, p.year {
+	text-transform: uppercase;
+	font-size:12px;
+}
+
+.header-single-proyecto .single-item-meta-top {
+	font-size:12px;
+}
+
+.header-single-proyecto {
+	position: relative;
+	padding-bottom:48px;
+	margin-bottom:24px;
+
+	.single-item-meta-bottom {
+		position: absolute;
+		bottom:0;
+		left:0;
+	}
+}
+
+.header-single-proyecto p.tema {
+
+}
+
+.header-single-proyecto p.year {
+
+}
+
+@media screen and (max-width:$screen-sm) {
+	.header-single-proyecto {
+		padding-bottom:0;
+	}
+
+	.header-single-proyecto h1 {
+		margin-bottom:16px;
+	}
+
+	.header-single-proyecto .single-item-meta-bottom {
+		position:static;
+	}
+
+	.header-single-proyecto p.year {
+		right:auto;
+	}
+
+}
+
+.lista-proyectos ul li {
+	list-style:none;
+	margin:0;
+	padding:6px;
+}
+
+.lista-proyectos ul {
+	margin:0;
+	padding:0;
+}
+
+.lista-proyectos h5 {
+	margin-top:0;
+}

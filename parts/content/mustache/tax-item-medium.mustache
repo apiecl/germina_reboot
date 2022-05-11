@@ -1,0 +1,26 @@
+<div class="item-{{type}} tax-item-medium animated zoomIn {{#post_thumbnail}} with-image {{/post_thumbnail}}" data-type="{{type}}">
+
+		<a class="block-item-link" href="{{ post_link }}" title="{{ post_title }}">
+
+			<div class="tax-item-content-wrapper">
+				<div class="tax-item-meta-top">
+					<span class="tipo">{{ type_label }}</span> <i class="fa fa-angle-left"></i>
+					<span class="area">{{ post_area }}</span>
+				</div>
+
+				<h4>{{ post_title }}</h4>
+
+				<div class="tax-item-meta-bottom">
+
+					<span class="temas">
+						{{ post_temas }}
+					</span>
+				</div>
+			</div>
+
+			{{#post_thumbnail}}
+			<img src="{{ post_thumbnail }}" alt="{{ post_title }}">
+			{{/post_thumbnail}}
+		</a>
+
+</div>

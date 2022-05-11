@@ -1,0 +1,22 @@
+.boletines-anteriores {
+
+	@media screen and (min-width:$screen-md) {
+		margin-top:148px;
+		margin-bottom:48px;
+	}
+}
+
+.single-boletin div#mc_embed_signup {
+
+			@media screen and (min-width:$screen-md) {
+				padding-top:12px;
+			}
+			
+		}
+
+.boletin-bigimg {
+	img {
+		max-width:100%;
+		height:auto;
+	}
+}

@@ -1,0 +1,32 @@
+span.pagination-info {
+	text-transform:lowercase;
+	color:lighten(#555, 40%);
+}
+
+div.pagination a {
+	@extend .btn;
+	@extend .btn-info;
+}
+
+.archive h1.section-description-title img.avatar {
+	width:60px;
+	height:60px;
+	margin-right:6px;
+	margin-bottom:0;
+	border-radius:50%;
+	float:left;
+}
+
+.infoautor {
+	color:lighten(#555, 40%);
+	display:block;
+	line-height:14px;
+	font-size:14px;
+	text-transform:lowercase;
+	margin-top:16px;
+}
+
+.ficha-autor {
+	overflow:hidden;
+	margin-bottom:12px;
+}

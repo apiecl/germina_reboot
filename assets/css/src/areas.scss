@@ -1,0 +1,117 @@
+
+//Areas
+
+header.header-areas {
+	margin-bottom:24px;
+}
+
+.page-template-display-areas .post-content {
+	margin-bottom:24px;
+}
+
+.areas-tabs {
+	margin-bottom:24px;
+}
+
+.areas-tabs .tab-pane {
+	padding:15px;
+	border-width:0 1px 1px 1px;
+	border-style:solid;
+	border-color:$nav-tabs-border-color;
+	background-color:white;
+}
+
+.areas-tabs ul.nav-tabs li a {
+	font-size:13px;
+	text-transform:uppercase;
+	color:$gris;
+	border-top:3px solid transparent;
+	transition:all ease-in 0.2s;
+}
+
+@media screen and (max-width:$screen-sm) {
+	.areas-tabs ul.nav-tabs li a.artpubs-tabs {
+		padding:5px 12px;
+		max-width:130px;
+		line-height:14px;
+	}
+}
+
+.areas-tabs ul.nav-tabs li a:hover {
+
+}
+
+.areas-tabs ul.nav-tabs li.active a {
+	color:$crayonpurple;
+	font-weight:bold;
+	border-top:3px solid $crayonpurple;
+}
+
+.ambitos {
+	border-radius:0;
+	box-shadow:0;
+	background-color:transparentize($olivine, 0.9);
+	border:0;
+	padding:12px;
+	margin-bottom:12px;
+	font-size:16px;
+}
+
+.ambitos ul {
+	margin:0;
+	padding:0;
+}
+
+.ambitos ul li {
+	margin:0;
+}
+
+.ambitos ul li {
+	display:inline-block;;
+	padding:6px;
+}
+
+.ambitos h4 {
+	margin-top:0;
+	padding-bottom:6px;
+	border-bottom:1px dashed $olivine;
+	color:$olivine;
+	font-weight:normal;
+	text-align:center;
+}
+
+.ambitos ul li:before {
+	display:inline-block;
+	content:'\f140';
+	font-family:'FontAwesome';
+	color:$olivine;
+	font-size:16px;
+	margin-right:6px;
+}
+
+.extra-areas {
+	padding:16px;
+	border-bottom:3px solid $sandia;
+	margin-bottom:12px;
+	position: relative;
+	font-size:16px;
+}
+
+ul.proycol {
+	margin:0;
+	padding:0;
+}
+
+.proycol li {
+	list-style:none;
+	margin-bottom:12px;
+}
+
+.proycol li p {
+	margin:0;
+}
+
+.proycol h3 {
+	margin:0;
+	font-size: 22px;
+}

@@ -1,0 +1,79 @@
+ul.commentlist {
+	margin:0;
+	padding:0;
+}
+
+article.comment {
+	font-size:14px;
+	color:#555;
+}
+
+article.comment .comment-item {
+	background-color: white;
+	padding:24px;
+	margin-bottom:24px;
+	border-bottom:1px solid #ccc;
+}
+
+.child-comments {
+	margin-left:16px;
+}
+
+.child-comments article.comment .comment-item {
+	border-left:1px solid #ccc;
+	border-bottom:none;
+}
+
+article.comment h2.comment-author {
+	font-size:18px;
+	font-style:normal;
+	color:$pelorous;
+	margin-bottom:0;
+	margin-top:0;
+}
+
+.comment-content {
+	line-height:20px;
+	font-size:14px;
+}
+
+.comment-meta {
+	margin-bottom:24px;
+}
+
+.comment-item time a {
+	font-size:12px;
+	color:#555;
+}
+
+a#cancel-comment-reply-link {
+	@extend .btn;
+	@extend .btn-danger;
+	@extend .btn-xs;
+}
+
+#respond {
+	margin-bottom:24px;
+}
+
+#respond label {
+	font-weight:normal;
+	display:none;
+}
+
+#respond textarea {
+	width:100%;
+	height:160px;
+	max-width:100%;
+}
+
+#respond input,
+#respond textarea {
+	padding:6px;
+	color:#555;
+	border:1px solid #ccc;
+}
+
+#respond input#submit {
+	color:white;
+}

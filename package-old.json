@@ -1,0 +1,26 @@
+{
+  "name": "germina_reboot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "WordPress theme for Germina",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp watch",
+    "build": "gulp build"
+  },
+  "author": "Pablo Selín Carrasco Armijo",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp-clean-css": "^3.9.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-watch": "^5.0.0"
+  },
+  "dependencies": {
+    "dev": "^0.1.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

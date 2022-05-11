@@ -1,0 +1,33 @@
+<div class="item-{{type}} item-portafolio-large item-large" data-type="{{type}}">
+
+	<a class="block-item-link" href="{{ post_link }}" title="{{ post_title }}">
+
+		<div class="item-content-wrapper">
+
+			<div class="row">
+				
+				<div class="col-md-9 portafolio-info animated fadeInUp">
+					<span class="type">{{ type_label }}</span>
+					<h2>{{{post_title}}}</h2>
+					{{#post_clientes}}
+					
+					{{> partials/info-clientes}}
+
+					{{/post_clientes}}
+				
+					<div class="excerpt animated fadeInDown">
+						{{{post_excerpt}}}
+					</div>
+
+					{{#extra}}
+						{{> partials/extra-metadata}}
+					{{/extra}}
+				</div>
+			</div>
+
+
+		</div>
+
+	</a>
+
+</div>

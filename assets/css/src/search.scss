@@ -1,0 +1,147 @@
+
+.modal-content {
+	border-radius:0;
+}
+
+.modal-dialog {
+}
+
+@media screen and (max-width: $screen-sm) {
+	.modal-dialog {
+		margin:0;
+	}
+}
+
+
+//Top search form
+
+.searchmenu {
+	margin-top:0;
+}
+
+.search-menu-form {
+	padding:12px;
+}
+
+.searchmenu a {
+	padding-top:32px;
+	padding-bottom:8px;
+}
+
+.search-field {
+	border:1px solid #ccc;
+	color:$gris;
+	font-weight:normal;
+	padding:6px;
+	width:100%;
+	font-size:22px;
+	font-family:$headingsfont;
+	margin:12px auto;
+	background-color:#f0f0f0;
+}
+
+
+//Plugin stuff
+
+.search-in-place .loading {
+	color:$sandia;
+	text-align:center;
+	padding:12px;
+	height:auto;
+	margin: 0 auto;	
+	position: relative;
+	text-transform:lowercase;
+	line-height:22px;
+}
+
+.search-in-place-type-page,
+.search-in-place-type-post{
+	//background:url(arrow.png) no-repeat 0px bottom;
+	color: #AAA;
+	text-transform:uppercase;
+	font-size:12px;
+}
+
+.search-in-place {
+	// position:absolute; 
+	background-color: white;
+	z-index: 9999; 
+	margin:0; 
+	padding:0;
+	border:0;
+	overflow:hidden;
+}
+
+.search-in-place>div{
+	padding: 0 5px;
+}
+
+.search-in-place .label{
+	color: #333333;
+	font-size:14px;
+	background-color:transparent;
+	color:$sandia;
+}
+.search-in-place .item{
+	border:#ccc;
+	margin:12px 0;
+}
+
+.search-in-place .item img {
+	float:right;
+}
+
+.search-in-place .item.active{
+	background-color:#FFF;
+}
+
+.search-in-place .title{
+	display:block;
+	font-family: $headingsfont;
+	font-size:16px;
+}
+
+.search-in-place .title a {
+	color:$gris;
+}
+
+.search-in-place .resume{
+	display:block;
+	font-size:14px;
+}
+
+.search-in-place .author{
+	font-size:14px;
+	font-weight:bold;
+}
+
+.search-in-place .date{
+	font-size:14px;
+	color:$pelorous;
+	font-style:normal;
+	margin:0;
+}
+.search-in-place .more{
+	text-align:right;
+}
+
+//Search in place en 404
+
+.not_found .search-in-place,
+.not_found .search-in-place .item
+ {
+	background-color:transparent;
+}
+
+.not_found .search-in-place .item {
+	padding:12px;
+	outline:1px solid #ccc;
+	background-color:white;
+	margin:12px 12px 12px 2px;
+}
+
+.not_found .search-in-place .more {
+	display:inline-block;
+	float:right;
+	margin:12px 0;
+}

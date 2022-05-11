@@ -1,0 +1,61 @@
+//Main sass file
+
+//Variables
+
+//Colores del logo
+
+$cafe: #AEA39A;
+$sandia: #EC5A5E;
+$pelorous: desaturate(#41ADC4, 10%);
+$tanhide: #FC9554;
+$sunset: #C54F4F;
+$olivine: #99BB67;
+$crayonpurple: #83659F;
+$alabaster: #FBFBFB;
+$gris: #575756;
+$grisoscuro: darken($gris, 15%);
+$celeste: #008AA7;
+
+$navbar-border-color: transparentize($gris, 0.2);
+
+$headingsfont: 'Lato', sans-serif;
+
+@import 'bootstrap-custom';
+
+body {
+	background: #F7F7F7;
+	padding-top: $navbar-height + 20px;
+}
+
+@import '//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css';
+@import '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css';
+@import '//vjs.zencdn.net/5.8.8/video-js.css';
+@import 'wpcore';
+@import 'home';
+@import 'portafolio';
+@import 'page-portafolio';
+@import 'item';
+@import 'headings';
+@import 'proyects';
+@import 'proyect-item';
+@import 'proyect-nav';
+@import 'single-proyect';
+@import 'single';
+@import 'share';
+@import 'article-item';
+@import 'publicaciones';
+@import 'publicaciones-item';
+@import 'tax-item';
+@import 'page';
+@import 'navbar';
+@import 'areas';
+@import 'equipo';
+@import 'footer';
+@import 'search';
+@import 'taxonomy';
+@import 'taxonomy-nav';
+@import 'archive';
+@import 'comments';
+@import 'boletines';
+
+//Tipografías

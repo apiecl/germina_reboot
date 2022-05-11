@@ -1,0 +1,47 @@
+//Proyect Navigation Styles
+
+.proyects-filter {
+	padding-bottom:12px;
+}
+
+.proyects-filter .btn-group-vertical {
+	width:100%;
+}
+
+.proyects-filter .btn-group-vertical .btn {
+	text-align:left;
+}
+
+button.loadmore {
+	margin-bottom:12px;
+}
+
+
+@media screen and (max-width:$screen-xs) {
+	.filter-column {
+		position:fixed;
+		transition:all linear 2s;
+		height:100%;
+		top:$navbar-height;
+		left:0;
+		border-right:1px solid $gris;
+		padding-top:16px;
+		padding-bottom:$navbar-height + 16px;
+		background-color:white;
+		overflow:scroll;
+		z-index:100;
+		transition-duration:400ms;
+		transform:translateX(-100%);
+	}	
+}
+
+
+.filter-column.active {
+	position:fixed;
+	display:block;
+	transform:translateX(0);
+}
+
+.proyects-by-year-nav .btn {
+	margin-bottom:4px;
+}

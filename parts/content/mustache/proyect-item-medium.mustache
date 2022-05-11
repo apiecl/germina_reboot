@@ -1,0 +1,30 @@
+{{ #items }}
+<div class="col-md-12 proyect-items-wrapper">
+	<div class="proyect-item-medium animated zoomIn {{#post_thumbnail}} with-image {{/post_thumbnail}}">
+			
+		<a class="block-item-link" href="{{ post_link }}" title="{{ post_title }}">
+
+			<div class="proyect-item-content-wrapper">
+				<div class="proyect-item-meta-top">
+					<span class="area">{{ post_area }}</span> <i class="fa fa-angle-left"></i>
+					<span class="fecha">{{ post_year }}</span>
+				</div>
+					
+				<h4>{{ post_title }}</h4>
+					
+				<div class="proyect-item-meta-bottom">
+					
+					<span class="temas">
+						{{ post_temas }}
+					</span>
+				</div>
+			</div>
+
+			{{#post_thumbnail}}
+			<img src="{{ post_thumbnail }}" alt="{{ post_title }}">
+			{{/post_thumbnail}}
+		</a>
+	
+	</div>
+</div>
+{{ /items }}

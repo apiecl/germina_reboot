@@ -1,0 +1,17 @@
+Notas germina
+
+- Reescritura de todo el tema para adaptarlo a bootstrap
+- Funcionalidad de fotos ya no está disponible. Se dejan inactivos esos tabs mientras tanto.
+-- Reemplazar carga de proyectos con carga AJAX
+- La sección enlaces ya no corre
+
+Cambios con el tema anterior
+
+- Los custom posts y taxonomies se cargan en un plugin que hay que subir y activar: Contenidos Germina
+- El controlpanel se carga en un plugin que hay que subir y activar: Panel de Control
+- Plantillas
+	- Las páginas de áreas tienen que tener asignada la plantilla "Display Áreas".
+	- La página de equipo tiene que tener asignada la plantilla "Equipo".
+	- La página de proyectos tiene que tener asignada la plantilla "Archivo Proyectos"
+- El menú ahora es un solo menú.
+- El tamaño de imagen "medium tiene que ser de 380PX de ancho"
