@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "gulp watch",
-    "build": "gulp build"
+    "build": "gulp"
   },
   "author": "Pablo Selín Carrasco Armijo <pablo@apie.cl>",
   "license": "ISC",
@@ -21,5 +21,17 @@
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^5.1.0",
     "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "@babel/register": "^7.17.7",
+    "bootstrap": "^3.4.1",
+    "bootstrap-sass": "^3.4.1",
+    "imagesloaded": "^5.0.0",
+    "jquery-cycle-2": "^1.0.3",
+    "jquery-visible": "^1.2.0",
+    "masonry": "^0.0.2",
+    "masonry-layout": "^4.2.2",
+    "mustache": "^4.2.0",
+    "node-sass": "^7.0.1"
   }
 }
