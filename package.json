@@ -32,6 +32,7 @@
     "masonry": "^0.0.2",
     "masonry-layout": "^4.2.2",
     "mustache": "^4.2.0",
-    "node-sass": "^7.0.1"
+    "node-sass": "^7.0.1",
+    "responsive-toolkit": "^2.6.3"
   }
 }

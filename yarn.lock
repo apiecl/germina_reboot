@@ -4262,6 +4262,11 @@
     "debug" "^2.2.0"
     "minimatch" "^3.0.2"
 
+"responsive-toolkit@^2.6.3":
+  "integrity" "sha1-QQwqQbgZ9GpW9NnCO9HZs3cfUCY="
+  "resolved" "https://registry.npmjs.org/responsive-toolkit/-/responsive-toolkit-2.6.3.tgz"
+  "version" "2.6.3"
+
 "ret@~0.1.10":
   "integrity" "sha512-TTlYpa+OL+vMMNG24xSlQGEJ3B/RzEfUlLct7b5G/ytav+wPrplCpVMFuwzXbkecJrb6IYo1iFb0S9v37754mg=="
   "resolved" "https://registry.npmjs.org/ret/-/ret-0.1.15.tgz"

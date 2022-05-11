@@ -48,6 +48,7 @@ function scripts(cb) {
 		"./node_modules/masonry-layout/masonry.js",
 		"./node_modules/jquery-visible/jquery.visible.js",
 		"./node_modules/imagesloaded/imagesloaded.js",
+		"./node_modules/responsive-toolkit/dist/bootstrap-toolkit.js",
 		"./assets/js/src/functions.js",
 		"./assets/js/src/main.js",
 	])
@@ -56,7 +57,7 @@ function scripts(cb) {
 }
 
 function watchFiles(cb) {
-	watch("assets/js/*.js", scripts);
+	watch("assets/js/src/*.js", scripts);
 	watch("assets/css/src/*.scss", parsesass);
 	cb();
 }

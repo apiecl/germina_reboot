@@ -29,7 +29,7 @@ define( 'GERMINA_VERSION', '1.8.1');
  */
 
 //Composer autoload class
-require_once('vendor/autoload.php');
+//require_once('vendor/autoload.php');
 
 /**
  * INCLUDES
