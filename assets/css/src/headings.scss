@@ -1,83 +1,80 @@
-h1, h2, h3, h4, h5 {
+h1,
+h2,
+h3,
+h4,
+h5 {
 	font-family: $headingsfont;
-	font-weight:400;
+	font-weight: $headingsfontweight;
 }
 
 h1.post-title {
-	margin-top:12px;
-	margin-bottom:24px;
-	font-size:28px;
-	font-weight:700;
+	margin-top: 12px;
+	margin-bottom: 24px;
+	font-size: 36px;
+	font-weight: 700;
 }
-
 
 .portafolio h1 {
 	@extend .section-description-title;
 }
 
 .portfolio-item h2 a {
-	font-size:24px;
-	color:$sandia;
+	font-size: 24px;
+	color: $sandia;
 }
-
-
 
 header h1.post-title {
-
-	color:$sandia;
-	margin-top:12px;
-	margin-bottom:18px;
-
+	color: $sandia;
+	margin-top: 12px;
+	margin-bottom: 18px;
 }
 
-.post-content h1
- {
-  font-family:$headingsfont;
-  font-weight:400;
-  font-size: 26px;
-  color:$grisoscuro;
+.post-content h1 {
+	font-family: $headingsfont;
+	font-weight: $headingsfontweight;
+	font-size: 36px;
+	color: $grisoscuro;
 }
 
 .post-content h2 {
-  font-family:$headingsfont;
-  font-weight:400;
-  font-size: 25px;
-  color:$grisoscuro;
+	font-family: $headingsfont;
+	font-weight: $headingsfontweight;
+	font-size: 27px;
+	color: $grisoscuro;
 }
 
 .post-content h3 {
-  font-family:$headingsfont;
-  font-weight:400;
-  font-size: 20px;
-  color:$grisoscuro;
+	font-family: $headingsfont;
+	font-weight: $headingsfontweight;
+	font-size: 20px;
+	color: $grisoscuro;
 }
 
 .post-content h4 {
-	font-family:$headingsfont;
-	font-weight:400;
-	font-size:18px;
-	color:$grisoscuro;
-	margin-bottom:24px;
+	font-family: $headingsfont;
+	font-weight: $headingsfontweight;
+	font-size: 22px;
+	color: $grisoscuro;
+	margin-bottom: 24px;
 }
 
-
-@media screen and (max-width:$screen-sm) {
+@media screen and (max-width: $screen-sm) {
 	h1.post-title {
-		font-size:24px;
-		margin-bottom:16px;
+		font-size: 24px;
+		margin-bottom: 16px;
 	}
 
 	header h1.post-title {
-		margin-bottom:0;
+		margin-bottom: 0;
 	}
 }
 
 .section-description-title {
-	text-transform:uppercase;
-	font-size:14px;
-	color:$grisoscuro;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: $grisoscuro;
 }
 
 h1.section-description-title {
-	font-size:18px;
+	font-size: 18px;
 }

@@ -39,9 +39,9 @@ General Taxonomy Template
 
 						<?php if(have_posts()): while(have_posts()): the_post();
 
-							$compiler = include( get_template_directory() . '/lib/mustache-compiler.php');
+							//$compiler = include( get_template_directory() . '/lib/mustache-compiler.php');
 
-							$data = array(
+							$args = array(
 									'id' => $post->ID,
 									'year' => germina_getplainterms( $post->ID, 'year', '', ', ' ),
 									'type' => germina_itemtype( $post->ID ),
@@ -53,15 +53,16 @@ General Taxonomy Template
 									$thumbnail = get_post_thumbnail_id( $post->ID );
 									$thumbsrc = wp_get_attachment_image_src( $thumbnail, '120x120' );
 
-									$data['post_area'] 	= germina_getplainterms( $post->ID, 'areas', '', ' • ');
-									$data['post_temas'] = germina_getplainterms( $post->ID, 'tema', '', ' • ');
-									$data['post_year'] 	= germina_getplainterms( $post->ID, 'year', '', ' • ');
+									$args['post_area'] 	= germina_getplainterms( $post->ID, 'areas', '', ' • ');
+									$args['post_temas'] = germina_getplainterms( $post->ID, 'tema', '', ' • ');
+									$args['post_year'] 	= germina_getplainterms( $post->ID, 'year', '', ' • ');
 
 									if(has_post_thumbnail($post->ID) ):
-										$data['post_thumbnail'] = $thumbsrc[0];
+										$args['post_thumbnail'] = $thumbsrc[0];
 									endif;
 
-									echo $compiler->render('tax-item-medium', $data);
+									//echo $compiler->render('tax-item-medium', $data);
+									cur_get_template('tax-item-medium.php', $args, 'parts/content');
 
 							endwhile;?>
 						<?php endif;?>

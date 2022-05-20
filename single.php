@@ -37,7 +37,7 @@
 					<h1 class="post-title"><?php the_title();?></h1>
 					<span class="autores">por <?php germina_authors();?></span>
 
-					<?php get_template_part('parts/share');?>
+					
 				</header>
 
 
@@ -62,7 +62,7 @@
 
 			<?php get_template_part('parts/content/proyects-related');?>
 
-			<?php comments_template();?>
+			<?php //comments_template();?>
 
 		<?php endwhile;?>
 		<?php else:?>

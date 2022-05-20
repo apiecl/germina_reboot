@@ -48,8 +48,6 @@ Template Name: Archivo Proyectos
 
 				<?php
 
-					$compiler = include( get_template_directory() . '/lib/mustache-compiler.php');
-
 					$args = array(
 								'post_type' => 'resumen-proyecto',
 								'numberposts' => 6,
@@ -59,26 +57,10 @@ Template Name: Archivo Proyectos
 					$lastproyects = get_posts( $args );
 
 					foreach( $lastproyects as $lastproyect ) {
-
-						$data = array(
-							'post_title' => $lastproyect->post_title,
-							'post_link' => get_permalink( $lastproyect->ID ),
-							);
-
-						$thumbnail = get_post_thumbnail_id( $lastproyect->ID );
-						$thumbsrc = wp_get_attachment_image_src( $thumbnail, '120x120' );
-
-						$data['post_area'] 	= germina_getplainterms( $lastproyect->ID, 'areas', '', ' • ');
-						$data['post_temas'] = germina_getplainterms( $lastproyect->ID, 'tema', '', ' • ');
-						$data['post_year'] 	= germina_getplainterms( $lastproyect->ID, 'year', '', ' • ');
-
-						if(has_post_thumbnail($lastproyect->ID) ):
-
-							$data['post_thumbnail'] = $thumbsrc[0];
-
-						endif;
-
-						echo $compiler->render('proyect-item-medium', $data );
+						
+						$args['id'] = $lastproyect->ID;
+						$args['year'] = germina_getplainterms( $lastproyect->ID, 'year', '', ' • ');
+						cur_get_template('proyect-item-medium.php', $args, 'parts/content/');
 
 					}
 

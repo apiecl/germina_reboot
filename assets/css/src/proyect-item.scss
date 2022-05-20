@@ -1,82 +1,80 @@
 //Proyect Item
 
-.proyect-item-medium
- {
-	padding:12px;
-	outline:1px solid #ccc;
-	margin:12px 0;
-	transition:all linear 0.4s;
-	background-repeat:no-repeat;
-	background-position:left;
-	background-color:white;
+.proyect-item-medium {
+	padding: 12px;
+	outline: 1px solid #ccc;
+	margin: 12px 0;
+	transition: all linear 0.4s;
+	background-repeat: no-repeat;
+	background-position: left;
+	background-color: white;
 	background-size: contain;
 	position: relative;
 }
 
 .proyect-item-medium.with-image {
-	padding-right:130px;
-	min-height:120px;
+	padding-right: 130px;
+	min-height: 120px;
 }
 
 .proyect-item-medium img {
 	position: absolute;
-	top:0;
-	right:0;
-	width:120px;
-	height:120px;
+	top: 0;
+	right: 0;
+	width: 120px;
+	height: 120px;
 }
 
 .proyect-item-content-wrapper {
 }
 
 .proyect-item-medium.with-image .proyect-item-meta-top {
-	background-color:white;
-	display:inline-block;
-	padding:1px 3px;
+	background-color: white;
+	display: inline-block;
+	padding: 1px 3px;
 }
 
-.proyect-item-medium:hover
- {
- 	outline:1px solid desaturate($sandia, 10%);
+.proyect-item-medium:hover {
+	outline: 1px solid desaturate($sandia, 10%);
 }
 
-.proyect-item-medium h4
- {
-	color:$grisoscuro;
-	margin-top:0;
-	margin-bottom:6px;
+.proyect-item-medium h4 {
+	color: $sandia;
+	margin-top: 0;
+	margin-bottom: 6px;
+	line-height: 1.5em;
 }
 
 .proyect-item-meta-top {
-	font-size:12px;
-	color:$celeste;
-	text-transform:uppercase;
+	font-size: 12px;
+	color: $celeste;
+	text-transform: uppercase;
 }
 
 .proyect-item-meta-bottom {
-	font-size:12px;
-	color:$sandia;
-	text-transform:uppercase;
+	font-size: 12px;
+	color: $sandia;
+	text-transform: uppercase;
 }
 
 //Small
 
 .proyect-item-small {
-	padding:12px;
-	color:$grisoscuro;
-	margin-bottom:12px;
-  outline:1px solid #ccc;
-  background-color:white;
-  transition:all ease-in 0.4s;
+	padding: 12px;
+	color: $grisoscuro;
+	margin-bottom: 12px;
+	outline: 1px solid #ccc;
+	background-color: white;
+	transition: all ease-in 0.4s;
 }
 
 .proyect-item-small:hover {
-	outline:1px solid desaturate($sandia, 10%);
+	outline: 1px solid desaturate($sandia, 10%);
 }
 
 .proyect-item-small h4 {
-	font-size:16px;
-	margin-top:0;
-	margin-bottom:6px;
-	color:$grisoscuro;
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 6px;
+	color: $grisoscuro;
 }

@@ -8,7 +8,7 @@ $proyect_id = $args['id'];
 $year = $args['year'];
 
 $thumbnail_id = get_post_thumbnail_id( $proyect_id );
-$thumbnail_img = wp_get_attachment_image_src( $thumbnail_id, '635x300' );
+$thumbnail_img = wp_get_attachment_image_src( $thumbnail_id, '120x120' );
 $thumbnail_src = $thumbnail_img[0];
 
 if($thumbnail_src) {
@@ -19,7 +19,7 @@ if($thumbnail_src) {
 
 ?>
 
-<div class="proyect-item-medium <?php echo $class;?>" style="background-image:url(<?php echo $thumbnail_src;?>);">
+<div class="proyect-item-medium zoomIn <?php echo $class;?>">
 		
 	<a class="block-item-link" href="<?php echo get_permalink($proyect_id);?>" title="<?php echo get_the_title($proyect_id);?>">
 		<div class="proyect-item-meta-top">
@@ -39,5 +39,6 @@ if($thumbnail_src) {
 				<?php germina_theplainterms( $proyect_id, 'tema', 'Temas: ', ', ' );?>
 			</span>
 		</div>
+		<img src="<?php echo $thumbnail_src;?>" alt="<?php echo get_the_title($proyect_id);?>">
 	</a>
 </div>

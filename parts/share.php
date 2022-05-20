@@ -24,6 +24,5 @@
   <a target="_blank" href="<?php echo $whatsapp_shareurl;?>" class="sharebutton whatsapp visible-xs"><i class="fa fa-fw fa-whatsapp"></i></a>
   <a target="_blank" href="<?php echo $facebook_shareurl;?>" class="sharebutton facebook"><i class="fa fa-fw fa-facebook"></i></a>
   <a target="_blank" href="<?php echo $twitter_shareurl;?>" class="sharebutton twitter"><i class="fa fa-fw fa-twitter"></i></a>
-  <a target="_blank" href="<?php echo $googleplus_shareurl;?>" class="sharebutton googleplus"><i class="fa fa-fw fa-google-plus"></i></a>
   <a target="_blank" href="<?php echo $linkedin_shareurl;?>" class="sharebutton linkedin"><i class="fa fa-fw fa-linkedin"></i></a>
 </div>

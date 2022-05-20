@@ -16,14 +16,15 @@
  * CONSTANTS
  */
 
-define( 'GERMINA_PUBLICACIONES', 	10	);
-define( 'GERMINA_PROYECTOS'		,		142	);
+define( 'GERMINA_PUBLICACIONES', 10	);
+define( 'GERMINA_PROYECTOS', 142 );
 define( 'GERMINA_NOTFOUND', 829 );
 define( 'GERMINA_CATNOVEDADES', 16 );
 define( 'GERMINA_ARTICULOS', 6 );
-define( 'FACEBOOK_PAGE', 'https://web.facebook.com/Germina-conocimiento-para-la-acci%C3%B3n-2157914764440494/');
-define( 'LINKEDIN_PAGE', 'https://www.linkedin.com/company/11536225/');
-define( 'GERMINA_VERSION', '1.8.1');
+define( 'FACEBOOK_PAGE', 'https://web.facebook.com/Germina-conocimiento-para-la-acci%C3%B3n-2157914764440494/' );
+define( 'LINKEDIN_PAGE', 'https://www.linkedin.com/company/11536225/' );
+define( 'GERMINA_VERSION', '1.8.1' );
+
 /**
  * LIBRARIES
  */
@@ -97,7 +98,7 @@ function germina_scripts() {
 
 	if(!is_admin()) {
 		wp_deregister_script( 'jquery' );
-		wp_enqueue_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js', array(), '2.2.2', true );
+		wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true );
 	}
 
 	if(is_home() || is_page( 'somos' ) ) {

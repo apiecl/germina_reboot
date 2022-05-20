@@ -2,37 +2,37 @@
 
 div.sharer {
   position: absolute;
-  top:-10px;
-  right:-22px;
+  top: -10px;
+  right: -22px;
 }
 
 a.sharebutton {
-  display:block;
-  padding:4px;
-  float:left;
-  font-size:16px;
-  color:white;
-  opacity:0.6;
-  transition:opacity linear 0.4s;
+  display: block;
+  padding: 4px;
+  float: left;
+  font-size: 16px;
+  color: $sandia;
+  opacity: 1;
+  transition: opacity linear 0.4s;
 }
 
 a.sharebutton:hover {
-  opacity:1;
+  opacity: 0.6;
 }
 
-@media screen and (max-width:$screen-sm) {
+@media screen and (max-width: $screen-sm) {
   div.sharer {
     position: relative;
-    top:0;
-    right:0;
-    margin-top:12px;
-    margin-bottom:6px;
-    overflow:hidden;
+    top: 0;
+    right: 0;
+    margin-top: 12px;
+    margin-bottom: 6px;
+    overflow: hidden;
   }
 
   a.sharebutton {
-    opacity:0.6;
-    padding:8px 12px;
+    opacity: 0.6;
+    padding: 8px 12px;
   }
 }
 
@@ -42,22 +42,22 @@ $linkedin: #007bb5;
 $googleplus: #dd4b39;
 $whatsapp: #43d854;
 
-a.sharebutton.facebook {
-  background-color: desaturate($facebook, 15%);
-}
+// a.sharebutton.facebook {
+//   background-color: desaturate($facebook, 15%);
+// }
 
-a.sharebutton.twitter {
-  background-color: desaturate($twitter, 15%);
-}
+// a.sharebutton.twitter {
+//   background-color: desaturate($twitter, 15%);
+// }
 
-a.sharebutton.linkedin {
-  background-color: desaturate($linkedin, 15%);
-}
+// a.sharebutton.linkedin {
+//   background-color: desaturate($linkedin, 15%);
+// }
 
-a.sharebutton.googleplus {
-  background-color: desaturate($googleplus, 15%);
-}
+// a.sharebutton.googleplus {
+//   background-color: desaturate($googleplus, 15%);
+// }
 
-a.sharebutton.whatsapp {
-  background-color: desaturate($whatsapp, 15%);
-}
+// a.sharebutton.whatsapp {
+//   background-color: desaturate($whatsapp, 15%);
+// }

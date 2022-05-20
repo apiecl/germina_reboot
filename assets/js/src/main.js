@@ -1,6 +1,7 @@
 //main js file
 //stuff here
 $(document).ready(function () {
+    console.log("scripts germina");
     var body = $("body");
     var brand = $("a.navbar-brand");
     var navbar = $("#germina-menu");

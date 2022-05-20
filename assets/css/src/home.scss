@@ -1,84 +1,80 @@
-
 //Presentation
 
-@media screen and (min-width:$screen-md) {
-
+@media screen and (min-width: $screen-md) {
 }
 
 .presentation {
-	padding:0;
-	color:darken($gris, 10%);
-	text-align:center;
-	max-width:100%;
-	@media screen and (min-width:$screen-md) {
-		margin-top:50px;
+	padding: 0;
+	color: darken($gris, 10%);
+	text-align: center;
+	max-width: 100%;
+	@media screen and (min-width: $screen-md) {
+		margin-top: 50px;
 	}
 
-	@media screen and (max-width:$screen-sm) {
-		margin-bottom:32px;
+	@media screen and (max-width: $screen-sm) {
+		margin-bottom: 32px;
 	}
 }
 
 .presentation h2 {
-	font-weight:normal;
+	font-weight: normal;
 	//text-shadow:1px 1px 1px #333;
 }
 
 .presentation img {
-	max-width:100%;
+	max-width: 100%;
 }
 
 .presentation-logohome {
 	position: relative;
-	width:360px;
-	height:159px;
-	margin:0;
-	animation-name:logofade;
+	width: 360px;
+	height: 159px;
+	margin: 0;
+	animation-name: logofade;
 	animation-duration: 4s;
 	animation-iteration-count: 1;
 	animation-direction: alternate;
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
-	
-	@media screen and (max-width:359px) {
-		width:320px;
-		height:auto;
+
+	@media screen and (max-width: 359px) {
+		width: 320px;
+		height: auto;
 	}
 }
 
-
 .animated-element-bottom {
-	background-color:$sandia;
+	background-color: $sandia;
 	position: absolute;
-	bottom:44px;
-	height:71px;
-	width:11px;
-	left:228px;
+	bottom: 44px;
+	height: 71px;
+	width: 11px;
+	left: 228px;
 	animation-name: logogrow;
 	animation-duration: 0.7s;
 	animation-iteration-count: 1;
 	animation-direction: alternate;
 	animation-timing-function: linear;
 	animation-fill-mode: forwards;
-	animation-delay:2.3s;
-	
-	@media screen and (max-width:359px) {
-		left:203px;
-		width:9px;
-		height:61px;
+	animation-delay: 2.3s;
+
+	@media screen and (max-width: 359px) {
+		left: 203px;
+		width: 9px;
+		height: 61px;
 	}
 }
 
 .presentation-logohome:hover .animated-element-bottom {
-
 }
 
 @keyframes logofade {
 	0% {
-		opacity:0;
+		opacity: 0;
 	}
-	100% {
-		opacity:100%;
+	100%  {
+		opacity: 100%;
 	}
 }
 
@@ -91,22 +87,22 @@
 //Video
 
 .germina-video-container {
-	background-color:$cafe;
+	background-color: $cafe;
 }
 
 .germina-video-container .video-germina {
-	background-color:white;
+	background-color: white;
 }
 
 .germina-video-container button.vjs-big-play-button {
-	color:$sandia;
-	font-size:36px;
-	border:0;
-	border-radius:0;
+	color: $sandia;
+	font-size: 36px;
+	border: 0;
+	border-radius: 0;
 }
 
 .germina-video-container video.vjs-fullscreen {
-	@media screen and (max-width:$screen-sm) {
+	@media screen and (max-width: $screen-sm) {
 		transform: rotate(90deg);
 	}
 }
@@ -115,26 +111,26 @@
 //
 
 .definition-container {
-	text-align:center;
+	text-align: center;
 }
 
 h2.definition {
-	margin-top:52px;
-	font-size:25px;
-	color:$sandia;
-	margin-bottom:52px;
-	line-height:1.4em;
-	font-weight:700;
-	// text-align:right;
+	margin-top: 52px;
+	font-size: 25px;
+	color: $grismedio;
+	margin-bottom: 52px;
+	line-height: 1.4em;
+	font-weight: $defaultfontweight;
+	text-align: left;
 	// max-width:360px;
 }
 
-@media screen and (max-width:$screen-sm) {
+@media screen and (max-width: $screen-sm) {
 	h2.definition {
-		clear:both;
-		padding-top:24px;
-		font-size:18px;
-		margin-top:0;
+		clear: both;
+		padding-top: 24px;
+		font-size: 18px;
+		margin-top: 0;
 		//margin-bottom:0;
 	}
 }
@@ -147,18 +143,17 @@ address {
 	color: $gris;
 
 	p {
-		margin-bottom:0;
+		margin-bottom: 0;
 	}
 
 	a {
 		color: $gris;
 	}
-
 }
 
-@media screen and (max-width:$screen-sm) {
+@media screen and (max-width: $screen-sm) {
 	address {
-		clear:both;
-		margin-top:24px;
+		clear: both;
+		margin-top: 24px;
 	}
 }

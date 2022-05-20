@@ -44,7 +44,7 @@
 						<p class="tema"><?php the_terms( $post->ID, 'tema', 'temas <i class="fa fa-angle-right"></i> ', ' &bull; ' );?></p>
 					</div>
 
-					<?php get_template_part('parts/share');?>
+					
 				</header>
 
 				<div class="row">

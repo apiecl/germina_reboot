@@ -41,7 +41,7 @@ function germina_proyects_by_term() {
 
 	//El template para mustache
 	
-	$proyect_items['template'] = get_bloginfo('template_url') . '/parts/content/mustache/proyect-item-medium.mustache';
+	//$proyect_items['template'] = get_bloginfo('template_url') . '/parts/content/mustache/proyect-item-medium.mustache';
 
 	//El título de la taxonomía
 	

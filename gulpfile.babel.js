@@ -39,13 +39,12 @@ function parsesass(cb) {
 
 function scripts(cb) {
 	return src([
-		"./node_modules/mustache/mustache.js",
 		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js",
 		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js",
 		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js",
 		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
 		"./node_modules/jquery-cycle-2/src/jquery.cycle.all.js",
-		"./node_modules/masonry-layout/masonry.js",
+		"./node_modules/masonry-layout/dist/masonry.pkgd.js",
 		"./node_modules/jquery-visible/jquery.visible.js",
 		"./node_modules/imagesloaded/imagesloaded.js",
 		"./node_modules/responsive-toolkit/dist/bootstrap-toolkit.js",

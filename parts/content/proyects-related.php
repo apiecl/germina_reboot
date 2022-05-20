@@ -62,8 +62,7 @@
 				cur_get_template('item-small.php', $itemargs, '/parts/content/');
 
 			endforeach;
-			echo '</div>';
-			echo '</div>';
+			
 			?>
 			<?php
 		endif;	
@@ -82,8 +81,7 @@
 
 
 			endforeach;
-			echo '</div>';
-			echo '</div>';
+			
 
 			endif;	
 
@@ -100,11 +98,14 @@
 
 
 			endforeach;
-			echo '</div>';
-			echo '</div>';
-
 			endif;	
-		
+
+			if($crelposts || $crelvids || $crelfotos || $newcrelposts):
+						echo '</div>';
+			endif;
+			if($crelposts || get_post_meta($post->ID, 'proyectos relacionados') || get_post_meta($post->ID, 'proyectos_relacionados') || $newcrelposts):
+					echo '</div>';
+			endif;
 ?>
 
 
