@@ -39,6 +39,7 @@ function parsesass(cb) {
 
 function scripts(cb) {
 	return src([
+		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js",
 		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js",
 		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js",
 		"./node_modules/bootstrap-sass/assets/javascripts/bootstrap/collapse.js",

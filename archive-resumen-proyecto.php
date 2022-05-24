@@ -6,34 +6,9 @@
 
 <?php get_header();?>
 
-<div class="container">
+<div class="container archive-proyectos">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-1">
-
-			<?php if(have_posts()): while(have_posts()): the_post();?>
-
-			<article class="content-template-proyectos" >
-
-				<header>
-					<h1 class="section-description-title"><?php the_title();?></h1>
-					<a href="#" class="btn btn-info visible-xs-inline-block" data-target="proyect-nav" data-function="toggle-nav">Filtrar proyectos</a>
-				</header>
-
-
-
-				<div class="post-content">
-					<?php the_content();?>
-				</div>
-
-				<footer class="tax">
-
-				</footer>
-
-			</article>
-
-				<?php endwhile;?>
-			<?php endif;?>
-		</div>
+		
 
 		<div class="col-md-4 col-md-offset-1 filter-column" data-id="proyect-nav">
 			<?php get_template_part('parts/content/proyects-filter');?>

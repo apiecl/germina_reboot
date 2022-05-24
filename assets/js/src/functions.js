@@ -45,9 +45,7 @@ function germina_loadprojects(element) {
         loadmore.attr("data-reuse", 1);
     }
 
-    linkitem.append(
-        ' <span class="loading-status"><i class="fa fa-spin fa-circle-o-notch"></i></span>'
-    );
+    linkitem.addClass("loadingbtn");
 
     $.ajax({
         url: germina.ajax_url,
@@ -140,7 +138,7 @@ function germina_loadprojects(element) {
                 );
             }
 
-            $("span", linkitem).remove();
+            linkitem.removeClass("loadingbtn");
 
             //console.log(content);
 

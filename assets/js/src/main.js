@@ -90,6 +90,14 @@ $(document).ready(function () {
         }
     );
 
+    $("#taxonomy-accordion").on("shown.bs.collapse", function () {
+        $(".panel-collapse.in").prev(".panel-heading").addClass("active");
+    });
+
+    $("#taxonomy-accordion").on("hidden.bs.collapse", function () {
+        $(".panel-heading").removeClass("active");
+    });
+
     // Wrap IIFE around your code
     (function ($, viewport) {
         $(document).ready(function () {
@@ -141,9 +149,9 @@ $(document).ready(function () {
             // Executes in SM, MD and LG breakpoints
             if (viewport.is(">=sm")) {
                 console.log("proyectos-home");
-                $(".proyectos-home, .full-proylist").masonry({
-                    itemSelector: ".proyect-item-box",
-                });
+                // $(".proyectos-home, .full-proylist").masonry({
+                //     itemSelector: ".proyect-item-box",
+                // });
 
                 var $grid = $(".full-publist-items").imagesLoaded(function () {
                     $grid.masonry({

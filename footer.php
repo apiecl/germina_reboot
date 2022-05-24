@@ -1,4 +1,3 @@
-</div><!--main container end-->
 	
 	<footer class="germina-footer" style="clear:both;">
 		

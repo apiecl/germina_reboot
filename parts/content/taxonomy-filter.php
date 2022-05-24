@@ -10,57 +10,24 @@
 <?php
 
 	$current_term = get_queried_object();
+	$taxonomies = ['tema', 'ambito', 'year', 'estado', 'area'];
+	foreach($taxonomies as $taxonomy):
+		$taxlabels = get_taxonomy_labels( $taxonomy );
+		?>
 
-?>
+		<div class="panel-group tax-filter" id="taxonomy-accordion" role="tablist" aria-multiselectable="false">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="heading-<?php echo $taxonomy;?>">
+					<h4 class="panel-title">
+						<a role="button" data-toggle="collapse" data-parent="taxonomy-accordion" href="taxonomy-<?php echo $taxonomy;?>"><?php echo $taxonomy->name;?></a>
+					</h4>
+				</div>
+				<div class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading-<?php echo $taxonomy;?>" id="tax-<?php $taxonomy;?>">
+					<div class="panel-body">
+						
+					</div>
+				</div>
+			</div>
+		</div>
 
-<div class="tax-filter">
-
-	<a href="#" class="btn btn-info visible-xs-block" data-target="taxonomy-nav" data-function="toggle-nav"><i class="fa fa-times"></i> Cerrar</a>
-
-	<h2 class="section-description-title"><i class="fa fa-caret-right"></i> Áreas de acción</h2>
-
-	<div class="btn-group-vertical btn-group-sm">
-		<?php
-		$areas = get_terms( 'areas', array('orderby' => 'name') );
-
-		foreach($areas as $area):
-
-			$active = $current_term->term_id == $area->term_id ? 'active' : '';
-
-			?>
-
-			<a href="<?php echo get_term_link( $area->term_id, 'areas' );?>" class="btn btn-default proyect-call <?php echo $active; ?>" data-reuse="0" data-term="<?php echo $area->term_id;?>" data-tax="areas">
-
-				<?php echo $area->name;?>
-
-			</a>
-
-		<?php
-		endforeach; ?>
-	</div>
-
-	<h2 class="section-description-title"><i class="fa fa-caret-right"></i> Temas</h2>
-
-	<div class="btn-group-vertical btn-group-sm">
-
-	<?php
-		$temas = get_terms( 'tema', array('orderby' => 'name') );
-
-		foreach($temas as $tema):
-
-			$active = $current_term->term_id == $tema->term_id ? 'active' : '';
-
-			?>
-
-			<a href="<?php echo get_term_link( $tema->term_id, 'tema' );?>" class="btn btn-default proyect-call <?php echo $active;?>" data-reuse="0" data-term="<?php echo $tema->term_id;?>" data-tax="tema">
-
-				<?php echo $tema->name;?>
-
-			</a>
-
-		<?php
-		endforeach; ?>
-
-	</div>
-
-</div>
+<?php endforeach;?>

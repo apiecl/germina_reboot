@@ -1,85 +1,46 @@
 <?php
 /**
- * Proyect Nav template
+ * Projects Nav template
  *
  * @package  GerminaReboot
  * @subpackage  content_templates
  */
 ?>
 
-<div class="proyects-filter">
+<div class="panel-group tax-filter" id="taxonomy-accordion" role="tablist" aria-multiselectable="true">
 	
-	<a href="#" class="btn btn-info visible-xs-block" data-target="proyect-nav" data-function="toggle-nav"><i class="fa fa-times"></i> Cerrar</a>
-
-	<h2 class="section-description-title"><i class="fa fa-caret-right"></i> Proyectos por área</h2>
-	
-	<div class="btn-group-vertical btn-group-sm">
-		<?php 
-		$areas = get_terms( 'areas', array('orderby' => 'name', 'parent' => 0) );
-		
-		foreach($areas as $area): ?>
+	<?php
+		$current_term = get_queried_object();
+		$taxonomies = ['tema', 'ambitos_de_accion', 'germina_year', 'estado', 'areas'];
+		foreach($taxonomies as $taxonomy):
+			$taxobj = get_taxonomy( $taxonomy );
+			$taxlabels = get_taxonomy_labels( $taxobj );
+			//var_dump($taxlabels);
+			$args = array(
+						'taxonomy' => $taxonomy,
+						'parent'   => 0
+					);
+			$terms = get_terms($args);
+			?>
 			
-			<a href="#" class="btn btn-default proyect-call" data-reuse="0" data-term="<?php echo $area->term_id;?>" data-tax="areas">
-			
-				<?php echo $area->name;?>
-				
-			</a>	
+				<div class="panel panel-default">		
+					<div class="panel-heading" role="tab" id="heading-<?php echo $taxonomy;?>">
+						<h4 class="panel-title">
+							<a role="button" data-toggle="collapse" data-parent="#taxonomy-accordion" href="#taxpanel-<?php echo $taxonomy;?>"><?php echo $taxlabels->name;?> <i class="fa fa-chevron-down"></i></a>
+						</h4>
+					</div>
+					
+					<div class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-<?php echo $taxonomy;?>" id="taxpanel-<?php echo $taxonomy;?>">
+						<div class="panel-body">
+							<?php foreach($terms as $term) {
+								?>
+									<a href="#" class="btn btn-large btn-filter btn-default proyect-call" data-reuse="0" data-term="<?php echo $term->term_id;?>" data-tax="<?php echo $taxonomy;?>"><?php echo $term->name;?></a>
+								<?php
+							};?>
+						</div>
+					</div>
+				</div>
 
-		<?php
-		endforeach; ?>
-	</div>
+	<?php endforeach;?>
 
-	<h2 class="section-description-title"><i class="fa fa-caret-right"></i> Proyectos por tema</h2>
-
-	<div class="btn-group-vertical btn-group-sm">
-	
-	<?php 
-		$temas = get_terms( 'tema', array('orderby' => 'name') );
-		
-		foreach($temas as $tema): ?>
-			
-			<a href="#" class="btn btn-default proyect-call" data-reuse="0" data-term="<?php echo $tema->term_id;?>" data-tax="tema">
-			
-				<?php echo $tema->name;?>
-				
-			</a>	
-
-		<?php
-		endforeach; ?>
-	
-	</div>
-
-	<h2 class="section-description-title"><i class="fa fa-caret-right"></i> Proyectos por año</h2>
-
-	<div class="proyects-by-year-nav">
-		<?php 
-			$years = get_terms( 'year', array('orderby' => 'name' ) );
-			foreach($years as $year): ?>
-			
-			<a href="#" class="btn btn-default proyect-call btn-xs" data-reuse="0" data-term="<?php echo $year->term_id;?>" data-tax="year">
-			
-				<?php echo $year->name;?>
-				
-			</a>
-
-			<?php
-			endforeach; ?>
-	</div>
-
-	<h2 class="section-description-title"><i class="fa fa-caret-right"></i> Proyectos por estado</h2>
-
-	<div class="btn-group-vertical btn-group-sm">
-		<?php 
-			$estados = get_terms( 'estado', array('orderby' => 'name' ) );
-			foreach($estados as $estado): ?>
-			
-			<a href="#" class="btn btn-default proyect-call" data-reuse="0" data-term="<?php echo $estado->term_id;?>" data-tax="estado">
-			
-				<?php echo $estado->name;?>
-				
-			</a>
-
-			<?php
-			endforeach; ?>
-	</div>
 </div>

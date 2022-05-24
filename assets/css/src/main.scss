@@ -6,6 +6,7 @@
 
 $cafe: #aea39a;
 $sandia: #ec5a5e;
+$darksandia: #a23036;
 $pelorous: desaturate(#41adc4, 10%);
 $tanhide: #fc9554;
 $sunset: #c54f4f;
@@ -33,7 +34,16 @@ body {
 	padding-top: $navbar-height + 20px;
 }
 
-@import "//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css";
+body.post-type-archive-resumen-proyecto {
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	margin-top: auto;
+}
+
+//@import "//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css";
 @import "//cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css";
 @import "//vjs.zencdn.net/5.8.8/video-js.css";
 @import "wpcore";

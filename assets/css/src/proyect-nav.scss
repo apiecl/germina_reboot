@@ -1,47 +1,108 @@
 //Proyect Navigation Styles
 
 .proyects-filter {
-	padding-bottom:12px;
+	padding-bottom: 12px;
 }
 
 .proyects-filter .btn-group-vertical {
-	width:100%;
+	width: 100%;
 }
 
 .proyects-filter .btn-group-vertical .btn {
-	text-align:left;
+	text-align: left;
 }
 
 button.loadmore {
-	margin-bottom:12px;
+	margin-bottom: 12px;
 }
 
-
-@media screen and (max-width:$screen-xs) {
+@media screen and (max-width: $screen-xs) {
 	.filter-column {
-		position:fixed;
-		transition:all linear 2s;
-		height:100%;
-		top:$navbar-height;
-		left:0;
-		border-right:1px solid $gris;
-		padding-top:16px;
-		padding-bottom:$navbar-height + 16px;
-		background-color:white;
-		overflow:scroll;
-		z-index:100;
-		transition-duration:400ms;
-		transform:translateX(-100%);
-	}	
+		position: fixed;
+		transition: all linear 2s;
+		height: 100%;
+		top: $navbar-height;
+		left: 0;
+		border-right: 1px solid $gris;
+		padding-top: 16px;
+		padding-bottom: $navbar-height + 16px;
+		background-color: white;
+		overflow: scroll;
+		z-index: 100;
+		transition-duration: 400ms;
+		transform: translateX(-100%);
+	}
 }
-
 
 .filter-column.active {
-	position:fixed;
-	display:block;
-	transform:translateX(0);
+	position: fixed;
+	display: block;
+	transform: translateX(0);
 }
 
 .proyects-by-year-nav .btn {
-	margin-bottom:4px;
+	margin-bottom: 4px;
+}
+
+.tax-filter {
+	.panel-heading {
+		background-color: white;
+		transition: all ease-in 0.2s;
+
+		h4 {
+			font-family: $defaultfont;
+			font-weight: 400;
+			a {
+				display: flex;
+				justify-content: space-between;
+				i {
+					transition: transform ease-in 0.1s;
+				}
+				&:hover,
+				&:focus {
+					text-decoration: none;
+				}
+			}
+		}
+
+		&.active {
+			background-color: $darksandia;
+			color: white;
+			i {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	.panel-body {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		.btn {
+			border-color: $sandia;
+			color: $sandia;
+			margin: 4px;
+			white-space: break-spaces;
+			&:hover {
+				background-color: $sandia;
+				color: white;
+			}
+			&.active {
+				background-color: $sandia;
+				color: white;
+			}
+			&.loadingbtn {
+				animation: germinaloading infinite 0.8s;
+			}
+		}
+	}
+}
+
+@keyframes germinaloading {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.5;
+	}
 }

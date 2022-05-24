@@ -1,7 +1,7 @@
 <?php
 /**
- * Home page template
- *
+ * 
+ * Template Name: Home
  * @package  GerminaReboot
  * @subpackage page_templates
  */

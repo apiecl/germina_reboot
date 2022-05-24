@@ -1,4 +1,64 @@
 /* ========================================================================
+ * Bootstrap: transition.js v3.4.1
+ * https://getbootstrap.com/docs/3.4/javascript/#transitions
+ * ========================================================================
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+  'use strict';
+
+  // CSS TRANSITION SUPPORT (Shoutout: https://modernizr.com/)
+  // ============================================================
+
+  function transitionEnd() {
+    var el = document.createElement('bootstrap')
+
+    var transEndEventNames = {
+      WebkitTransition : 'webkitTransitionEnd',
+      MozTransition    : 'transitionend',
+      OTransition      : 'oTransitionEnd otransitionend',
+      transition       : 'transitionend'
+    }
+
+    for (var name in transEndEventNames) {
+      if (el.style[name] !== undefined) {
+        return { end: transEndEventNames[name] }
+      }
+    }
+
+    return false // explicit for ie8 (  ._.)
+  }
+
+  // https://blog.alexmaccaw.com/css-transitions
+  $.fn.emulateTransitionEnd = function (duration) {
+    var called = false
+    var $el = this
+    $(this).one('bsTransitionEnd', function () { called = true })
+    var callback = function () { if (!called) $($el).trigger($.support.transition.end) }
+    setTimeout(callback, duration)
+    return this
+  }
+
+  $(function () {
+    $.support.transition = transitionEnd()
+
+    if (!$.support.transition) return
+
+    $.event.special.bsTransitionEnd = {
+      bindType: $.support.transition.end,
+      delegateType: $.support.transition.end,
+      handle: function (e) {
+        if ($(e.target).is(this)) return e.handleObj.handler.apply(this, arguments)
+      }
+    }
+  })
+
+}(jQuery);
+
+/* ========================================================================
  * Bootstrap: modal.js v3.4.1
  * https://getbootstrap.com/docs/3.4/javascript/#modals
  * ========================================================================
@@ -5592,9 +5652,7 @@ function germina_loadprojects(element) {
         loadmore.attr("data-reuse", 1);
     }
 
-    linkitem.append(
-        ' <span class="loading-status"><i class="fa fa-spin fa-circle-o-notch"></i></span>'
-    );
+    linkitem.addClass("loadingbtn");
 
     $.ajax({
         url: germina.ajax_url,
@@ -5687,7 +5745,7 @@ function germina_loadprojects(element) {
                 );
             }
 
-            $("span", linkitem).remove();
+            linkitem.removeClass("loadingbtn");
 
             //console.log(content);
 
@@ -5801,6 +5859,14 @@ $(document).ready(function () {
         }
     );
 
+    $("#taxonomy-accordion").on("shown.bs.collapse", function () {
+        $(".panel-collapse.in").prev(".panel-heading").addClass("active");
+    });
+
+    $("#taxonomy-accordion").on("hidden.bs.collapse", function () {
+        $(".panel-heading").removeClass("active");
+    });
+
     // Wrap IIFE around your code
     (function ($, viewport) {
         $(document).ready(function () {
@@ -5852,9 +5918,9 @@ $(document).ready(function () {
             // Executes in SM, MD and LG breakpoints
             if (viewport.is(">=sm")) {
                 console.log("proyectos-home");
-                $(".proyectos-home, .full-proylist").masonry({
-                    itemSelector: ".proyect-item-box",
-                });
+                // $(".proyectos-home, .full-proylist").masonry({
+                //     itemSelector: ".proyect-item-box",
+                // });
 
                 var $grid = $(".full-publist-items").imagesLoaded(function () {
                     $grid.masonry({
