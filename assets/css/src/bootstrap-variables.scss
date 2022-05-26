@@ -108,9 +108,9 @@ $padding-xs-horizontal: 5px !default;
 $line-height-large: 1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small: 1.5 !default;
 
-$border-radius-base: 4px !default;
-$border-radius-large: 6px !default;
-$border-radius-small: 3px !default;
+$border-radius-base: 8px !default;
+$border-radius-large: 12px !default;
+$border-radius-small: 6px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color: #fff !default;
@@ -702,7 +702,7 @@ $panel-bg: #fff !default;
 $panel-body-padding: 15px !default;
 $panel-heading-padding: 14px 15px !default;
 $panel-footer-padding: $panel-heading-padding !default;
-$panel-border-radius: $border-radius-base !default;
+$panel-border-radius: 0 !default;
 
 //** Border color for elements within panels
 $panel-inner-border: #ddd !default;

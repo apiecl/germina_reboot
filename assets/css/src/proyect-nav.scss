@@ -16,21 +16,27 @@ button.loadmore {
 	margin-bottom: 12px;
 }
 
-@media screen and (max-width: $screen-xs) {
+// @media screen and (max-width: $screen-xs) {
+// 	.filter-column {
+// 		position: fixed;
+// 		transition: all linear 2s;
+// 		height: 100%;
+// 		top: $navbar-height;
+// 		left: 0;
+// 		border-right: 1px solid $gris;
+// 		padding-top: 16px;
+// 		padding-bottom: $navbar-height + 16px;
+// 		background-color: white;
+// 		overflow: scroll;
+// 		z-index: 100;
+// 		transition-duration: 400ms;
+// 		transform: translateX(-100%);
+// 	}
+// }
+
+@media screen and (min-width: $screen-md) {
 	.filter-column {
-		position: fixed;
-		transition: all linear 2s;
-		height: 100%;
-		top: $navbar-height;
-		left: 0;
-		border-right: 1px solid $gris;
-		padding-top: 16px;
-		padding-bottom: $navbar-height + 16px;
-		background-color: white;
-		overflow: scroll;
-		z-index: 100;
-		transition-duration: 400ms;
-		transform: translateX(-100%);
+		margin-top: 70px;
 	}
 }
 
@@ -84,11 +90,12 @@ button.loadmore {
 			margin: 4px;
 			white-space: break-spaces;
 			&:hover {
-				background-color: $sandia;
+				background-color: $darksandia;
 				color: white;
 			}
 			&.active {
-				background-color: $sandia;
+				background-color: $darksandia;
+				border-color: $darksandia;
 				color: white;
 			}
 			&.loadingbtn {

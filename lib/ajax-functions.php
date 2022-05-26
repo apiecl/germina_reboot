@@ -21,13 +21,27 @@ function germina_proyects_by_term() {
 	$offset = $_POST['offset'];
 	$output = '';
 
+	$countargs = array(
+		'post_type' => 'resumen-proyecto',
+		'posts_per_page' => -1,
+		'tax_query'	=> array(
+				array(
+					'taxonomy' 	=> $tax,
+					'field'		=> 'term_id',
+					'terms'		=> $termid
+					)
+				)
+	);
+	$countitems = new WP_Query($countargs);
+	$noitems = $countitems->post_count;
+
 	$args = array(
 				'post_type' => 'resumen-proyecto',
 				'numberposts' => 5,
 				'orderby' => 'date',
 				'order' => 'DESC',
 				'offset' => $offset
-		);
+			);
 
 	$args['tax_query'] = array(
 							array(
@@ -38,6 +52,11 @@ function germina_proyects_by_term() {
 							);
 
 	$proyects = get_posts($args);
+	$actualcount = count($proyects);
+	$actual = $offset + $actualcount;
+	$proyect_items['total'] = $noitems;
+	$proyect_items['actual'] = $actual;
+	$proyect_items['isfinalquery'] = $actual == $noitems  ? 'limit' : 'remaining';
 
 	//El template para mustache
 	
@@ -72,6 +91,7 @@ function germina_proyects_by_term() {
 	}
 
 	$output = json_encode($proyect_items);
+
 	echo $output;
 
 	die();

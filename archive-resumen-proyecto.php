@@ -11,6 +11,9 @@
 		
 
 		<div class="col-md-4 col-md-offset-1 filter-column" data-id="proyect-nav">
+			<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">
+				Filtrar por <i class="fa fa-chevron-down"></i>
+			</h4>
 			<?php get_template_part('parts/content/proyects-filter');?>
 		</div>
 		<div class="content col-md-7">

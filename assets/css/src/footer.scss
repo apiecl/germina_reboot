@@ -1,6 +1,13 @@
 footer.germina-footer {
-	border-top: 1px solid transparentize($gris, 0.6);
+	background-color: $sandia;
+	color: white;
 	text-align: right;
+	address {
+		color: white;
+	}
+	a {
+		color: white;
+	}
 	.licencia {
 		float: left;
 		text-align: left;

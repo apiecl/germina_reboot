@@ -11,25 +11,18 @@
 <div class="item-<?php echo $type;?> tax-item-medium animated zoomIn <?php echo $image_class;?>" data-type="<?php echo $type;?>">
 
 		<a class="block-item-link" href="<?php echo get_permalink($args['id']);?>" title="<?php echo $title;?>">
-
 			<div class="tax-item-content-wrapper">
-				<div class="tax-item-meta-top">
-					<span class="tipo"><?php echo $label;?></span> <i class="fa fa-angle-left"></i>
-					<span class="area"><?php echo $area;?></span>
-				</div>
-
 				<h4><?php echo $title;?></h4>
-
 				<div class="tax-item-meta-bottom">
-
-					<span class="temas">
+					<div class="temas">
+						<span>Temas: </span>
 						<?php echo $temas;?>
-					</span>
+					</div>
 				</div>
 			</div>
 
 			<?php if($post_thumbnail):?>
-			<img src="<?php echo $post_thumbnail;?>" alt="<?php echo $title;?>">
+				<img src="<?php echo $post_thumbnail;?>" alt="<?php echo $title;?>">
 			<?php endif;?>
 		</a>
 

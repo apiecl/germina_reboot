@@ -1,79 +1,80 @@
 //Proyect Item
 
-.tax-item-medium
- {
-	padding:12px;
-	outline:1px solid #ccc;
-	margin:12px 0;
-	transition:all linear 0.4s;
-	background-repeat:no-repeat;
-	background-position:left;
-	background-color:white;
-	background-size: contain;
-	position: relative;
-}
+// .tax-item-medium {
+// 	padding: 12px;
+// 	outline: 1px solid #ccc;
+// 	margin: 12px 0;
+// 	transition: all linear 0.4s;
+// 	background-repeat: no-repeat;
+// 	background-position: left;
+// 	background-color: white;
+// 	background-size: contain;
+// 	position: relative;
+// }
 
-.tax-item-medium.with-image {
-	padding-right:130px;
-	min-height:120px;
-}
+// .tax-item-medium.with-image {
+// 	padding-right: 130px;
+// 	min-height: 120px;
+// }
 
-.tax-item-medium img {
-	position: absolute;
-	top:0;
-	right:0;
-	width:120px;
-	height:120px;
-}
+// .tax-item-medium img {
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	width: 120px;
+// 	height: 120px;
+// }
 
-.tax-item-content-wrapper {
-}
+// .tax-item-content-wrapper {
+// }
 
-.tax-item-medium.with-image .tax-item-meta-top {
-	background-color:white;
-	display:inline-block;
-	padding:1px 3px;
-}
+// .tax-item-medium.with-image .tax-item-meta-top {
+// 	background-color: white;
+// 	display: inline-block;
+// 	padding: 1px 3px;
+// }
 
-.tax-item-medium:hover
- {
- 	outline:1px solid desaturate($sandia, 10%);
-}
+// .tax-item-medium:hover {
+// 	outline: 1px solid desaturate($sandia, 10%);
+// }
 
-.tax-item-medium h4
- {
-	color:$grisoscuro;
-	margin-top:0;
-	margin-bottom:6px;
-}
+// .tax-item-medium h4 {
+// 	color: $sandia;
+// 	margin-top: 0;
+// 	margin-bottom: 6px;
+// }
 
-.tax-item-meta-top {
-	font-size:12px;
-	color:$pelorous;
-	text-transform:uppercase;
-}
+// .tax-item-meta-top {
+// 	font-size: 12px;
+// 	color: $pelorous;
+// 	text-transform: uppercase;
+// }
 
-.tax-item-meta-bottom {
-	font-size:12px;
-	color:$sandia;
-	text-transform:uppercase;
-}
+// .tax-item-meta-bottom {
+// 	font-size: 14px;
+// 	color: $pelorous;
+// 	font-style: normal;
+// 	span {
+// 		display: block;
+// 		color: #333;
+// 	}
+// }
 
 //Small
 
 .tax-item-small {
-	padding:0;
-	color:$gris;
-	margin-bottom:12px;
+	padding: 0;
+	color: $gris;
+	margin-bottom: 12px;
 }
 
 .tax-item-small:hover h4 {
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 .tax-item-small h4 {
-	font-size:16px;
-	margin-top:0;
-	margin-bottom:6px;
-	color:$grisoscuro;
+	font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 6px;
+	color: $grisoscuro;
 }

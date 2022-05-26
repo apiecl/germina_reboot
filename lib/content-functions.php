@@ -127,7 +127,7 @@ function germina_theplainterms($postid, $taxonomy, $before = '', $separator = ',
 
 	if($terms):
 		foreach($terms as $term) {
-			$termnames[] = $term->name;
+			$termnames[] = '<i>' . $term->name . '</i>';
 		}
 
 		$termstring = implode($separator, $termnames);
@@ -152,7 +152,7 @@ function germina_getplainterms($postid, $taxonomy, $before = '', $separator = ',
 		if($terms):
 
 			foreach($terms as $term) {
-				$termnames[] = $term->name;
+				$termnames[] = '<i>' . $term->name . '</i>';
 			}
 
 

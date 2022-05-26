@@ -144,6 +144,13 @@ $(document).ready(function () {
                         el.addClass("active");
                     }
                 });
+
+                //Colapsable de filtros para móvil
+                $(".filter-heading-toggle").on("click", function () {
+                    let dataTarget = $($(this).attr("data-target"));
+                    $(this).toggleClass("active");
+                    dataTarget.toggleClass("active");
+                });
             }
 
             // Executes in SM, MD and LG breakpoints

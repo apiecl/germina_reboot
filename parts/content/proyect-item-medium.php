@@ -22,11 +22,7 @@ if($thumbnail_src) {
 <div class="proyect-item-medium zoomIn <?php echo $class;?>">
 		
 	<a class="block-item-link" href="<?php echo get_permalink($proyect_id);?>" title="<?php echo get_the_title($proyect_id);?>">
-		<div class="proyect-item-meta-top">
-			<span class="area"><?php germina_theplainterms($proyect_id, 'areas', '', ', ');?> | </span>
-			<span class="fecha"><?php echo $year;?></span>
-		</div>
-
+		
 		<h4><?php echo get_the_title($proyect_id);?></h4>
 
 		<div class="proyect-item-meta-bottom">
@@ -35,9 +31,9 @@ if($thumbnail_src) {
 				
 			<?php endif;?>
 			
-			<span class="temas">
-				<?php germina_theplainterms( $proyect_id, 'tema', 'Temas: ', ', ' );?>
-			</span>
+			<div class="temas">
+				<?php germina_theplainterms( $proyect_id, 'tema', '<span>Temas:</span> ', ', ' );?>
+			</div>
 		</div>
 		<img src="<?php echo $thumbnail_src;?>" alt="<?php echo get_the_title($proyect_id);?>">
 	</a>
