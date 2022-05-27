@@ -8,6 +8,11 @@ body.admin-bar .navbar {
 	background-color: transparentize(white, 0.2);
 }
 
+.navbar-fixed-top .navbar-collapse,
+.navbar-fixed-bottom .navbar-collapse {
+	max-height: 90vh;
+}
+
 .navbar li.menu-item.memoria {
 	a {
 		width: 80px;
@@ -25,7 +30,6 @@ body.admin-bar .navbar {
 		a {
 			width: 100%;
 			text-align: left;
-			padding: 16px 0 16px 26px;
 		}
 	}
 }
@@ -69,6 +73,43 @@ body.admin-bar .navbar {
 
 #germina-menu.navbar-collapse {
 	position: relative;
+	transition: all ease-in 0.2s;
+	.navbar-nav li a {
+		transition: all ease-in 0.2s;
+	}
+}
+
+.navbar-collapse {
+	.navbar-nav a.dropdown-toggle {
+		display: flex;
+		justify-content: space-between;
+		border-bottom: 1px solid $newsandia;
+		i {
+			margin-right: 12px;
+		}
+	}
+}
+
+#germina-menu .navbar-collapse.in {
+	border-top: 1px solid $navbar-border-color;
+	background-color: $newsandia;
+
+	.open > a,
+	.open > a:hover,
+	.open > a:focus {
+		background-color: white;
+	}
+	.navbar-nav li a {
+		color: white;
+	}
+
+	.dropdown-menu {
+		background-color: white;
+		border-radius: 0;
+		> li > a {
+			color: $sandia;
+		}
+	}
 }
 
 @media screen and (min-width: $grid-float-breakpoint) {
@@ -104,14 +145,9 @@ body.admin-bar .navbar {
 }
 
 .navbar-nav li a {
-	text-transform: lowercase;
 	font-size: 15px;
 	font-family: $headingsfont;
 	font-weight: 400;
-}
-
-.navbar-collapse.in {
-	border-top: 1px solid $navbar-border-color;
 }
 
 .navbar-brand {

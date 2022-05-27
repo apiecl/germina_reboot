@@ -88,6 +88,10 @@
 
 .germina-video-container {
 	background-color: $cafe;
+	video {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .germina-video-container .video-germina {

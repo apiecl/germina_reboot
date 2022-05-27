@@ -103,6 +103,7 @@
 	border: 1px solid $bodyblack;
 	font-size: 14px;
 	margin-bottom: 0;
+	margin-top: 0;
 
 	i {
 		font-size: 18px;
@@ -153,7 +154,7 @@
 .tax-item-small,
 .proyect-item-small {
 	padding: 12px;
-	color: $grisoscuro;
+	color: $sandia;
 	margin-bottom: 12px;
 	outline: 1px solid #ccc;
 	background-color: white;
@@ -167,8 +168,8 @@
 .proyect-item-small h4 {
 	font-size: 16px;
 	margin-top: 0;
-	margin-bottom: 6px;
-	color: $grisoscuro;
+	margin-bottom: 12px;
+	color: $sandia;
 }
 
 .not-found-message {

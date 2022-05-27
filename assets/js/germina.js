@@ -5825,10 +5825,12 @@ $(document).ready(function () {
 
     $("#taxonomy-accordion").on("shown.bs.collapse", function () {
         $(".panel-collapse.in").prev(".panel-heading").addClass("active");
+        $(".panel-collapse.in").parent(".panel-default").addClass("active");
     });
 
-    $("#taxonomy-accordion").on("hidden.bs.collapse", function () {
+    $("#taxonomy-accordion").on("hide.bs.collapse", function () {
         $(".panel-heading").removeClass("active");
+        $(".panel-default.active").removeClass("active");
     });
 
     // Wrap IIFE around your code

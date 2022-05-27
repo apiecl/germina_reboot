@@ -17,7 +17,7 @@
 
 			<div class="col-md-3 item-image">
 
-			<?php the_post_thumbnail( 'medium' );?>
+				<?php the_post_thumbnail( 'medium' );?>
 
 			</div>
 

@@ -16,16 +16,16 @@ a.block-item-link:hover {
 	background-color: white;
 	outline: 1px solid #ccc;
 	transition: all ease-in 0.4s;
-}
+	margin-bottom: 12px;
+	h4 {
+		font-size: 16px;
+		color: $sandia;
+		margin-top: 0;
+	}
 
-.item-small:hover {
-	outline: 1px solid desaturate($sandia, 10%);
-}
-
-.item-small h4 {
-	font-size: 16px;
-	color: $gris;
-	margin-top: 0;
+	&:hover {
+		outline: 1px solid desaturate($sandia, 10%);
+	}
 }
 
 //Item medium
