@@ -5833,6 +5833,17 @@ $(document).ready(function () {
         $(".panel-default.active").removeClass("active");
     });
 
+    $('a[data-toggle="showparent"]').on("click", function () {
+        $("#taxonomy-accordion").show();
+        $(".subpanel").not(".hidden").addClass("hidden");
+    });
+
+    $(".childterms-call").on("click", function () {
+        let slug = $(this).attr("data-termslug");
+        $("#taxonomy-accordion").hide();
+        $("#childpanel-" + slug).removeClass("hidden");
+    });
+
     // Wrap IIFE around your code
     (function ($, viewport) {
         $(document).ready(function () {

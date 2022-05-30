@@ -4921,46 +4921,72 @@ button.loadmore {
 .proyects-by-year-nav .btn, .proyects-by-year-nav div.pagination a, div.pagination .proyects-by-year-nav a, .proyects-by-year-nav a#cancel-comment-reply-link {
   margin-bottom: 4px; }
 
-.tax-filter .panel-default.active {
+.tax-filter .panel-default.active,
+.subterm-filter .panel-default.active {
   border-color: #a23036; }
 
-.tax-filter .panel-heading {
+.tax-filter .panel-heading,
+.subterm-filter .panel-heading {
   background-color: white;
   transition: all ease-in 0.2s; }
-  .tax-filter .panel-heading h4 {
+  .tax-filter .panel-heading h4,
+  .subterm-filter .panel-heading h4 {
     font-family: "Lato", sans-serif;
     font-weight: 400; }
-    .tax-filter .panel-heading h4 a {
+    .tax-filter .panel-heading h4 a,
+    .subterm-filter .panel-heading h4 a {
       display: flex;
       justify-content: space-between; }
-      .tax-filter .panel-heading h4 a i {
+      .tax-filter .panel-heading h4 a i,
+      .subterm-filter .panel-heading h4 a i {
         transition: transform ease-in 0.1s; }
-      .tax-filter .panel-heading h4 a:hover, .tax-filter .panel-heading h4 a:focus {
+      .tax-filter .panel-heading h4 a:hover, .tax-filter .panel-heading h4 a:focus,
+      .subterm-filter .panel-heading h4 a:hover,
+      .subterm-filter .panel-heading h4 a:focus {
         text-decoration: none; }
-  .tax-filter .panel-heading.active {
+  .tax-filter .panel-heading.active,
+  .subterm-filter .panel-heading.active {
     background-color: #a23036;
     color: white; }
-    .tax-filter .panel-heading.active i {
+    .tax-filter .panel-heading.active i,
+    .subterm-filter .panel-heading.active i {
       transform: rotate(180deg); }
 
-.tax-filter .panel-body {
+.tax-filter .panel-body,
+.subterm-filter .panel-body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
-  .tax-filter .panel-body .btn, .tax-filter .panel-body div.pagination a, div.pagination .tax-filter .panel-body a, .tax-filter .panel-body a#cancel-comment-reply-link {
+  .tax-filter .panel-body .btn, .tax-filter .panel-body div.pagination a, div.pagination .tax-filter .panel-body a, .tax-filter .panel-body a#cancel-comment-reply-link,
+  .subterm-filter .panel-body .btn,
+  .subterm-filter .panel-body div.pagination a,
+  div.pagination .subterm-filter .panel-body a,
+  .subterm-filter .panel-body a#cancel-comment-reply-link {
     border-color: #ec5a5e;
     color: #ec5a5e;
     margin: 4px;
     white-space: break-spaces; }
-    .tax-filter .panel-body .btn:hover, .tax-filter .panel-body div.pagination a:hover, div.pagination .tax-filter .panel-body a:hover, .tax-filter .panel-body a#cancel-comment-reply-link:hover {
+    .tax-filter .panel-body .btn:hover, .tax-filter .panel-body div.pagination a:hover, div.pagination .tax-filter .panel-body a:hover, .tax-filter .panel-body a#cancel-comment-reply-link:hover,
+    .subterm-filter .panel-body .btn:hover,
+    .subterm-filter .panel-body div.pagination a:hover,
+    div.pagination .subterm-filter .panel-body a:hover,
+    .subterm-filter .panel-body a#cancel-comment-reply-link:hover {
       background-color: #a23036;
       color: white;
       border-color: white; }
-    .tax-filter .panel-body .btn.active, .tax-filter .panel-body div.pagination a.active, div.pagination .tax-filter .panel-body a.active, .tax-filter .panel-body a.active#cancel-comment-reply-link {
+    .tax-filter .panel-body .btn.active, .tax-filter .panel-body div.pagination a.active, div.pagination .tax-filter .panel-body a.active, .tax-filter .panel-body a.active#cancel-comment-reply-link,
+    .subterm-filter .panel-body .btn.active,
+    .subterm-filter .panel-body div.pagination a.active,
+    div.pagination .subterm-filter .panel-body a.active,
+    .subterm-filter .panel-body a.active#cancel-comment-reply-link {
       background-color: #a23036;
       border-color: white;
       color: white; }
-    .tax-filter .panel-body .btn.loadingbtn, .tax-filter .panel-body div.pagination a.loadingbtn, div.pagination .tax-filter .panel-body a.loadingbtn, .tax-filter .panel-body a.loadingbtn#cancel-comment-reply-link {
+    .tax-filter .panel-body .btn.loadingbtn, .tax-filter .panel-body div.pagination a.loadingbtn, div.pagination .tax-filter .panel-body a.loadingbtn, .tax-filter .panel-body a.loadingbtn#cancel-comment-reply-link,
+    .subterm-filter .panel-body .btn.loadingbtn,
+    .subterm-filter .panel-body div.pagination a.loadingbtn,
+    div.pagination .subterm-filter .panel-body a.loadingbtn,
+    .subterm-filter .panel-body a.loadingbtn#cancel-comment-reply-link {
       animation: germinaloading infinite 0.8s; }
 
 @keyframes germinaloading {

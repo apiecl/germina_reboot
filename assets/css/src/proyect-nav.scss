@@ -50,7 +50,8 @@ button.loadmore {
 	margin-bottom: 4px;
 }
 
-.tax-filter {
+.tax-filter,
+.subterm-filter {
 	.panel-default.active {
 		border-color: $darksandia;
 	}
