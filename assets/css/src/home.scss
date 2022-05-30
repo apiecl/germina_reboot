@@ -30,7 +30,7 @@
 	position: relative;
 	width: 360px;
 	height: 159px;
-	margin: 0;
+	margin: 0 auto;
 	animation-name: logofade;
 	animation-duration: 4s;
 	animation-iteration-count: 1;
@@ -38,8 +38,8 @@
 	animation-timing-function: ease;
 	animation-fill-mode: forwards;
 
-	@media screen and (max-width: 359px) {
-		width: 320px;
+	@media screen and (max-width: $screen-sm) {
+		width: 240px;
 		height: auto;
 	}
 }
@@ -59,10 +59,11 @@
 	animation-fill-mode: forwards;
 	animation-delay: 2.3s;
 
-	@media screen and (max-width: 359px) {
-		left: 203px;
-		width: 9px;
-		height: 61px;
+	@media screen and (max-width: $screen-sm) {
+		left: 151px;
+		width: 8px;
+		height: 45px;
+		bottom: 32px;
 	}
 }
 
@@ -159,5 +160,37 @@ address {
 	address {
 		clear: both;
 		margin-top: 24px;
+	}
+}
+
+.metodologia {
+	background-color: $grisfondo;
+	text-align: center;
+	padding: 24px 0;
+	h2 {
+		font-size: 20px;
+	}
+	.metodologia-list {
+		display: flex;
+		padding: 32px 0;
+		align-items: center;
+		justify-content: center;
+		li {
+			list-style: none;
+			margin: 0 24px;
+			@media screen and (max-width: $screen-sm) {
+				margin: 0 6px;
+			}
+			img {
+				margin-bottom: 6px;
+			}
+			span {
+				display: block;
+				text-align: left;
+				@media screen and (max-width: $screen-sm) {
+					font-size: 12px;
+				}
+			}
+		}
 	}
 }

@@ -26,26 +26,49 @@
 
 
 		
-		<address class="datos-contacto">
-			<div class="licencia">
-				<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
-			</div>
-			<p><a target="_blank" href="<?php echo $enlace_direccion;?>"><i class="fa fa-map-marker"></i> <?php echo $direccion;?> - <?php echo $comuna;?> - <?php echo $ciudad;?></a></p>
-			<p><a href="tel:<?php echo $fono;?>"><i class="fa fa-phone"></i><?php echo $fono; ?></a>
+		<address class="datos-contacto row">
+			<div class="col-md-6 col-sm-12 col-md-push-6">
+				<h4>Dirección</h4>
 
-			<?php if ( $fono2 ) : ?>
-				<a href="tel:<?php echo $fono2;?>"><i class="fa fa-mobile fa-fw"></i><?php echo $fono2;?></a>
-			<?php endif; ?>
+				<p class="address-button"><a target="_blank" href="<?php echo $enlace_direccion;?>"><i class="fa fa-map-marker"></i> <?php echo $direccion;?> - <?php echo $comuna;?> - <?php echo $ciudad;?></a></p>
 
-				<span class="separator hidden-xs">|</span>
-				<br class="visible-xs"/>
-				<a href="mailto:<?php echo $email;?>" title="Escríbenos un mail">
-					<i class="fa fa-fw fa-envelope"></i> <?php echo $email;?>
-				</a>
 
-				<span class="separator hidden-xs">-</span>
+				<h4>Teléfono</h4>
 
-				<a style="display:inline-block;" href="<?php echo $facebook;?>" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a> - <a style="display:inline-block" href="<?php echo $linkedin;?>"><i class="fa fa-fw fa-linkedin"></i> Linkedin </a>
+				<p class="address-button"><a href="tel:<?php echo $fono;?>"><i class="fa fa-phone"></i><?php echo $fono; ?></a></p>
+
+				<?php if ( $fono2 ) : ?>
+					<p class="address-button"><a href="tel:<?php echo $fono2;?>"><i class="fa fa-mobile fa-fw"></i><?php echo $fono2;?></a></p>
+				<?php endif; ?>
+
 				
-			</p>
+				<h4>Correo</h4>
+				<p class="address-button">
+					<a href="mailto:<?php echo $email;?>" title="Escríbenos un mail">
+						<i class="fa fa-fw fa-envelope"></i> <?php echo $email;?>
+					</a>
+				</p>
+
+			</div>
+
+			<div class="col-md-6 col-sm-12 col-md-pull-6">
+
+				<h4>Redes Sociales</h4>
+
+				<p class="address-button">
+					<a style="display:inline-block;" href="<?php echo $facebook;?>" target="_blank"><i class="fa fa-fw fa-facebook-square"></i></a>
+				</p>
+				
+				<p class="address-button">
+					<a style="display:inline-block" href="<?php echo $linkedin;?>"><i class="fa fa-fw fa-linkedin"></i></a>
+				</p> 
+
+
+				<div class="licencia">
+					<h4>Licencia Creative Commons</h4>
+					<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons" src="<?php bloginfo('template_url');?>/assets/img/cc_button.svg" /></a>
+				</div>
+
+			</div>
+
 		</address>

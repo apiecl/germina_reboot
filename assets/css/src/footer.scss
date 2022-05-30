@@ -1,7 +1,11 @@
 footer.germina-footer {
-	background-color: $sandia;
+	background-color: $newsandia;
 	color: white;
 	text-align: right;
+	h4 {
+		margin-top: 24px;
+	}
+
 	address {
 		color: white;
 	}
@@ -9,12 +13,34 @@ footer.germina-footer {
 		color: white;
 	}
 	.licencia {
-		float: left;
-		text-align: left;
-		@media screen and (max-width: $screen-sm) {
-			float: none;
-			text-align: right;
-			margin-bottom: 6px;
+	}
+
+	.address-button {
+		display: inline-block;
+	}
+
+	.address-button a {
+		color: $newsandia;
+		display: inline-block;
+		background-color: white;
+		border-radius: 4px;
+		box-shadow: 0 0 6px $darksandia;
+		margin: 12px 4px;
+		padding: 12px;
+		font-size: 18px;
+		border: 1px solid $newsandia;
+		i {
+			font-size: 24px;
 		}
+		&:hover {
+			text-decoration: none;
+			color: white;
+			border: 1px solid white;
+			background-color: $newsandia;
+		}
+	}
+
+	img {
+		margin-top: 4px;
 	}
 }

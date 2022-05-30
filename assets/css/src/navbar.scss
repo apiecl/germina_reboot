@@ -5,7 +5,43 @@ body.admin-bar .navbar {
 .navbar {
 	border: 0;
 	border-bottom: 1px solid transparentize($navbar-border-color, 0.6);
-	background-color: transparentize(white, 0.2);
+	background-color: white;
+}
+
+.navbar-default #germina-menu .navbar-nav > li > a,
+.navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
+	color: $sandia;
+}
+
+.navbar-default #germina-menu .navbar-nav > li > a {
+	@media screen and (max-width: $screen-md) {
+		font-size: 20px;
+	}
+}
+
+.navbar-default #germina-menu .navbar-nav .dropdown.open {
+	border-bottom: 1px solid $sandia;
+	font-size: 16px;
+}
+
+.navbar-default #germina-menu .navbar-nav .dropdown-menu {
+	animation-duration: 0.5s;
+	animation-fill-mode: both;
+	animation-name: slideIn;
+}
+
+@keyframes slideIn {
+	0% {
+		transform: translateY(1rem);
+	}
+
+	100% {
+		transform: translateY(0rem);
+	}
+
+	0% {
+		transform: translateY(1rem);
+	}
 }
 
 .navbar-fixed-top .navbar-collapse,
@@ -69,6 +105,7 @@ body.admin-bar .navbar {
 	margin-top: 22px;
 	margin-bottom: 0;
 	padding: 8px;
+	border-radius: 4px;
 }
 
 #germina-menu.navbar-collapse {
@@ -83,7 +120,11 @@ body.admin-bar .navbar {
 	.navbar-nav a.dropdown-toggle {
 		display: flex;
 		justify-content: space-between;
-		border-bottom: 1px solid $newsandia;
+
+		@media screen and (max-width: $screen-md) {
+			border-bottom: 1px solid $newsandia;
+		}
+
 		i {
 			margin-right: 12px;
 		}
@@ -99,6 +140,7 @@ body.admin-bar .navbar {
 	.open > a:focus {
 		background-color: white;
 	}
+
 	.navbar-nav li a {
 		color: white;
 	}
@@ -148,6 +190,7 @@ body.admin-bar .navbar {
 	font-size: 15px;
 	font-family: $headingsfont;
 	font-weight: 400;
+	color: $sandia;
 }
 
 .navbar-brand {
@@ -174,8 +217,8 @@ body.admin-bar .navbar {
 			transform: translateX(60px);
 		}
 		&.fa-times {
-			left: 6px;
-			top: 2px;
+			left: 8px;
+			top: 4px;
 			transform: translateX(0);
 		}
 	}
