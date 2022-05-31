@@ -2321,10 +2321,10 @@ tbody.collapse.in {
   font-size: 16px;
   text-align: left;
   list-style: none;
-  background-color: #fbfbfb;
+  background-color: #f7f7f7;
   background-clip: padding-box;
   border: 1px solid rgba(87, 87, 86, 0.8);
-  border: 1px solid rgba(87, 87, 86, 0.8);
+  border: 1px solid #a23036;
   border-radius: 8px;
   -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175); }
@@ -2764,7 +2764,7 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
     .nav > li > a {
       position: relative;
       display: block;
-      padding: 10px 8px; }
+      padding: 10px 16px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
         background-color: #eeeeee; }
@@ -2873,7 +2873,7 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
 
 .navbar {
   position: relative;
-  min-height: 62px;
+  min-height: 80px;
   margin-bottom: 22px;
   border: 1px solid transparent; }
   .navbar:before, .navbar:after {
@@ -2978,8 +2978,8 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
 
 .navbar-brand {
   float: left;
-  height: 62px;
-  padding: 20px 15px;
+  height: 80px;
+  padding: 29px 15px;
   font-size: 20px;
   line-height: 22px; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -2996,8 +2996,8 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
   float: right;
   padding: 9px 10px;
   margin-right: 15px;
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 23px;
+  margin-bottom: 23px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -3016,7 +3016,7 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
       display: none; } }
 
 .navbar-nav {
-  margin: 10px -15px; }
+  margin: 14.5px -15px; }
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -3044,8 +3044,8 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
       .navbar-nav > li {
         float: left; }
         .navbar-nav > li > a {
-          padding-top: 20px;
-          padding-bottom: 20px; } }
+          padding-top: 29px;
+          padding-bottom: 29px; } }
 
 .navbar-form {
   padding: 10px 15px;
@@ -3055,8 +3055,8 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 13px;
-  margin-bottom: 13px; }
+  margin-top: 22px;
+  margin-bottom: 22px; }
   @media (min-width: 768px) {
     .navbar-form .form-group {
       display: inline-block;
@@ -3124,18 +3124,18 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
   border-bottom-left-radius: 0; }
 
 .navbar-btn {
-  margin-top: 13px;
-  margin-bottom: 13px; }
+  margin-top: 22px;
+  margin-bottom: 22px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, div.pagination .btn-group-sm > a.navbar-btn, .btn-group-sm > a.navbar-btn#cancel-comment-reply-link {
-    margin-top: 14.5px;
-    margin-bottom: 14.5px; }
+    margin-top: 23.5px;
+    margin-bottom: 23.5px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, div.pagination .btn-group-xs > a.navbar-btn, .btn-group-xs > a.navbar-btn#cancel-comment-reply-link {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    margin-top: 29px;
+    margin-bottom: 29px; }
 
 .navbar-text {
-  margin-top: 20px;
-  margin-bottom: 20px; }
+  margin-top: 29px;
+  margin-bottom: 29px; }
   @media (min-width: 768px) {
     .navbar-text {
       float: left;
@@ -3158,7 +3158,7 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
     color: #555; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
       color: #555;
-      background-color: white; }
+      background-color: transparent; }
   .navbar-default .navbar-text {
     color: #ec5a5e; }
   .navbar-default .navbar-nav > li > a {
@@ -3980,7 +3980,7 @@ button.close {
 
 body {
   background: #f7f7f7;
-  padding-top: 82px; }
+  padding-top: 100px; }
 
 body.post-type-archive-resumen-proyecto {
   display: flex;
@@ -5343,11 +5343,33 @@ body.admin-bar .navbar {
 .navbar {
   border: 0;
   border-bottom: 1px solid rgba(87, 87, 86, 0.2);
-  background-color: white; }
+  background-color: #cb3c43;
+  min-height: 80; }
 
 .navbar-default #germina-menu .navbar-nav > li > a,
 .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
-  color: #ec5a5e; }
+  color: white; }
+  .navbar-default #germina-menu .navbar-nav > li > a:hover,
+  .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a:hover {
+    background-color: #f7f7f7;
+    color: #cb3c43; }
+    @media screen and (min-width: 992px) {
+      .navbar-default #germina-menu .navbar-nav > li > a:hover,
+      .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a:hover {
+        background-color: #cb3c43;
+        color: white; } }
+  @media screen and (max-width: 992px) {
+    .navbar-default #germina-menu .navbar-nav > li > a,
+    .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
+      color: #cb3c43; } }
+
+.navbar-default #germina-menu .navbar-nav .open .dropdown-menu {
+  border-radius: 0;
+  min-width: 240px; }
+
+.navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
+  color: #cb3c43;
+  background-color: #f7f7f7; }
 
 @media screen and (max-width: 992px) {
   .navbar-default #germina-menu .navbar-nav > li > a {
@@ -5432,7 +5454,8 @@ body.admin-bar .navbar {
     .navbar-collapse .navbar-nav a.dropdown-toggle {
       border-bottom: 1px solid #cb3c43; } }
   .navbar-collapse .navbar-nav a.dropdown-toggle i {
-    margin-right: 12px; }
+    margin-right: 12px;
+    margin-left: 12px; }
 
 #germina-menu .navbar-collapse.in {
   border-top: 1px solid rgba(87, 87, 86, 0.8);
@@ -5462,7 +5485,7 @@ body.admin-bar .navbar {
       float: left; }
       .navbar-nav > li > a {
         padding-top: 32px;
-        padding-bottom: 8px; } }
+        padding-bottom: 26px; } }
 
 @media (max-width: 768px) {
   .navbar-nav > li > a {

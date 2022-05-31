@@ -242,9 +242,9 @@ $cursor-disabled: not-allowed !default;
 //## Dropdown menu container and contents.
 
 //** Background for the dropdown menu.
-$dropdown-bg: $alabaster !default;
+$dropdown-bg: $grisfondoclaro !default;
 //** Dropdown menu `border-color`.
-$dropdown-border: $navbar-border-color !default;
+$dropdown-border: $darksandia !default;
 //** Dropdown menu `border-color` **for IE8**.
 $dropdown-fallback-border: $navbar-border-color !default;
 //** Divider color for between dropdown items.
@@ -362,7 +362,7 @@ $container-lg: $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height: 62px !default;
+$navbar-height: 80px !default;
 $navbar-margin-bottom: 22px;
 $navbar-border-radius: 0;
 $navbar-padding-horizontal: floor(($grid-gutter-width / 2)) !default;
@@ -387,7 +387,7 @@ $navbar-default-link-disabled-bg: transparent !default;
 // Navbar brand label
 $navbar-default-brand-color: $navbar-default-link-color !default;
 $navbar-default-brand-hover-color: $navbar-default-link-color;
-$navbar-default-brand-hover-bg: white;
+$navbar-default-brand-hover-bg: transparent;
 
 // Navbar toggle
 $navbar-default-toggle-hover-bg: white !default;
@@ -424,7 +424,7 @@ $navbar-inverse-toggle-border-color: #333 !default;
 //##
 
 //=== Shared nav styles
-$nav-link-padding: 10px 8px !default;
+$nav-link-padding: 10px 16px !default;
 $nav-link-hover-bg: $gray-lighter !default;
 
 $nav-disabled-link-color: $gray-light !default;

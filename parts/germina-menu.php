@@ -7,7 +7,8 @@
         <i class="fa fa-times"></i>
       </button>
       <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>">
-        <img height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_gris_brand.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn">
+        <img height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_blanco.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn hidden-xs">
+        <img height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_color_brand.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn visible-xs">
       </a>
     </div>
 
