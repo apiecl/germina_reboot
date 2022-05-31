@@ -5353,15 +5353,15 @@ body.admin-bar .navbar {
   .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a:hover {
     background-color: #f7f7f7;
     color: #cb3c43; }
-    @media screen and (min-width: 992px) {
-      .navbar-default #germina-menu .navbar-nav > li > a:hover,
-      .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a:hover {
-        background-color: #cb3c43;
-        color: white; } }
   @media screen and (max-width: 992px) {
     .navbar-default #germina-menu .navbar-nav > li > a,
     .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
       color: #cb3c43; } }
+
+@media screen and (min-width: 992px) {
+  .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a:hover {
+    background-color: #cb3c43;
+    color: white; } }
 
 .navbar-default #germina-menu .navbar-nav .open .dropdown-menu {
   border-radius: 0;

@@ -16,14 +16,18 @@ body.admin-bar .navbar {
 	&:hover {
 		background-color: $grisfondoclaro;
 		color: $newsandia;
-		@media screen and (min-width: $screen-md) {
-			background-color: $newsandia;
-			color: white;
-		}
 	}
 
 	@media screen and (max-width: $screen-md) {
 		color: $newsandia;
+	}
+}
+.navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
+	&:hover {
+		@media screen and (min-width: $screen-md) {
+			background-color: $newsandia;
+			color: white;
+		}
 	}
 }
 
