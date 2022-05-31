@@ -2764,7 +2764,7 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
     .nav > li > a {
       position: relative;
       display: block;
-      padding: 10px 16px; }
+      padding: 10px 10px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
         background-color: #eeeeee; }
@@ -5412,18 +5412,6 @@ body.admin-bar .navbar {
     width: 100%;
     text-align: left; } }
 
-.navbar li.menu-item-305 > a {
-  width: 80px;
-  line-height: 16px;
-  padding-top: 27px;
-  text-align: center; }
-
-@media screen and (max-width: 768px) {
-  .navbar li.menu-item-305 > a {
-    width: 100%;
-    text-align: left;
-    padding: 16px 0 16px 26px; } }
-
 .caret {
   transition: transform linear 0.2s; }
 
@@ -5440,6 +5428,16 @@ body.admin-bar .navbar {
   margin-bottom: 0;
   padding: 8px;
   border-radius: 4px; }
+
+.searchmenu {
+  margin-top: 0; }
+
+ul.searchmenu > li > a {
+  max-width: 90px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 21.5px 10px; }
 
 #germina-menu.navbar-collapse {
   position: relative;
@@ -5806,15 +5804,8 @@ footer.germina-footer {
   .modal-dialog {
     margin: 0; } }
 
-.searchmenu {
-  margin-top: 0; }
-
 .search-menu-form {
   padding: 12px; }
-
-.searchmenu a {
-  padding-top: 32px;
-  padding-bottom: 8px; }
 
 .search-field {
   border: 1px solid #ccc;
@@ -5839,7 +5830,7 @@ footer.germina-footer {
 
 .search-in-place-type-page,
 .search-in-place-type-post {
-  color: #AAA;
+  color: #aaa;
   text-transform: uppercase;
   font-size: 12px; }
 
@@ -5868,7 +5859,7 @@ footer.germina-footer {
   float: right; }
 
 .search-in-place .item.active {
-  background-color: #FFF; }
+  background-color: #fff; }
 
 .search-in-place .title {
   display: block;

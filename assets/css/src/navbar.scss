@@ -98,21 +98,21 @@ body.admin-bar .navbar {
 	}
 }
 
-.navbar li.menu-item-305 {
-	> a {
-		width: 80px;
-		line-height: 16px;
-		padding-top: 27px;
-		text-align: center;
-	}
-	@media screen and (max-width: $screen-sm) {
-		> a {
-			width: 100%;
-			text-align: left;
-			padding: 16px 0 16px 26px;
-		}
-	}
-}
+// .navbar li.menu-item-305 {
+// 	> a {
+// 		width: 80px;
+// 		line-height: 16px;
+// 		padding-top: 27px;
+// 		text-align: center;
+// 	}
+// 	@media screen and (max-width: $screen-sm) {
+// 		> a {
+// 			width: 100%;
+// 			text-align: left;
+// 			padding: 16px 0 16px 26px;
+// 		}
+// 	}
+// }
 
 .caret {
 	transition: transform linear 0.2s;
@@ -134,6 +134,18 @@ body.admin-bar .navbar {
 	margin-bottom: 0;
 	padding: 8px;
 	border-radius: 4px;
+}
+
+.searchmenu {
+	margin-top: 0;
+}
+
+ul.searchmenu > li > a {
+	max-width: 90px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	padding: 21.5px 10px;
 }
 
 #germina-menu.navbar-collapse {
