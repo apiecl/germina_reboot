@@ -4989,6 +4989,13 @@ button.loadmore {
     .subterm-filter .panel-body a.loadingbtn#cancel-comment-reply-link {
       animation: germinaloading infinite 0.8s; }
 
+.subterm-filter .fa-stack {
+  line-height: 0.9em;
+  width: 1em;
+  height: 1em; }
+  .subterm-filter .fa-stack i.fa-times {
+    color: #cb3c43; }
+
 @keyframes germinaloading {
   0% {
     opacity: 1; }
@@ -5359,6 +5366,19 @@ body.admin-bar .navbar {
       color: #cb3c43; } }
 
 @media screen and (min-width: 992px) {
+  .navbar-default #germina-menu .navbar-nav .dropdown.open > a.dropdown-toggle {
+    background-color: #f7f7f7;
+    color: #cb3c43; }
+    .navbar-default #germina-menu .navbar-nav .dropdown.open > a.dropdown-toggle i {
+      transform: rotate(180deg); } }
+
+@media screen and (min-width: 992px) {
+  .navbar-default #germina-menu .navbar-nav .dropdown > a.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
+@media screen and (min-width: 992px) {
   .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a:hover {
     background-color: #cb3c43;
     color: white; } }
@@ -5432,12 +5452,17 @@ body.admin-bar .navbar {
 .searchmenu {
   margin-top: 0; }
 
-ul.searchmenu > li > a {
-  max-width: 90px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  padding: 21.5px 10px; }
+@media screen and (min-width: 768px) {
+  ul.searchmenu > li > a {
+    max-width: 90px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 21.5px 10px; } }
+
+@media screen and (max-width: 768px) {
+  ul.searchmenu > li > a.dropdown-toggle {
+    display: block; } }
 
 #germina-menu.navbar-collapse {
   position: relative;
@@ -5453,7 +5478,8 @@ ul.searchmenu > li > a {
       border-bottom: 1px solid #cb3c43; } }
   .navbar-collapse .navbar-nav a.dropdown-toggle i {
     margin-right: 12px;
-    margin-left: 12px; }
+    margin-left: 12px;
+    transition: all ease-in 0.2s; }
 
 #germina-menu .navbar-collapse.in {
   border-top: 1px solid rgba(87, 87, 86, 0.8);

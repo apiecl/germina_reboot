@@ -22,6 +22,25 @@ body.admin-bar .navbar {
 		color: $newsandia;
 	}
 }
+
+.navbar-default #germina-menu .navbar-nav .dropdown.open > a.dropdown-toggle {
+	@media screen and (min-width: $screen-md) {
+		background-color: $grisfondoclaro;
+		color: $newsandia;
+		i {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.navbar-default #germina-menu .navbar-nav .dropdown > a.dropdown-toggle {
+	@media screen and (min-width: $screen-md) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
 .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
 	&:hover {
 		@media screen and (min-width: $screen-md) {
@@ -141,11 +160,18 @@ body.admin-bar .navbar {
 }
 
 ul.searchmenu > li > a {
-	max-width: 90px;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	padding: 21.5px 10px;
+	@media screen and (min-width: $screen-sm) {
+		max-width: 90px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		padding: 21.5px 10px;
+	}
+	@media screen and (max-width: $screen-sm) {
+		&.dropdown-toggle {
+			display: block;
+		}
+	}
 }
 
 #germina-menu.navbar-collapse {
@@ -168,6 +194,7 @@ ul.searchmenu > li > a {
 		i {
 			margin-right: 12px;
 			margin-left: 12px;
+			transition: all ease-in 0.2s;
 		}
 	}
 }

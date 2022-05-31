@@ -76,7 +76,12 @@
 		<div class="panel panel-default subpanel hidden" id="childpanel-<?php echo $parent_term->slug;?>">
 			<div class="panel-heading" role="tab" id="heading-<?php echo $childtermarr->name;?>">
 				<h4 class="panel-title">
-					<a role="button" data-toggle="showparent" data-parent="#taxonomy-accordion" href="#subtermpanel-<?php echo $parent_term->slug;?>"><?php echo $parent_term->name;?> <i class="fa fa-times"></i></a>
+					<a role="button" data-toggle="showparent" data-parent="#taxonomy-accordion" href="#subtermpanel-<?php echo $parent_term->slug;?>"><?php echo $parent_term->name;?> 
+					<span class="fa-stack fa-lg">
+						<i class="fa fa-circle fa-stack-1x"></i>
+						<i class="fa fa-times fa-stack-1x"></i>
+					</span>
+					</a>
 				</h4>
 			</div>
 			

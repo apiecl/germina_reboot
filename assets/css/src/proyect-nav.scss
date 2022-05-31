@@ -110,6 +110,17 @@ button.loadmore {
 	}
 }
 
+.subterm-filter {
+	.fa-stack {
+		line-height: 0.9em;
+		width: 1em;
+		height: 1em;
+		i.fa-times {
+			color: $newsandia;
+		}
+	}
+}
+
 @keyframes germinaloading {
 	0% {
 		opacity: 1;
