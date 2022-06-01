@@ -23,7 +23,7 @@ define( 'GERMINA_CATNOVEDADES', 16 );
 define( 'GERMINA_ARTICULOS', 6 );
 define( 'FACEBOOK_PAGE', 'https://web.facebook.com/Germina-conocimiento-para-la-acci%C3%B3n-2157914764440494/' );
 define( 'LINKEDIN_PAGE', 'https://www.linkedin.com/company/11536225/' );
-define( 'GERMINA_VERSION', '1.8.8' );
+define( 'GERMINA_VERSION', '1.9' );
 
 /**
  * LIBRARIES
@@ -81,9 +81,10 @@ add_action('after_setup_theme', 'germina_imagesizes');
 function germina_menus() {
 	register_nav_menus(
 		array(
-			'principal' => 'Menú Superior',
-			'portada' => 'Novedades en portada',
-			'portafolio' => 'Contenidos de Portafolio'
+			'principal' 	=> 'Menú Superior',
+			'portada' 		=> 'Novedades en portada',
+			'portafolio' 	=> 'Contenidos de Portafolio',
+			'cedoc'			=> 'Centro de Documentación en portada'
 		)
 	);
 }

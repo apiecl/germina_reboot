@@ -71,4 +71,43 @@
 	</div>
 </section>
 
+		<?php 
+		$args = array(
+			'title' 		=> 'Centro de Documentación',
+			'subtitle' 		=> 'Últimas publicaciones',
+			'menu_name'		=> 'cedoc',
+			'content_type'	=> 'documentos',
+			'max_items'		=> 4
+			);
+
+		cur_get_template( 'home-section-cedoc.php', $args, 'parts/' );
+		
+		?>
+
+		<?php 
+		$args = array(
+			'title' 		=> 'Proyectos',
+			'subtitle' 		=> 'Más recientes',
+			'menu_name'		=> 'portafolio',
+			'content_type'	=> 'proyectos',
+			'max_items'		=> 4
+			);
+
+		cur_get_template( 'home-section-cedoc.php', $args, 'parts/' );
+		
+		?>
+
+		<?php 
+		$args = array(
+			'title' 		=> 'Novedades',
+			'subtitle' 		=> 'Más recientes',
+			'menu_name'		=> 'portada',
+			'content_type'	=> 'novedades',
+			'max_items'		=> 4
+			);
+
+		cur_get_template( 'home-section-cedoc.php', $args, 'parts/' );
+		
+		?>
+
 <?php get_footer();?>

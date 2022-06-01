@@ -59,15 +59,20 @@ article header.header-single {
 .single-item-meta-top {
 	font-size: 16px;
 	color: $gris;
+
 	> div {
 		margin-top: 24px;
 	}
+
 	.taxname {
 		display: inline-block;
 		padding: 3px;
 		text-transform: uppercase;
 		background-color: $celeste;
 		color: white;
+		&.ambitos-de-accion {
+			background-color: $morado;
+		}
 	}
 
 	a {
@@ -187,4 +192,13 @@ footer.single-footer {
 	max-width: 555px;
 	height: auto;
 	margin: 24px auto;
+}
+
+.proyect-item-label {
+	background-color: $verdeagua;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 3px;
+	color: white;
+	font-size: 14px;
 }

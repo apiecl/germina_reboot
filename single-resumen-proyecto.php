@@ -29,22 +29,11 @@
 
 
 			<article <?php post_class();?> >
-
 				<header class="header-single-proyecto">
-
 					<div class="single-item-meta-top">
-						<span class="item-type"><a href="<?php echo get_permalink(GERMINA_PROYECTOS);?>" title="Ir a archivo de proyectos">proyectos</a> </span> <i class="fa fa-angle-right"></i>
-						<span class="area"><?php the_terms( $post->ID, 'areas', '', ' . ' );?></span>
+						<span class="proyect-item-label">PROYECTOS</span>
 					</div>
-
 					<h1 class="post-title"><?php the_title();?></h1>
-
-					<div class="single-item-meta-bottom">
-						<p class="year"><?php the_terms( $post->ID, 'year', '', ' . ' );?></p>
-						<p class="tema"><?php the_terms( $post->ID, 'tema', 'temas <i class="fa fa-angle-right"></i> ', ' &bull; ' );?></p>
-					</div>
-
-					
 				</header>
 
 				<div class="row">
@@ -53,11 +42,8 @@
 							<?php the_content();?>
 						</div>
 					</div>
-
 				</div>
-
 				<?php get_template_part('parts/footer-single');?>
-
 			</article>
 
 			<?php get_template_part('parts/content/proyects-related');?>

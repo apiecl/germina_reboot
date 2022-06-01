@@ -768,3 +768,18 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+
+function germina_getplaincats($postid) {
+	$cats = get_the_category($postid);
+	//excluir publicaciones para mostrar solo el sub
+	$catstring = '';
+	
+	foreach($cats as $cat) {
+		if($cat->slug != 'publicaciones') {
+			$catstring = $cat->name;
+		}
+	}
+
+	return $catstring;
+
+}

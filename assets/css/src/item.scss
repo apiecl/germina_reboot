@@ -36,20 +36,52 @@ a.block-item-link:hover {
 	background-color: white;
 	padding: 12px;
 	transition: all linear 0.4s;
+	position: relative;
+
 	&:hover {
 		outline: 1px solid desaturate($sandia, 10%);
 	}
 
 	h2 {
-		margin: 0;
+		margin: 0 0 24px 0;
 		font-size: 24px;
 		color: $sandia;
 		line-height: 1.5em;
+		@media screen and (max-width: $screen-sm) {
+			font-size: 18px;
+		}
 	}
 
 	.item-meta-bottom {
 		color: $celeste;
 		font-size: 14px;
+	}
+
+	.item-meta-bottom,
+	.proyect-item-meta-bottom {
+		i {
+			font-style: normal;
+			text-decoration: underline;
+		}
+	}
+
+	&.with-image a {
+		min-height: 176px;
+		h2 {
+			padding-right: 224px;
+		}
+
+		img {
+			@media screen and (max-width: $screen-sm) {
+				max-width: 120px;
+			}
+			height: auto;
+		}
+		@media screen and (max-width: $screen-sm) {
+			h2 {
+				padding-right: 120px;
+			}
+		}
 	}
 }
 
@@ -113,7 +145,8 @@ a.block-item-link:hover {
 	text-transform: uppercase;
 }
 
-.item-large img {
+.item-large img,
+.item-medium img {
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -126,5 +159,40 @@ a.block-item-link:hover {
 
 	.item-large img {
 		display: none;
+	}
+}
+
+.item-type {
+	background-color: $grisfondo;
+	color: #333;
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 3px;
+}
+
+.item-medium.item-medium-proyecto {
+	background-color: $newsandia;
+	h2 {
+		color: white;
+	}
+	.proyect-item-meta-bottom {
+		div {
+			margin-bottom: 6px;
+			color: white;
+		}
+		span {
+			color: #000;
+		}
+		i {
+			color: white;
+		}
+	}
+
+	.item-meta-top {
+		.item-type {
+			i {
+				font-style: normal;
+			}
+		}
 	}
 }
