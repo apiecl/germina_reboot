@@ -4788,8 +4788,12 @@ header h1.post-title {
     margin-bottom: 0; } }
 
 .section-description-title, .portafolio h1 {
-  font-size: 24px;
-  color: #313130; }
+  color: #313130;
+  font-weight: normal;
+  font-size: 18px; }
+  @media screen and (max-width: 768px) {
+    .section-description-title, .portafolio h1 {
+      font-size: 14px; } }
 
 h1.section-description-title, .portafolio h1 {
   font-size: 18px; }
@@ -4888,7 +4892,12 @@ body.page.page-template-proyectos {
   border: 1px solid #121211;
   font-size: 14px;
   margin-bottom: 0;
-  margin-top: 0; }
+  margin-top: 0;
+  transition: all ease-in 0.3s; }
+  @media screen and (max-width: 768px) {
+    .filter-heading-toggle {
+      margin-left: 16px;
+      margin-right: 16px; } }
   .filter-heading-toggle i {
     font-size: 18px; }
   @media screen and (max-width: 768px) {
@@ -4897,7 +4906,8 @@ body.page.page-template-proyectos {
   .filter-heading-toggle.active {
     border-color: #dededd;
     background-color: white;
-    color: #ec5a5e; }
+    color: #ec5a5e;
+    margin: 0; }
   @media screen and (min-width: 992px) {
     .filter-heading-toggle {
       background-color: white;
@@ -5310,9 +5320,6 @@ a.sharebutton:hover {
   margin-bottom: 6px;
   color: #313130; }
 
-body.category-publicaciones {
-  background-color: #ecebe6; }
-
 .publicaciones-wrapper .publicacion-item-medium {
   float: left;
   margin-right: 28px;
@@ -5369,8 +5376,57 @@ body.category-publicaciones {
   margin-bottom: 6px;
   color: #313130; }
 
-article.type-page {
-  margin: 24px 0; }
+body.page article.type-page {
+  margin: 24px 0;
+  padding: 0; }
+  body.page article.type-page header {
+    text-align: center;
+    background-color: #f7f7f7;
+    padding: 12px 0;
+    border-top: 1px solid #585857;
+    border-bottom: 1px solid #585857; }
+    body.page article.type-page header h1,
+    body.page article.type-page header h2 {
+      margin: 0;
+      color: #ec5a5e; }
+  body.page article.type-page .post-content {
+    border-top: 24px solid #f7f7f7;
+    padding: 24px; }
+
+header.section-header {
+  text-align: center;
+  background-color: #f7f7f7;
+  padding: 12px 0;
+  border-top: 1px solid #585857;
+  border-bottom: 1px solid #585857;
+  margin-bottom: 24px; }
+  header.section-header h1,
+  header.section-header h2 {
+    margin: 0;
+    color: #ec5a5e; }
+    @media screen and (max-width: 768px) {
+      header.section-header h1,
+      header.section-header h2 {
+        font-size: 27px; } }
+
+.page-template-somos .equipo-intro {
+  padding: 12px; }
+
+.page-template-somos .sub-content-equipo {
+  border-top: 24px solid #f7f7f7; }
+
+.page-template-somos .sub-content.colaboran {
+  padding: 0 24px;
+  border-top: 0;
+  margin-top: 0; }
+  .page-template-somos .sub-content.colaboran h3 {
+    color: #ec5a5e;
+    border-top: 1px solid #585857;
+    border-bottom: 1px solid #585857;
+    padding: 12px 0;
+    margin: 24px auto;
+    max-width: 300px;
+    font-weight: 300; }
 
 @media screen and (max-width: 768px) {
   article.type-page {
@@ -5613,14 +5669,12 @@ body.admin-bar .navbar {
 .navbar-toggle .icon-bar {
   height: 4px; }
 
-header.header-areas {
-  margin-bottom: 24px; }
-
 .page-template-display-areas .post-content {
   margin-bottom: 24px; }
 
 .areas-tabs {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  padding: 0 24px 0 24px; }
 
 .areas-tabs .tab-pane {
   padding: 15px;
@@ -5677,8 +5731,8 @@ header.header-areas {
 
 .ambitos ul li:before {
   display: inline-block;
-  content: '\f140';
-  font-family: 'FontAwesome';
+  content: "\f140";
+  font-family: "FontAwesome";
   color: #99bb67;
   font-size: 16px;
   margin-right: 6px; }
@@ -5717,6 +5771,8 @@ ul.proycol {
 
 .sub-content-equipo {
   margin-top: 24px; }
+  .sub-content-equipo h2 {
+    text-align: center; }
 
 .sub-content h3 {
   color: #575756;

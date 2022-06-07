@@ -1,69 +1,60 @@
 <?php
-/**
- * Category page
- *
- * for categories-publicaciones
- *
- * @package germina_reboot
- */
-
+/*
+* Template Name: Centro de documentación
+*/
 ?>
 
 <?php get_header();?>
 
-<div class="container">
+<div class="container archive-proyectos">
 	<div class="row">
-		<div class="content col-md-9 col-md-offset-2">
-
-		<?php 
-			$pagedtext = '';
-			$paged = get_query_var('paged');
-			$totalpages = $wp_query->max_num_pages;
-			if($totalpages > 1) {
-				if($paged != 0) {
-					$pagedtext = '- página ' . $paged . ' de ' . $totalpages;
-				} else {
-					$pagedtext = '- página 1 de ' . $totalpages;
-				}	
-			}
-			
-
-		?>
 		
-		<h1 class="section-description-title"><?php single_cat_title( );?> <span class="pagination-info"><?php echo $pagedtext;?></span></h2>
-
-		<div class="publicaciones-wrapper">
-
-			<?php if ( have_posts() ) : while ( have_posts() ) : the_post();?>
-				
-				<?php 
-					$args = array(
-						'id' => $post->ID,
-						);
-			
-					cur_get_template('publicacion-item-medium.php', $args, '/parts/content/');
-					
-				?>
-			
-			<?php endwhile;?>
-			
+		<div class="col-md-12">
+			<header class="section-header">
+				<h1>Centro de documentación</h1>
+			</header>	
 		</div>
 
-		<div class="pagination">
-				<div class="nav-previous alignright"><?php next_posts_link( 'Más antiguos <i class="fa fa-angle-right"></i>' ); ?></div>
-				<div class="nav-next alignleft"><?php previous_posts_link( '<i class="fa fa-angle-left"></i> Más recientes' ); ?></div>
+		<div class="col-md-4 col-md-offset-1 filter-column" data-id="proyect-nav">
+			<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">
+				Filtrar por <i class="fa fa-chevron-down"></i>
+			</h4>
+			<?php get_template_part('parts/content/documents-filter');?>
+		</div>
+		<div class="content col-md-7">
+
+			<h2 class="section-description-title taxtitle">Últimas publicaciones</h2>
+
+			<div class="full-proylist row">
+				<!-- Ajax call for proyects -->
+				<!-- Llamada inicial de los últimos proyectos -->
+
+				<?php
+
+					$args = array(
+								'post_type' 	=> 'post',
+								'numberposts' 	=> 6,
+								'post_status' 	=> 'publish',
+								'cat'			=> 10
+							);
+
+					$lastproyects = get_posts( $args );
+
+					foreach( $lastproyects as $lastproyect ) {
+						
+						$args['id'] = $lastproyect->ID;
+						$args['year'] = germina_getplainterms( $lastproyect->ID, 'year', '', ' • ');
+						cur_get_template('proyect-item-medium.php', $args, 'parts/content/');
+
+					}
+
+				?>
 			</div>
 
-		<?php else : ?>
-			<article class="not_found">
-				<header>
-					<h1>No encontrado</h1>
-					<p><?php get_search_form( true );?></p>
-				</header>
-			</article>
-		<?php endif;?>
-		
+			<button class="proyect-call btn btn-info loadmore hidden" data-reuse="1"><i class="fa fa-plus"></i> Cargar más proyectos</button>
+
 		</div>
+
 	</div>
 </div>
 

@@ -21,22 +21,27 @@ WebFontConfig = {
 //Loader para proyectos
 
 function germina_loadprojects(element) {
-    var proyectlist = $("div.full-proylist");
-    var proyectsPerPage = parseInt(germina.proyects_per_page);
-    var linkitem = element;
-    var termid = element.attr("data-term");
-    var tax = element.attr("data-tax");
-    var reuse = parseInt(element.attr("data-reuse"));
-    var curOffset = 0;
-    var taxtitle = $("h2.taxtitle");
-    var loadmore = $("body button.loadmore");
+    let proyectlist = $("div.full-proylist");
+    let proyectsPerPage = parseInt(germina.proyects_per_page);
+    let linkitem = element;
+    let termid = element.attr("data-term");
+    let tax = element.attr("data-tax");
+    let reuse = parseInt(element.attr("data-reuse"));
+    let curOffset = 0;
+    let taxtitle = $("h2.taxtitle");
+    let loadmore = $("body button.loadmore");
+    let itemtype = element.attr("data-type")
+        ? element.attr("data-type")
+        : "resumen-proyecto";
+
+    console.log(itemtype);
 
     $(".proyect-call").removeClass("active");
 
     console.log(reuse);
 
     if (reuse !== 0) {
-        var curOffset = proyectsPerPage * reuse;
+        let curOffset = proyectsPerPage * reuse;
 
         //añade un contador al data-reuse
 
@@ -55,6 +60,7 @@ function germina_loadprojects(element) {
             termid: termid,
             tax: tax,
             offset: curOffset,
+            itemtype: itemtype,
         },
         success: function (response) {
             if (reuse === 0) {
@@ -94,6 +100,7 @@ function germina_loadprojects(element) {
                     loadmore
                         .attr("data-term", content["term_id"])
                         .attr("data-tax", content["tax_slug"])
+                        .attr("data-type", itemtype)
                         .removeClass("hidden")
                         .fadeIn();
                 }

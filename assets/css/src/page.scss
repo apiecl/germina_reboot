@@ -1,10 +1,67 @@
-article.type-page {
-	margin:24px 0;
+body.page article.type-page {
+	margin: 24px 0;
+	padding: 0;
+	header {
+		text-align: center;
+		background-color: $grisfondoclaro;
+		padding: 12px 0;
+		border-top: 1px solid $grismedio;
+		border-bottom: 1px solid $grismedio;
+		h1,
+		h2 {
+			margin: 0;
+			color: $sandia;
+		}
+	}
+	.post-content {
+		border-top: 24px solid $grisfondoclaro;
+		padding: 24px;
+	}
 }
 
-@media screen and (max-width:$screen-sm) {
+header.section-header {
+	text-align: center;
+	background-color: $grisfondoclaro;
+	padding: 12px 0;
+	border-top: 1px solid $grismedio;
+	border-bottom: 1px solid $grismedio;
+	margin-bottom: 24px;
+	h1,
+	h2 {
+		margin: 0;
+		color: $sandia;
+		@media screen and (max-width: $screen-sm) {
+			font-size: 27px;
+		}
+	}
+}
+
+.page-template-somos {
+	.equipo-intro {
+		padding: 12px;
+	}
+	.sub-content-equipo {
+		border-top: 24px solid $grisfondoclaro;
+	}
+	.sub-content.colaboran {
+		padding: 0 24px;
+		border-top: 0;
+		margin-top: 0;
+		h3 {
+			color: $sandia;
+			border-top: 1px solid $grismedio;
+			border-bottom: 1px solid $grismedio;
+			padding: 12px 0;
+			margin: 24px auto;
+			max-width: 300px;
+			font-weight: 300;
+		}
+	}
+}
+
+@media screen and (max-width: $screen-sm) {
 	article.type-page {
-		margin:0;
+		margin: 0;
 	}
 }
 
@@ -12,35 +69,35 @@ article.type-page {
 }
 
 .mailchimp-box h3 {
-	margin-top:6px;
-	font-size:16px;
+	margin-top: 6px;
+	font-size: 16px;
 }
 
 .page-template-contacto article.type-page {
-	padding-top:24px;
-	border:1px solid #ccc;
-	margin:48px 0 72px 0;
+	padding-top: 24px;
+	border: 1px solid #ccc;
+	margin: 48px 0 72px 0;
 }
 
-@media screen and (max-width:$screen-sm) {
+@media screen and (max-width: $screen-sm) {
 	.page-template-contacto article.type-page {
-		margin:0;
-		border:0;
+		margin: 0;
+		border: 0;
 	}
 }
 
 .page-template-contacto #mc_embed_signup form {
-	padding:16px 0 0 0;
+	padding: 16px 0 0 0;
 }
 
 .page-template-contacto h1.post-title {
-	margin-top:0;
+	margin-top: 0;
 }
 
 .page-template-contacto .post-content address {
-	font-size:18px;
+	font-size: 18px;
 }
 
 .page-template-contacto .post-content address p {
-	margin-bottom:6px;
+	margin-bottom: 6px;
 }

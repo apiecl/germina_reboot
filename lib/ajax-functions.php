@@ -20,9 +20,10 @@ function germina_proyects_by_term() {
 	$tax = $_POST['tax'];
 	$offset = $_POST['offset'];
 	$output = '';
+	$type = $_POST['itemtype'];
 
 	$countargs = array(
-		'post_type' => 'resumen-proyecto',
+		'post_type' => $type,
 		'posts_per_page' => -1,
 		'tax_query'	=> array(
 				array(
@@ -32,11 +33,27 @@ function germina_proyects_by_term() {
 					)
 				)
 	);
+	if($type == 'post') {
+		$countargs['tax_query'] = array(
+									array(
+										'taxonomy' 	=> 'category',
+										'field'		=> 'term_id',
+										'terms'		=> 10
+										),
+									array(
+										'taxonomy' 	=> $tax,
+										'field'		=> 'term_id',
+										'terms'		=> $termid
+										)
+									);
+
+	};
+
 	$countitems = new WP_Query($countargs);
 	$noitems = $countitems->post_count;
 
 	$args = array(
-				'post_type' => 'resumen-proyecto',
+				'post_type' => $type,
 				'numberposts' => 5,
 				'orderby' => 'date',
 				'order' => 'DESC',
@@ -50,6 +67,21 @@ function germina_proyects_by_term() {
 								'terms' => $termid
 								)
 							);
+
+	if($type == 'post') {
+		$args['tax_query'] = array(
+									array(
+										'taxonomy' 	=> 'category',
+										'field'		=> 'term_id',
+										'terms'		=> 10
+										),
+									array(
+										'taxonomy' 	=> $tax,
+										'field'		=> 'term_id',
+										'terms'		=> $termid
+										)
+									);
+	};
 
 	$proyects = get_posts($args);
 	$actualcount = count($proyects);

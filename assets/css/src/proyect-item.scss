@@ -104,6 +104,11 @@
 	font-size: 14px;
 	margin-bottom: 0;
 	margin-top: 0;
+	@media screen and (max-width: $screen-sm) {
+		margin-left: 16px;
+		margin-right: 16px;
+	}
+	transition: all ease-in 0.3s;
 
 	i {
 		font-size: 18px;
@@ -117,6 +122,7 @@
 		border-color: $gris10;
 		background-color: white;
 		color: $sandia;
+		margin: 0;
 	}
 
 	@media screen and (min-width: $screen-md) {

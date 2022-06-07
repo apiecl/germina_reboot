@@ -1,25 +1,21 @@
 // publicaciones
 
-body.category-publicaciones {
-	background-color:lighten(#D5D4CA, 10%);	
-}
-
 .publicaciones-wrapper .publicacion-item-medium {
-	float:left;
-	margin-right:28px;
-	margin-bottom:28px;
-	overflow:hidden;
-	width:220px;
+	float: left;
+	margin-right: 28px;
+	margin-bottom: 28px;
+	overflow: hidden;
+	width: 220px;
 }
 
-@media screen and (max-width:$screen-sm) {
+@media screen and (max-width: $screen-sm) {
 	.publicaciones-wrapper .publicacion-item-medium {
-		text-align:center;
-		width:100%;	
-		float:none;
+		text-align: center;
+		width: 100%;
+		float: none;
 	}
 
 	.publicaciones-wrapper .publicacion-item-medium a {
-		margin:0 auto 12px auto;
+		margin: 0 auto 12px auto;
 	}
 }
