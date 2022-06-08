@@ -5155,24 +5155,41 @@ article header.header-single {
   font-size: 14px; }
 
 .single-item-meta-top {
-  font-size: 16px;
+  font-size: 14px;
   color: #575756; }
-  .single-item-meta-top > div {
-    margin-top: 24px; }
-  .single-item-meta-top .taxname {
+  .single-item-meta-top ul.post-categories {
+    display: flex;
+    padding: 0;
+    margin: 0; }
+    .single-item-meta-top ul.post-categories li {
+      list-style: none; }
+      .single-item-meta-top ul.post-categories li a {
+        color: #333;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all ease-in 0.2s;
+        display: inline-block;
+        padding: 3px 6px;
+        margin: 0 3px 0 0;
+        background-color: #d9d9d9; }
+        .single-item-meta-top ul.post-categories li a:hover {
+          background-color: #f7f7f7; }
+
+.single-item-meta-bottom {
+  font-size: 16px; }
+  .single-item-meta-bottom .single-tax-zone {
+    margin-bottom: 24px; }
+  .single-item-meta-bottom .taxname {
     display: inline-block;
     padding: 3px;
     text-transform: uppercase;
     background-color: #008aa7;
     color: white; }
-    .single-item-meta-top .taxname.ambitos-de-accion {
+    .single-item-meta-bottom .taxname.ambitos-de-accion {
       background-color: #83659f; }
-  .single-item-meta-top a {
+  .single-item-meta-bottom a {
     color: #008aa7;
     text-decoration: underline; }
-
-.single-item-meta-bottom {
-  font-size: 14px; }
 
 .post-content ul li {
   list-style: none;
@@ -5251,8 +5268,7 @@ footer.single-footer {
   padding-top: 16px;
   margin-top: 16px;
   margin-right: 0;
-  padding-right: 0;
-  border-top: 1px dotted #71716f; }
+  padding-right: 0; }
 
 .page .post-content .germina-video-container {
   max-width: 555px;
@@ -5467,6 +5483,12 @@ body.admin-bar .navbar {
   background-color: #cb3c43;
   min-height: 80; }
 
+@media screen and (max-width: 768px) {
+  .redes-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center; } }
+
 .navbar-default #germina-menu .navbar-nav > li > a,
 .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
   color: white; }
@@ -5477,7 +5499,10 @@ body.admin-bar .navbar {
   @media screen and (max-width: 992px) {
     .navbar-default #germina-menu .navbar-nav > li > a,
     .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
-      color: #cb3c43; } }
+      color: #cb3c43; }
+      .navbar-default #germina-menu .navbar-nav > li > a:focus,
+      .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a:focus {
+        background-color: #cb3c43; } }
 
 @media screen and (min-width: 992px) {
   .navbar-default #germina-menu .navbar-nav .dropdown.open > a.dropdown-toggle {
@@ -5529,6 +5554,10 @@ body.admin-bar .navbar {
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
   max-height: 90vh; }
+
+nav.navbar-fixed-top.unfolded {
+  min-height: 100vh;
+  background-color: #cb3c43; }
 
 .navbar li.menu-item.memoria a {
   width: 80px;
@@ -5595,20 +5624,43 @@ body.admin-bar .navbar {
     margin-left: 12px;
     transition: all ease-in 0.2s; }
 
-#germina-menu .navbar-collapse.in {
-  border-top: 1px solid rgba(87, 87, 86, 0.8);
+#germina-menu.navbar-collapse.in {
+  border-top: 1px solid white;
   background-color: #cb3c43; }
-  #germina-menu .navbar-collapse.in .open > a,
-  #germina-menu .navbar-collapse.in .open > a:hover,
-  #germina-menu .navbar-collapse.in .open > a:focus {
+  #germina-menu.navbar-collapse.in .open > a,
+  #germina-menu.navbar-collapse.in .open > a:hover,
+  #germina-menu.navbar-collapse.in .open > a:focus {
     background-color: white; }
-  #germina-menu .navbar-collapse.in .navbar-nav li a {
+  #germina-menu.navbar-collapse.in .navbar-nav li a {
     color: white; }
-  #germina-menu .navbar-collapse.in .dropdown-menu {
+  #germina-menu.navbar-collapse.in .dropdown-menu {
     background-color: white;
     border-radius: 0; }
-    #germina-menu .navbar-collapse.in .dropdown-menu > li > a {
-      color: #ec5a5e; }
+    #germina-menu.navbar-collapse.in .dropdown-menu > li > a {
+      color: #cb3c43; }
+  #germina-menu.navbar-collapse.in .dropdown.open > a {
+    color: #ec5a5e; }
+
+.navbar-header {
+  transition: all ease-in 0.4s;
+  position: relative; }
+  .navbar-header.open {
+    background-color: #cb3c43;
+    color: white; }
+    .navbar-header.open .navbar-toggle {
+      color: white;
+      background-color: #cb3c43;
+      border-color: white; }
+      .navbar-header.open .navbar-toggle i {
+        color: white; }
+  .navbar-header .logo-color {
+    display: none; }
+  @media screen and (max-width: 768px) {
+    .navbar-header .logo-blanco,
+    .navbar-header .logo-color {
+      position: absolute;
+      left: 12px;
+      top: 12px; } }
 
 @media screen and (min-width: 768px) {
   #germina-menu.navbar-collapse {
@@ -5642,7 +5694,7 @@ body.admin-bar .navbar {
   width: 170px; }
 
 .navbar-toggle {
-  margin-top: 16px;
+  margin-top: 26px;
   position: relative;
   width: 36px;
   height: 36px;
@@ -5905,19 +5957,25 @@ article.integrante-equipo header.header-equipo  {
   max-width: 100%;
   height: auto; }
 
-footer.germina-footer {
+footer.germina-footer,
+.redes-menu {
   background-color: #cb3c43;
   color: white;
   text-align: right; }
-  footer.germina-footer h4 {
+  footer.germina-footer h4,
+  .redes-menu h4 {
     margin-top: 24px; }
-  footer.germina-footer address {
+  footer.germina-footer address,
+  .redes-menu address {
     color: white; }
-  footer.germina-footer a {
+  footer.germina-footer a,
+  .redes-menu a {
     color: white; }
-  footer.germina-footer .address-button {
+  footer.germina-footer .address-button,
+  .redes-menu .address-button {
     display: inline-block; }
-  footer.germina-footer .address-button a {
+  footer.germina-footer .address-button a,
+  .redes-menu .address-button a {
     color: #cb3c43;
     display: inline-block;
     background-color: white;
@@ -5927,14 +5985,17 @@ footer.germina-footer {
     padding: 12px;
     font-size: 18px;
     border: 1px solid #cb3c43; }
-    footer.germina-footer .address-button a i {
+    footer.germina-footer .address-button a i,
+    .redes-menu .address-button a i {
       font-size: 24px; }
-    footer.germina-footer .address-button a:hover {
+    footer.germina-footer .address-button a:hover,
+    .redes-menu .address-button a:hover {
       text-decoration: none;
       color: white;
       border: 1px solid white;
       background-color: #cb3c43; }
-  footer.germina-footer img {
+  footer.germina-footer img,
+  .redes-menu img {
     margin-top: 4px; }
 
 .modal-content {

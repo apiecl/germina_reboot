@@ -57,11 +57,37 @@ article header.header-single {
 }
 
 .single-item-meta-top {
-	font-size: 16px;
+	font-size: 14px;
 	color: $gris;
 
-	> div {
-		margin-top: 24px;
+	ul.post-categories {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		li {
+			list-style: none;
+			a {
+				color: #333;
+				text-decoration: none;
+				text-transform: uppercase;
+				transition: all ease-in 0.2s;
+				display: inline-block;
+				padding: 3px 6px;
+				margin: 0 3px 0 0;
+				background-color: $grisfondo;
+				&:hover {
+					background-color: $grisfondoclaro;
+				}
+			}
+		}
+	}
+}
+
+.single-item-meta-bottom {
+	font-size: 16px;
+
+	.single-tax-zone {
+		margin-bottom: 24px;
 	}
 
 	.taxname {
@@ -79,10 +105,6 @@ article header.header-single {
 		color: $celeste;
 		text-decoration: underline;
 	}
-}
-
-.single-item-meta-bottom {
-	font-size: 14px;
 }
 
 .post-content ul li {
@@ -185,7 +207,6 @@ footer.single-footer {
 	margin-top: 16px;
 	margin-right: 0;
 	padding-right: 0;
-	border-top: 1px dotted lighten($gris, 10%);
 }
 
 .page .post-content .germina-video-container {

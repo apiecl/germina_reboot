@@ -4,6 +4,7 @@ $(document).ready(function () {
     console.log("scripts germina v");
     var body = $("body");
     var brand = $("a.navbar-brand");
+    var navbarwrap = $("nav.navbar-fixed-top");
     var navbar = $("#germina-menu");
     var togglenavbar = $(".navbar-toggle");
     var presentation = $(".presentation");
@@ -15,6 +16,9 @@ $(document).ready(function () {
     var ptypenavitems = $("div.ptype-nav a");
 
     var typebuttons = $("div.ptype-nav a");
+
+    let logocolor = $("img.logo-color");
+    let logoblanco = $("img.logo-blanco");
 
     typebuttons.each(function (index, element) {
         var filter = $(element).attr("data-filter");
@@ -136,6 +140,11 @@ $(document).ready(function () {
                         brand.show();
                         navbar.removeClass("without-brand");
                     }
+                    $(".navbar-header").addClass("open");
+                    logocolor.fadeOut(500, function () {
+                        logoblanco.fadeIn(500);
+                    });
+                    navbarwrap.addClass("unfolded");
                 });
 
                 navbar.on("hidden.bs.collapse", function () {
@@ -143,6 +152,11 @@ $(document).ready(function () {
                         brand.fadeOut();
                         navbar.addClass("without-brand");
                     }
+                    $(".navbar-header").removeClass("open");
+                    logocolor.fadeIn(500, function () {
+                        logoblanco.fadeOut(500);
+                    });
+                    navbarwrap.removeClass("unfolded");
                 });
 
                 //Botones que muestran navegación

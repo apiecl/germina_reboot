@@ -9,6 +9,14 @@ body.admin-bar .navbar {
 	min-height: 80;
 }
 
+.redes-menu {
+	@media screen and (max-width: $screen-sm) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
 .navbar-default #germina-menu .navbar-nav > li > a,
 .navbar-default #germina-menu .navbar-nav .open .dropdown-menu > li > a {
 	color: white;
@@ -20,6 +28,9 @@ body.admin-bar .navbar {
 
 	@media screen and (max-width: $screen-md) {
 		color: $newsandia;
+		&:focus {
+			background-color: $newsandia;
+		}
 	}
 }
 
@@ -94,6 +105,11 @@ body.admin-bar .navbar {
 .navbar-fixed-top .navbar-collapse,
 .navbar-fixed-bottom .navbar-collapse {
 	max-height: 90vh;
+}
+
+nav.navbar-fixed-top.unfolded {
+	min-height: 100vh;
+	background-color: $newsandia;
 }
 
 .navbar li.menu-item.memoria {
@@ -199,8 +215,8 @@ ul.searchmenu > li > a {
 	}
 }
 
-#germina-menu .navbar-collapse.in {
-	border-top: 1px solid $navbar-border-color;
+#germina-menu.navbar-collapse.in {
+	border-top: 1px solid white;
 	background-color: $newsandia;
 
 	.open > a,
@@ -217,7 +233,42 @@ ul.searchmenu > li > a {
 		background-color: white;
 		border-radius: 0;
 		> li > a {
-			color: $sandia;
+			color: $newsandia;
+		}
+	}
+
+	.dropdown.open > a {
+		color: $sandia;
+	}
+}
+
+.navbar-header {
+	transition: all ease-in 0.4s;
+	position: relative;
+
+	&.open {
+		background-color: $newsandia;
+		color: white;
+		.navbar-toggle {
+			color: white;
+			background-color: $newsandia;
+			border-color: white;
+			i {
+				color: white;
+			}
+		}
+	}
+
+	.logo-color {
+		display: none;
+	}
+
+	@media screen and (max-width: $screen-sm) {
+		.logo-blanco,
+		.logo-color {
+			position: absolute;
+			left: 12px;
+			top: 12px;
 		}
 	}
 }
@@ -268,7 +319,7 @@ ul.searchmenu > li > a {
 }
 
 .navbar-toggle {
-	margin-top: 16px;
+	margin-top: 26px;
 	position: relative;
 	width: 36px;
 	height: 36px;

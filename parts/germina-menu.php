@@ -7,8 +7,8 @@
         <i class="fa fa-times"></i>
       </button>
       <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>">
-        <img height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_blanco.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn hidden-xs">
-        <img height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_color_brand.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn visible-xs">
+        <img class="logo-blanco" height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_blanco.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn hidden-xs">
+        <img class="logo-color" height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_color_brand.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn visible-xs">
       </a>
     </div>
 
@@ -16,11 +16,11 @@
     <div class="collapse navbar-collapse" id="germina-menu">
      	<?php wp_nav_menu(
 				array(
-					'theme_location' => 'principal',
-					'menu_class' => 'nav navbar-nav animated fadeIn',
-					'depth' => 2,
-					'container' => false,
-					'walker' => new wp_bootstrap_navwalker()
+					'theme_location'   => 'principal',
+					'menu_class'       => 'nav navbar-nav animated fadeIn',
+					'depth'            => 2,
+					'container'        => false,
+					'walker'           => new wp_bootstrap_navwalker()
 					)
 				);?>
       <ul class="nav navbar-nav animated fadeIn searchmenu">
@@ -28,6 +28,12 @@
           <a title="Buscar" href="#" class="search-link-top dropdown-toggle" aria-haspopup="true" data-toggle="modal" data-target="#search-modal"><i class="fa fa-search"></i> buscar</a>
         </li>
       </ul>
+      
+      <div class="visible-xs">
+        <div class="redes-menu">
+          <?php get_template_part('parts/redes-sociales');?>
+        </div>
+      </div>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->

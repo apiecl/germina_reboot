@@ -32,10 +32,11 @@
 
 				<header class="header-single">
 					<div class="single-item-meta-top">
-						<span class="cats"><?php the_category(' . ');?></span> <i class="fa fa-angle-left"></i> <span class="fecha"><?php the_time('F Y');?></span>
+						<div class="cats"><?php the_category();?></div>
 					</div>
 					<h1 class="post-title"><?php the_title();?></h1>
-					<span class="autores">por <?php germina_authors();?></span>
+					<span class="fecha"><?php the_time('F Y');?></span>
+					<p class="autores">por <?php germina_authors();?></p>
 
 					
 				</header>
