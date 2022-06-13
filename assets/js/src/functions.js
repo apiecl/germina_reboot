@@ -50,8 +50,6 @@ function germina_loadprojects(element) {
         loadmore.attr("data-reuse", 1);
     }
 
-    $(".filter-heading-toggle").click();
-
     linkitem.addClass("loadingbtn");
 
     $.ajax({
@@ -68,6 +66,8 @@ function germina_loadprojects(element) {
             if (reuse === 0) {
                 proyectlist.empty();
             }
+
+            $(".filter-heading-toggle").click();
 
             var content = JSON.parse(response);
 
