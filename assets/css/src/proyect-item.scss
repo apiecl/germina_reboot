@@ -100,7 +100,7 @@
 	justify-content: space-between;
 	text-transform: uppercase;
 	background-color: $gris10;
-	border: 1px solid $bodyblack;
+	border: 1px solid $newsandia;
 	font-size: 14px;
 	margin-bottom: 0;
 	margin-top: 0;
@@ -112,6 +112,13 @@
 
 	i {
 		font-size: 18px;
+	}
+
+	span.labelorder {
+		text-transform: capitalize;
+		color: $newsandia;
+		position: absolute;
+		right: 70px;
 	}
 
 	@media screen and (max-width: $screen-sm) {
@@ -132,7 +139,8 @@
 	}
 }
 
-#taxonomy-accordion {
+#taxonomy-accordion,
+#order-accordion {
 	@media screen and (max-width: $screen-sm) {
 		max-height: 0;
 		padding: 0;

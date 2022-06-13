@@ -4,7 +4,10 @@
 */
 ?>
 
-<?php get_header();?>
+<?php get_header();
+	$category = $wp_query->query_vars['category_name'];
+	$categoryobj = get_category_by_slug( $category );
+?>
 
 <div class="container archive-proyectos">
 	<div class="row">
@@ -23,7 +26,7 @@
 		</div>
 		<div class="content col-md-7">
 
-			<h2 class="section-description-title taxtitle">Últimas publicaciones</h2>
+			<h2 class="section-description-title taxtitle"><?php echo $category == 'publicaciones' ? 'Últimas publicaciones' : $categoryobj->name;?></h2>
 
 			<div class="full-proylist row">
 				<!-- Ajax call for proyects -->
@@ -35,7 +38,13 @@
 								'post_type' 	=> 'post',
 								'numberposts' 	=> 6,
 								'post_status' 	=> 'publish',
-								'cat'			=> 10
+								'tax_query'		=> array(
+													array(
+														'taxonomy' 	=> 'category',
+														'field'   	=> 'slug',
+														'terms'		=> $category
+														)
+													)
 							);
 
 					$lastproyects = get_posts( $args );
@@ -51,7 +60,7 @@
 				?>
 			</div>
 
-			<button class="proyect-call btn btn-info loadmore hidden" data-reuse="1"><i class="fa fa-plus"></i> Cargar más proyectos</button>
+			<button class="proyect-call btn btn-info loadmore hidden" data-reuse="1"><i class="fa fa-plus"></i> Cargar más publicaciones</button>
 
 		</div>
 

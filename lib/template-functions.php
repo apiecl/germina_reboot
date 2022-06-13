@@ -56,3 +56,22 @@ function cur_locate_template( $template_name, $template_path = '', $default_path
         return false;
     }
 }
+
+add_filter('template_include', 'germina_subdocs');
+
+function germina_subdocs( $original_template ) {
+    //hace que se devuelva la plantilla de publicaciones para subs de publicaciones
+    global $post;
+    $args = array(
+        'taxonomy'  => 'category',
+        'child_of'  =>  10,
+        'fields'    => 'ids'
+    );
+    $subcats = get_terms($args);
+
+    if(is_category($subcats)) {
+        return TEMPLATEPATH . '/category-publicaciones.php';
+    } else {
+        return $original_template;
+    }
+}

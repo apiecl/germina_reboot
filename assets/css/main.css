@@ -4889,7 +4889,7 @@ body.page.page-template-proyectos {
   justify-content: space-between;
   text-transform: uppercase;
   background-color: #dededd;
-  border: 1px solid #121211;
+  border: 1px solid #cb3c43;
   font-size: 14px;
   margin-bottom: 0;
   margin-top: 0;
@@ -4900,6 +4900,11 @@ body.page.page-template-proyectos {
       margin-right: 16px; } }
   .filter-heading-toggle i {
     font-size: 18px; }
+  .filter-heading-toggle span.labelorder {
+    text-transform: capitalize;
+    color: #cb3c43;
+    position: absolute;
+    right: 70px; }
   @media screen and (max-width: 768px) {
     .filter-heading-toggle {
       cursor: pointer; } }
@@ -4915,12 +4920,14 @@ body.page.page-template-proyectos {
       color: #ec5a5e; } }
 
 @media screen and (max-width: 768px) {
-  #taxonomy-accordion {
+  #taxonomy-accordion,
+  #order-accordion {
     max-height: 0;
     padding: 0;
     overflow: hidden;
     transition: max-height 1s linear; }
-    #taxonomy-accordion.active {
+    #taxonomy-accordion.active,
+    #order-accordion.active {
       max-height: 1000px;
       height: auto; } }
 
@@ -4980,38 +4987,48 @@ button.loadmore {
   margin-bottom: 4px; }
 
 .tax-filter .panel-default.active,
-.subterm-filter .panel-default.active {
+.subterm-filter .panel-default.active,
+.order-filter .panel-default.active {
   border-color: #a23036; }
 
 .tax-filter .panel-heading,
-.subterm-filter .panel-heading {
+.subterm-filter .panel-heading,
+.order-filter .panel-heading {
   background-color: white;
   transition: all ease-in 0.2s; }
   .tax-filter .panel-heading h4,
-  .subterm-filter .panel-heading h4 {
+  .subterm-filter .panel-heading h4,
+  .order-filter .panel-heading h4 {
     font-family: "Lato", sans-serif;
     font-weight: 400; }
     .tax-filter .panel-heading h4 a,
-    .subterm-filter .panel-heading h4 a {
+    .subterm-filter .panel-heading h4 a,
+    .order-filter .panel-heading h4 a {
       display: flex;
       justify-content: space-between; }
       .tax-filter .panel-heading h4 a i,
-      .subterm-filter .panel-heading h4 a i {
+      .subterm-filter .panel-heading h4 a i,
+      .order-filter .panel-heading h4 a i {
         transition: transform ease-in 0.1s; }
       .tax-filter .panel-heading h4 a:hover, .tax-filter .panel-heading h4 a:focus,
       .subterm-filter .panel-heading h4 a:hover,
-      .subterm-filter .panel-heading h4 a:focus {
+      .subterm-filter .panel-heading h4 a:focus,
+      .order-filter .panel-heading h4 a:hover,
+      .order-filter .panel-heading h4 a:focus {
         text-decoration: none; }
   .tax-filter .panel-heading.active,
-  .subterm-filter .panel-heading.active {
+  .subterm-filter .panel-heading.active,
+  .order-filter .panel-heading.active {
     background-color: #a23036;
     color: white; }
     .tax-filter .panel-heading.active i,
-    .subterm-filter .panel-heading.active i {
+    .subterm-filter .panel-heading.active i,
+    .order-filter .panel-heading.active i {
       transform: rotate(180deg); }
 
 .tax-filter .panel-body,
-.subterm-filter .panel-body {
+.subterm-filter .panel-body,
+.order-filter .panel-body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
@@ -5019,7 +5036,11 @@ button.loadmore {
   .subterm-filter .panel-body .btn,
   .subterm-filter .panel-body div.pagination a,
   div.pagination .subterm-filter .panel-body a,
-  .subterm-filter .panel-body a#cancel-comment-reply-link {
+  .subterm-filter .panel-body a#cancel-comment-reply-link,
+  .order-filter .panel-body .btn,
+  .order-filter .panel-body div.pagination a,
+  div.pagination .order-filter .panel-body a,
+  .order-filter .panel-body a#cancel-comment-reply-link {
     border-color: #ec5a5e;
     color: #ec5a5e;
     margin: 4px;
@@ -5028,7 +5049,11 @@ button.loadmore {
     .subterm-filter .panel-body .btn:hover,
     .subterm-filter .panel-body div.pagination a:hover,
     div.pagination .subterm-filter .panel-body a:hover,
-    .subterm-filter .panel-body a#cancel-comment-reply-link:hover {
+    .subterm-filter .panel-body a#cancel-comment-reply-link:hover,
+    .order-filter .panel-body .btn:hover,
+    .order-filter .panel-body div.pagination a:hover,
+    div.pagination .order-filter .panel-body a:hover,
+    .order-filter .panel-body a#cancel-comment-reply-link:hover {
       background-color: #a23036;
       color: white;
       border-color: white; }
@@ -5036,7 +5061,11 @@ button.loadmore {
     .subterm-filter .panel-body .btn.active,
     .subterm-filter .panel-body div.pagination a.active,
     div.pagination .subterm-filter .panel-body a.active,
-    .subterm-filter .panel-body a.active#cancel-comment-reply-link {
+    .subterm-filter .panel-body a.active#cancel-comment-reply-link,
+    .order-filter .panel-body .btn.active,
+    .order-filter .panel-body div.pagination a.active,
+    div.pagination .order-filter .panel-body a.active,
+    .order-filter .panel-body a.active#cancel-comment-reply-link {
       background-color: #a23036;
       border-color: white;
       color: white; }
@@ -5044,7 +5073,11 @@ button.loadmore {
     .subterm-filter .panel-body .btn.loadingbtn,
     .subterm-filter .panel-body div.pagination a.loadingbtn,
     div.pagination .subterm-filter .panel-body a.loadingbtn,
-    .subterm-filter .panel-body a.loadingbtn#cancel-comment-reply-link {
+    .subterm-filter .panel-body a.loadingbtn#cancel-comment-reply-link,
+    .order-filter .panel-body .btn.loadingbtn,
+    .order-filter .panel-body div.pagination a.loadingbtn,
+    div.pagination .order-filter .panel-body a.loadingbtn,
+    .order-filter .panel-body a.loadingbtn#cancel-comment-reply-link {
       animation: germinaloading infinite 0.8s; }
 
 .subterm-filter .fa-stack {
@@ -5059,6 +5092,14 @@ button.loadmore {
     opacity: 1; }
   50% {
     opacity: 0.5; } }
+
+.order-filter.panel-group .panel + .panel {
+  margin-top: 0;
+  border-top: 0; }
+
+.order-filter.panel-group .panel-heading:hover, .order-filter.panel-group .panel-heading.active {
+  background-color: #cb3c43;
+  color: white; }
 
 .proyect-image {
   margin-right: -14px;
@@ -5655,6 +5696,9 @@ nav.navbar-fixed-top.unfolded {
         color: white; }
   .navbar-header .logo-color {
     display: none; }
+    @media screen and (max-width: 768px) {
+      .navbar-header .logo-color {
+        display: block; } }
   @media screen and (max-width: 768px) {
     .navbar-header .logo-blanco,
     .navbar-header .logo-color {
@@ -6125,6 +6169,29 @@ button.loadmore {
 span.pagination-info {
   text-transform: lowercase;
   color: #bbbbbb; }
+
+div.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0; }
+  div.pagination .pagination-info {
+    color: #333; }
+    div.pagination .pagination-info span {
+      color: #cb3c43; }
+  div.pagination .nav-next,
+  div.pagination .nav-previous {
+    width: 135px; }
+
+div.pagination a {
+  background-color: white;
+  color: #cb3c43;
+  border-color: #cb3c43;
+  transition: all ease-in 0.3s; }
+  div.pagination a:hover, div.pagination a:focus {
+    background-color: #cb3c43;
+    color: white;
+    border-color: #cb3c43; }
 
 .archive h1.section-description-title img.avatar, .archive .portafolio h1 img.avatar, .portafolio .archive h1 img.avatar {
   width: 60px;

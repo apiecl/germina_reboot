@@ -261,6 +261,9 @@ ul.searchmenu > li > a {
 
 	.logo-color {
 		display: none;
+		@media screen and (max-width: $screen-sm) {
+			display: block;
+		}
 	}
 
 	@media screen and (max-width: $screen-sm) {

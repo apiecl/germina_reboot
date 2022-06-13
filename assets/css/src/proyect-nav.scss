@@ -51,7 +51,8 @@ button.loadmore {
 }
 
 .tax-filter,
-.subterm-filter {
+.subterm-filter,
+.order-filter {
 	.panel-default.active {
 		border-color: $darksandia;
 	}
@@ -127,5 +128,20 @@ button.loadmore {
 	}
 	50% {
 		opacity: 0.5;
+	}
+}
+
+.order-filter.panel-group {
+	.panel + .panel {
+		margin-top: 0;
+		border-top: 0;
+	}
+
+	.panel-heading {
+		&:hover,
+		&.active {
+			background-color: $newsandia;
+			color: white;
+		}
 	}
 }

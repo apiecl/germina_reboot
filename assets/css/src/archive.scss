@@ -1,32 +1,60 @@
 span.pagination-info {
-	text-transform:lowercase;
-	color:lighten(#555, 40%);
+	text-transform: lowercase;
+	color: lighten(#555, 40%);
+}
+
+div.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 24px 0;
+	.pagination-info {
+		color: #333;
+		span {
+			color: $newsandia;
+		}
+	}
+
+	.nav-next,
+	.nav-previous {
+		width: 135px;
+	}
 }
 
 div.pagination a {
 	@extend .btn;
 	@extend .btn-info;
+	background-color: white;
+	color: $newsandia;
+	border-color: $newsandia;
+	transition: all ease-in 0.3s;
+	&:hover,
+	&:focus {
+		background-color: $newsandia;
+		color: white;
+		border-color: $newsandia;
+	}
 }
 
 .archive h1.section-description-title img.avatar {
-	width:60px;
-	height:60px;
-	margin-right:6px;
-	margin-bottom:0;
-	border-radius:50%;
-	float:left;
+	width: 60px;
+	height: 60px;
+	margin-right: 6px;
+	margin-bottom: 0;
+	border-radius: 50%;
+	float: left;
 }
 
 .infoautor {
-	color:lighten(#555, 40%);
-	display:block;
-	line-height:14px;
-	font-size:14px;
-	text-transform:lowercase;
-	margin-top:16px;
+	color: lighten(#555, 40%);
+	display: block;
+	line-height: 14px;
+	font-size: 14px;
+	text-transform: lowercase;
+	margin-top: 16px;
 }
 
 .ficha-autor {
-	overflow:hidden;
-	margin-bottom:12px;
+	overflow: hidden;
+	margin-bottom: 12px;
 }

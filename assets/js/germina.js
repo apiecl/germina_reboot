@@ -5657,6 +5657,8 @@ function germina_loadprojects(element) {
         loadmore.attr("data-reuse", 1);
     }
 
+    $(".filter-heading-toggle").click();
+
     linkitem.addClass("loadingbtn");
 
     $.ajax({

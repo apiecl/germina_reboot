@@ -184,3 +184,18 @@ function germina_favico() {
 
 
 add_action( 'wp_head', 'germina_favico');
+
+function germina_change_order( $query ) {
+	if(!is_admin() && $query->is_main_query()) {
+		if(is_archive() && isset($_GET['order'])) {
+			$order = $_GET['order'];
+			if($order == 'ascending') {
+				$query->set('order', 'ASC');
+			} elseif($order == 'descending') {
+				$query->set('order', 'DESC');
+			}
+		}
+	}
+}
+
+add_action('pre_get_posts', 'germina_change_order');
