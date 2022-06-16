@@ -13,8 +13,12 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<header class="section-header">
-				<h1><?php echo (get_query_var('s') ? 'Resultados de búsqueda para: <strong>' . get_query_var('s') . '</strong>' : 'Buscar');?></h1>
+			<header class="section-header search-section-header">
+				<?php 
+				global $wp_query;
+				$count = $wp_query->found_posts;
+				;?>
+				<h1><?php echo (get_query_var('s') ? '<span>' . $count . '</span> Resultados para: <strong>' . get_query_var('s') . '</strong>' : 'Buscar');?></h1>
 			</header>
 
 
@@ -31,10 +35,9 @@
 
 			<?php get_template_part('parts/content/taxonomy-filter');?>
 		</div>
-		<div class="content col-md-8">
-		
-		
 
+		<div class="content col-md-8">
+	
 		<?php if ( have_posts() && get_query_var('s') ) : while ( have_posts() ) : the_post();?>
 			
 			<?php 
@@ -57,14 +60,21 @@
 
 		<?php else : ?>
 			<article class="not_found">
+
+				<?php if ( (strlen(get_query_var('s')) > 0 && have_posts()) || !get_query_var('s')) : while (have_posts()) : the_post();?>
 				
-				<?php if ( have_posts()) : while (have_posts()) : the_post();?>
-				
-					<?php the_content();?>
+					<div class="noresultszone">
+						<?php the_content();?>
+					</div>
 				
 				<?php endwhile;?>
-				<?php endif;?>
-			
+				<?php else: ?>
+
+					<div class="noresultszone">
+						<img class="aligncenter" src="<?php bloginfo('template_url');?>/assets/img/noresults.svg" alt="Sin resultados">
+						<p>¡Lo sentimos! No hay resultados para tu búsqueda de <strong><?php echo the_search_query();?></strong>. Inténtalo de nuevo o usa el filtro "Todo Sobre"</p>
+					</div>
+				<?php endif;?>	
 			</article>
 		<?php endif;?>
 		

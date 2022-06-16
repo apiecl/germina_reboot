@@ -6078,19 +6078,40 @@ footer.germina-footer,
   .redes-menu img {
     margin-top: 4px; }
 
+.search-section-header span {
+  color: #333; }
+
+.search-section-header strong {
+  color: #333; }
+
 .panel.panel-search {
   margin-bottom: 0;
   background-color: #d9d9d9;
   padding: 0 12px; }
   .panel.panel-search label {
-    display: block; }
+    display: block;
+    position: relative; }
+  .panel.panel-search i {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    color: #cb3c43;
+    font-size: 22px; }
   .panel.panel-search input {
     margin: 5px 0 0 0;
     border-radius: 30px;
     background-color: white;
     font-weight: normal;
     font-size: 16px;
-    padding: 12px 30px; }
+    padding: 12px 30px 12px 40px;
+    position: relative; }
+    .panel.panel-search input:focus-visible {
+      outline: 1px solid #cb3c43; }
+
+.noresultszone {
+  max-width: 450px;
+  margin: 24px auto;
+  font-size: 18px; }
 
 .modal-content {
   border-radius: 0; }

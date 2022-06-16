@@ -1,20 +1,50 @@
 // New search stuff
 
+.search-section-header {
+	span {
+		color: #333;
+	}
+
+	strong {
+		color: #333;
+	}
+}
+
 .panel.panel-search {
 	margin-bottom: 0;
 	background-color: $grisfondo;
 	padding: 0 12px;
 	label {
 		display: block;
+		position: relative;
 	}
+
+	i {
+		position: absolute;
+		left: 16px;
+		top: 18px;
+		color: $newsandia;
+		font-size: 22px;
+	}
+
 	input {
 		margin: 5px 0 0 0;
 		border-radius: 30px;
 		background-color: white;
 		font-weight: normal;
 		font-size: 16px;
-		padding: 12px 30px;
+		padding: 12px 30px 12px 40px;
+		position: relative;
+		&:focus-visible {
+			outline: 1px solid $newsandia;
+		}
 	}
+}
+
+.noresultszone {
+	max-width: 450px;
+	margin: 24px auto;
+	font-size: 18px;
 }
 
 .modal-content {
