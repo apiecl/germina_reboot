@@ -199,3 +199,10 @@ function germina_change_order( $query ) {
 }
 
 add_action('pre_get_posts', 'germina_change_order');
+
+function germina_include_custom_post_types_in_search_results( $query ) {
+    if ( $query->is_main_query() && $query->is_search() && ! is_admin() ) {
+        $query->set( 'post_type', array( 'post', 'resumen-proyecto', 'page', 'boletin' ) );
+    }
+}
+add_action( 'pre_get_posts', 'germina_include_custom_post_types_in_search_results' );
