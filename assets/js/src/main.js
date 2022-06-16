@@ -120,42 +120,19 @@ $(document).ready(function () {
         $(document).ready(function () {
             // Executes only in XS breakpoint
             if (viewport.is("xs")) {
-                if (body.hasClass("home")) {
-                    brand.hide();
-                    navbar.addClass("without-brand");
-                }
-
-                $(window).on("scroll", function () {
-                    if (presentation.visible()) {
-                        brand.fadeOut();
-                        navbar.addClass("without-brand");
-                    } else {
-                        brand.show();
-                        navbar.removeClass("without-brand");
-                    }
-                });
+                $(window).on("scroll", function () {});
 
                 navbar.on("show.bs.collapse", function () {
-                    if (brand.visible() === false) {
-                        brand.show();
-                        navbar.removeClass("without-brand");
-                    }
-                    $(".navbar-header").addClass("open");
-                    logocolor.fadeOut(500, function () {
-                        logoblanco.fadeIn(500);
-                    });
                     navbarwrap.addClass("unfolded");
                 });
 
                 navbar.on("hidden.bs.collapse", function () {
                     if (presentation.visible()) {
-                        brand.fadeOut();
-                        navbar.addClass("without-brand");
+                        //brand.fadeOut();
+                        //navbar.addClass("without-brand");
                     }
                     $(".navbar-header").removeClass("open");
-                    logocolor.fadeIn(500, function () {
-                        logoblanco.fadeOut(500);
-                    });
+
                     navbarwrap.removeClass("unfolded");
                 });
 

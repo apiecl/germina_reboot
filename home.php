@@ -15,20 +15,22 @@
 		<?php
 		$somos_id = 6;
 		$somos = get_post( $somos_id );
+		$desc = get_post_meta( $somos_id, 'texto_presentacion_home', true );
 		?>
 
 
 		<div class="presentation col-md-4 col-xs-12 col-md-offset-1">
 			<div class="presentation-logohome">
-				<img src="<?php bloginfo( 'template_url' );?>/assets/img/germina_gris_home.svg" alt="<?php bloginfo( 'name' );?>">
-				<span class="animated-element-bottom"></span>
+				<h1><?php bloginfo('name');?></h1>
+				<div class="textdesc">
+					<?php echo apply_filters('the_content', $desc);?>
+				</div>
 			</div>
 		</div>
 
 		<div class="col-md-6 col-xs-12">
 
 			<?php get_template_part('parts/video');?>
-
 
 		</div>
 
@@ -40,8 +42,6 @@
 			<h2 class="definition animated fadeIn"><?php echo $somos->post_excerpt;?></h2>
 		</div>
 	</div>
-
-	
 
 </div><!--end first container-->
 

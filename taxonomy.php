@@ -25,10 +25,9 @@ General Taxonomy Template
 
 				<div class="ptype-nav">
 					<div class="btn-group btn-group-xs">
-						<a href="#" data-filter="resumen-proyecto" class="btn btn-default btn-xs">Proyectos</a>
-						<a href="#" data-filter="articulos" class="btn btn-default btn-xs">Artículos</a>
-						<a href="#" data-filter="publicaciones" class="btn btn-default btn-xs">Publicaciones</a>
 						<a href="#" data-filter="novedades" class="btn btn-default btn-xs">Novedades</a>
+						<a href="#" data-filter="publicaciones" class="btn btn-default btn-xs">Centro de documentación</a>
+						<a href="#" data-filter="resumen-proyecto" class="btn btn-default btn-xs">Proyectos</a>
 					</div>
 				</div>
 

@@ -1,10 +1,8 @@
-<section class="centro-de-documentacion-home">
+<section class="section-home section-home-<?php echo $args['content_type'];?>">
 	<h3 class="home-section-title"><?php echo $args['title'];?></h3>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				
-				<p><?php echo $args['subtitle'];?></p>
 
 				<?php 
 

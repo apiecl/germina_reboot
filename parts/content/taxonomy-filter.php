@@ -11,7 +11,7 @@
 	
 	<?php
 		$current_term = get_queried_object();
-		$taxonomies = ['tema', 'ambitos_de_accion', 'germina_year', 'estado', 'areas'];
+		$taxonomies = ['tema', 'ambitos_de_accion', 'areas'];
 		foreach($taxonomies as $taxonomy):
 			$taxobj = get_taxonomy( $taxonomy );
 			$taxlabels = get_taxonomy_labels( $taxobj );

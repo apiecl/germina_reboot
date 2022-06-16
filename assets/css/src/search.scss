@@ -1,3 +1,22 @@
+// New search stuff
+
+.panel.panel-search {
+	margin-bottom: 0;
+	background-color: $grisfondo;
+	padding: 0 12px;
+	label {
+		display: block;
+	}
+	input {
+		margin: 5px 0 0 0;
+		border-radius: 30px;
+		background-color: white;
+		font-weight: normal;
+		font-size: 16px;
+		padding: 12px 30px;
+	}
+}
+
 .modal-content {
 	border-radius: 0;
 }

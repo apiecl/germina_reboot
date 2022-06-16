@@ -8,7 +8,6 @@
       </button>
       <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>">
         <img class="logo-blanco" height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_blanco.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn hidden-xs">
-        <img class="logo-color" height="48" src="<?php bloginfo( 'template_url' );?>/assets/img/germina_color_brand.svg" alt="<?php bloginfo( 'name' );?>" class="animated fadeIn visible-xs">
       </a>
     </div>
 
@@ -23,11 +22,11 @@
 					'walker'           => new wp_bootstrap_navwalker()
 					)
 				);?>
-      <ul class="nav navbar-nav animated fadeIn searchmenu">
+      <!-- <ul class="nav navbar-nav animated fadeIn searchmenu">
         <li class="menu-item">
           <a title="Buscar" href="#" class="search-link-top dropdown-toggle" aria-haspopup="true" data-toggle="modal" data-target="#search-modal"><i class="fa fa-search"></i> buscar</a>
         </li>
-      </ul>
+      </ul> -->
       
       <div class="visible-xs">
         <div class="redes-menu">
