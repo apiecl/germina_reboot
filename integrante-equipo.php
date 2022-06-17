@@ -18,11 +18,22 @@ Template Name: Integrante Equipo
 					<header class="header-equipo">
 						<h1 class="post-title"><?php the_title();?></h1>
 
-						<?php if(has_post_thumbnail()):?>
-							<div class="ficha-equipo">
-								<?php the_post_thumbnail('174x200');?>
+						
+					</header>
 
-								<div class="equipo-datos">
+					<?php if(has_post_thumbnail()):?>
+							<div class="ficha-equipo">
+								<?php the_post_thumbnail('200x200');?>
+							</div>
+						<?php endif;?>
+
+
+
+					<div class="post-content">
+						<?php the_content();?>
+					</div>
+
+					<div class="equipo-datos">
 									<?php if(get_post_meta($post->ID, 'correo', true)):?>
 										<p>
 											<a class="eqcorreo" href="mailto:<?php echo get_post_meta($post->ID, 'correo', true);?>" title="Escribir un correo a <?php the_title();?>"><i class="fa fa-envelope"></i> <?php echo get_post_meta($post->ID, 'correo', true);?></a>
@@ -41,23 +52,6 @@ Template Name: Integrante Equipo
 										<?php endif;?>
 									
 								</div>
-							</div>
-						<?php endif;?>
-
-
-						
-
-						
-						
-
-
-					</header>
-
-
-
-					<div class="post-content">
-						<?php the_content();?>
-					</div>
 
 					<footer class="tax">
 						

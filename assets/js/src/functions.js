@@ -41,17 +41,15 @@ function germina_loadprojects(element) {
     console.log(reuse);
 
     if (reuse !== 0) {
-        let curOffset = proyectsPerPage * reuse;
-
+        curOffset = proyectsPerPage * reuse;
         //añade un contador al data-reuse
-
-        linkitem.attr("data-reuse", reuse + 1);
+        loadmore.attr("data-reuse", reuse + 1);
     } else {
         loadmore.attr("data-reuse", 1);
     }
 
     linkitem.addClass("loadingbtn");
-
+    console.log("offset", curOffset);
     $.ajax({
         url: germina.ajax_url,
         type: "POST",
@@ -97,7 +95,7 @@ function germina_loadprojects(element) {
                             </div>             
                         `);
                 });
-                console.log(content.isfinalquery);
+                console.log("server offset", content.offset);
                 if (content.isfinalquery === "remaining") {
                     loadmore
                         .attr("data-term", content["term_id"])

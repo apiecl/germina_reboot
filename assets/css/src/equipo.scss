@@ -92,31 +92,44 @@
 
 //Single equipo
 
-article.integrante-equipo header.header-equipo  {
+article.integrante-equipo header.header-equipo {
 	margin-bottom: 0;
 }
 
 .ficha-equipo {
-	float: left;
-	margin-right: 12px;
 	width: 176px;
 	padding: 0;
-	border: 1px solid #ccc;
+	margin: 0 auto;
+	text-align: center;
 }
 
 .ficha-equipo img {
 	margin-bottom: 6px;
+	border-radius: 50%;
+	width: 176px;
+	height: 176px;
+	margin: 24px auto;
 }
 
 .equipo-datos {
 	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .equipo-datos p {
-	margin-bottom: 4px;
-	width: 100%;
-	border-bottom: 1px solid #ccc;
-	padding: 4px 6px;
+	a {
+		display: inline-block;
+		color: $newsandia;
+		padding: 12px;
+		border: 1px solid $newsandia;
+		border-radius: 10px;
+		margin: 12px;
+		color: $newsandia;
+		font-size: 16px;
+	}
 }
 
 .equipo-datos p:last-child {
@@ -125,34 +138,14 @@ article.integrante-equipo header.header-equipo  {
 
 @media screen and (min-width: $screen-lg) {
 	.integrante-equipo .post-content {
-		margin-left: 210px;
-		margin-right: 24px;
+		// margin-left: 210px;
+		// margin-right: 24px;
 	}
 }
 
 @media screen and (max-width: $screen-sm) {
 	.integrante-equipo h1.post-title {
 		font-size: 24px;
-	}
-
-	.ficha-equipo {
-		width: 100%;
-		float: none;
-		margin: 0 auto 24px auto;
-		overflow: hidden;
-		padding: 0;
-	}
-
-	.ficha-equipo img {
-		max-width: 140px;
-		height: auto;
-		float: left;
-		margin-right: 12px;
-		margin-bottom: 0;
-		border-right: 1px solid transparentize($pelorous, 0.8);
-	}
-
-	.equipo-datos {
 	}
 
 	.team-nav > h3 {

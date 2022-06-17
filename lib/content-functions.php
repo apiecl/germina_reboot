@@ -374,7 +374,8 @@ function germina_itemtype( $postid ) {
 	$ptype = get_post_type( $postid );
 
 	if( $ptype != 'post') {
-		return $ptype;
+		$ptypeobj = get_post_type_object( $ptype );
+		return $ptypeobj->labels->name;
 	} elseif(in_category( 'publicaciones', $postid ) ) {
 		//Devuelve categoría
 		return 'publicaciones';

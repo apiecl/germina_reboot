@@ -38,6 +38,11 @@ a.block-item-link:hover {
 	transition: all linear 0.4s;
 	position: relative;
 
+	.proyect-item-label {
+		background-color: $grisfondo;
+		color: #333;
+	}
+
 	&:hover {
 		outline: 1px solid desaturate($sandia, 10%);
 	}
@@ -53,8 +58,11 @@ a.block-item-link:hover {
 	}
 
 	.item-meta-bottom {
-		color: $celeste;
+		color: #333;
 		font-size: 14px;
+		span {
+			display: block;
+		}
 	}
 
 	.item-meta-bottom,

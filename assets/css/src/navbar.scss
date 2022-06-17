@@ -385,4 +385,13 @@ ul.searchmenu > li > a {
 		font-weight: 900;
 		color: white;
 	}
+
+	@media screen and (max-width: $screen-sm) {
+		padding-left: 56px !important;
+
+		&:before {
+			left: 24px;
+			top: 16px;
+		}
+	}
 }

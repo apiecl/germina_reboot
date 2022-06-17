@@ -4643,6 +4643,9 @@ a.block-item-link:hover {
   padding: 12px;
   transition: all linear 0.4s;
   position: relative; }
+  .item-medium .proyect-item-label {
+    background-color: #d9d9d9;
+    color: #333; }
   .item-medium:hover {
     outline: 1px solid #e36367; }
   .item-medium h2 {
@@ -4654,8 +4657,10 @@ a.block-item-link:hover {
       .item-medium h2 {
         font-size: 18px; } }
   .item-medium .item-meta-bottom {
-    color: #008aa7;
+    color: #333;
     font-size: 14px; }
+    .item-medium .item-meta-bottom span {
+      display: block; }
   .item-medium .item-meta-bottom i,
   .item-medium .proyect-item-meta-bottom i {
     font-style: normal;
@@ -4901,7 +4906,8 @@ body.page.page-template-proyectos {
   .filter-column {
     padding: 0; } }
 
-.filter-heading-toggle {
+.filter-heading-toggle,
+.panel-section {
   padding: 16px;
   background-color: white;
   font-weight: 300;
@@ -4916,26 +4922,32 @@ body.page.page-template-proyectos {
   margin-top: 0;
   transition: all ease-in 0.3s; }
   @media screen and (max-width: 768px) {
-    .filter-heading-toggle {
+    .filter-heading-toggle,
+    .panel-section {
       margin-left: 16px;
       margin-right: 16px; } }
-  .filter-heading-toggle i {
+  .filter-heading-toggle i,
+  .panel-section i {
     font-size: 18px; }
-  .filter-heading-toggle span.labelorder {
+  .filter-heading-toggle span.labelorder,
+  .panel-section span.labelorder {
     text-transform: capitalize;
     color: #cb3c43;
     position: absolute;
     right: 70px; }
   @media screen and (max-width: 768px) {
-    .filter-heading-toggle {
+    .filter-heading-toggle,
+    .panel-section {
       cursor: pointer; } }
-  .filter-heading-toggle.active {
+  .filter-heading-toggle.active,
+  .panel-section.active {
     border-color: #dededd;
     background-color: white;
     color: #ec5a5e;
     margin: 0; }
   @media screen and (min-width: 992px) {
-    .filter-heading-toggle {
+    .filter-heading-toggle,
+    .panel-section {
       background-color: white;
       border: 1px solid #dededd;
       color: #ec5a5e; } }
@@ -5468,7 +5480,6 @@ body.page article.type-page {
       margin: 0;
       color: #ec5a5e; }
   body.page article.type-page .post-content {
-    border-top: 24px solid #f7f7f7;
     padding: 24px; }
 
 header.section-header {
@@ -5800,6 +5811,12 @@ nav.navbar-fixed-top.unfolded {
     content: "\f002";
     font-weight: 900;
     color: white; }
+  @media screen and (max-width: 768px) {
+    .search-menu a {
+      padding-left: 56px !important; }
+      .search-menu a:before {
+        left: 24px;
+        top: 16px; } }
 
 .page-template-display-areas .post-content {
   margin-bottom: 24px; }
@@ -5960,52 +5977,45 @@ ul.proycol {
 .sub-content h3 {
   margin-top: 12px; }
 
-article.integrante-equipo header.header-equipo  {
+article.integrante-equipo header.header-equipo {
   margin-bottom: 0; }
 
 .ficha-equipo {
-  float: left;
-  margin-right: 12px;
   width: 176px;
   padding: 0;
-  border: 1px solid #ccc; }
+  margin: 0 auto;
+  text-align: center; }
 
 .ficha-equipo img {
-  margin-bottom: 6px; }
+  margin-bottom: 6px;
+  border-radius: 50%;
+  width: 176px;
+  height: 176px;
+  margin: 24px auto; }
 
 .equipo-datos {
-  font-size: 14px; }
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; }
 
-.equipo-datos p {
-  margin-bottom: 4px;
-  width: 100%;
-  border-bottom: 1px solid #ccc;
-  padding: 4px 6px; }
+.equipo-datos p a {
+  display: inline-block;
+  color: #cb3c43;
+  padding: 12px;
+  border: 1px solid #cb3c43;
+  border-radius: 10px;
+  margin: 12px;
+  color: #cb3c43;
+  font-size: 16px; }
 
 .equipo-datos p:last-child {
   border-bottom: 0; }
 
-@media screen and (min-width: 1200px) {
-  .integrante-equipo .post-content {
-    margin-left: 210px;
-    margin-right: 24px; } }
-
 @media screen and (max-width: 768px) {
   .integrante-equipo h1.post-title {
     font-size: 24px; }
-  .ficha-equipo {
-    width: 100%;
-    float: none;
-    margin: 0 auto 24px auto;
-    overflow: hidden;
-    padding: 0; }
-  .ficha-equipo img {
-    max-width: 140px;
-    height: auto;
-    float: left;
-    margin-right: 12px;
-    margin-bottom: 0;
-    border-right: 1px solid rgba(77, 165, 184, 0.2); }
   .team-nav > h3 {
     margin-top: 0; } }
 
@@ -6084,6 +6094,9 @@ footer.germina-footer,
 .search-section-header strong {
   color: #333; }
 
+p.search-results-count {
+  color: #cb3c43; }
+
 .panel.panel-search {
   margin-bottom: 0;
   background-color: #d9d9d9;
@@ -6130,7 +6143,7 @@ footer.germina-footer,
   padding: 6px;
   width: 100%;
   font-size: 22px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Lato", sans-serif;
   margin: 12px auto;
   background-color: #f0f0f0; }
 

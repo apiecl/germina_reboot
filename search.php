@@ -18,26 +18,26 @@
 				global $wp_query;
 				$count = $wp_query->found_posts;
 				;?>
-				<h1><?php echo (get_query_var('s') ? '<span>' . $count . '</span> Resultados para: <strong>' . get_query_var('s') . '</strong>' : 'Buscar');?></h1>
+				<h1>Buscador</h1>
 			</header>
 
 
 		</div>
 
-		<div class="content col-md-4">
+		<div class="content col-md-4 col-md-offset-1">
 			<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">
-				Filtrar por <i class="fa fa-chevron-up"></i>
+				Buscar <i class="fa fa-chevron-up"></i>
 			</h4>
 			
-			<div class="panel panel-default panel-search">
-				<?php echo get_search_form();?>	
-			</div>
+			
 
 			<?php get_template_part('parts/content/taxonomy-filter');?>
 		</div>
 
-		<div class="content col-md-8">
-	
+		<div class="content col-md-7">
+		
+		<p class="search-results-count"><?php echo (get_query_var('s') ? '<span>' . $count . '</span> resultados para: <strong>' . get_query_var('s') . '</strong>' : '');?></p>
+
 		<?php if ( have_posts() && get_query_var('s') ) : while ( have_posts() ) : the_post();?>
 			
 			<?php 

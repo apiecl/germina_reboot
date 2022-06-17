@@ -10,6 +10,10 @@
 	}
 }
 
+p.search-results-count {
+	color: $newsandia;
+}
+
 .panel.panel-search {
 	margin-bottom: 0;
 	background-color: $grisfondo;
@@ -73,7 +77,7 @@
 	padding: 6px;
 	width: 100%;
 	font-size: 22px;
-	font-family: $headingsfont;
+	font-family: $defaultfont;
 	margin: 12px auto;
 	background-color: #f0f0f0;
 }

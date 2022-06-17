@@ -89,11 +89,7 @@ function germina_proyects_by_term() {
 	$proyect_items['total'] = $noitems;
 	$proyect_items['actual'] = $actual;
 	$proyect_items['isfinalquery'] = $actual == $noitems  ? 'limit' : 'remaining';
-
-	//El template para mustache
-	
-	//$proyect_items['template'] = get_bloginfo('template_url') . '/parts/content/mustache/proyect-item-medium.mustache';
-
+	$proyect_items['offset'] = $offset;
 	//El título de la taxonomía
 	
 	$term_title = get_term( $termid, $tax );
