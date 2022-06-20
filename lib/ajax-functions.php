@@ -33,6 +33,7 @@ function germina_proyects_by_term() {
 					)
 				)
 	);
+	
 	if($type == 'post') {
 		$countargs['tax_query'] = array(
 									array(

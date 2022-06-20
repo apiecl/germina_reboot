@@ -8,9 +8,9 @@ function germina_authors() {
 	global $post;
 
 	if(function_exists('coauthors_posts_links')):
-			return coauthors_posts_links();
+		return coauthors_posts_links();
 	else:
-			return the_author();
+		return the_author();
 	endif;
 }
 
@@ -26,15 +26,15 @@ function germina_plainauthors($postid, $prefix) {
 	if($coauth) {
 		foreach($coauth as $key=>$auth):
 
-		if($key+1 == $finauts) {
+			if($key+1 == $finauts) {
 			//final
-			$separator = '.';
-		} elseif($key+1 == $finauts-1) {
+				$separator = '.';
+			} elseif($key+1 == $finauts-1) {
 			//penúltimo
-			$separator = ' y ';
-		} else {
+				$separator = ' y ';
+			} else {
 			//intermedio
-			$separator = ', ';
+				$separator = ', ';
 			}
 
 			$autores .= $auth->display_name . $separator;
@@ -48,12 +48,12 @@ function germina_plainauthors($postid, $prefix) {
 function germina_get_post_attachments($title, $text, $filetitle = false) {
 	global $post;
 	$files = get_children(array('post_parent' => $post->ID, 'post_status' => 'inherit', 'post_type'=>'attachment'));
-		if($files)
+	if($files)
 
-		{
+	{
 		foreach($files as $file) :
-				$mimtype = get_post_mime_type($file->ID);
-				switch($mimtype){
+			$mimtype = get_post_mime_type($file->ID);
+			switch($mimtype){
 				case('application/msword'):
 				$mime = 'doc';
 				break;
@@ -68,19 +68,19 @@ function germina_get_post_attachments($title, $text, $filetitle = false) {
 				break;
 				default:
 				$mime = $mimtype;
-				}
+			}
 
-				if(!wp_attachment_is_image($file->ID)) {
-					if($filetitle == true):
-							echo '<a class="downlink" href="'.wp_get_attachment_url($file->ID).'" title="'.$title.'"><i class="fa fa-download"></i> <span class="downtext">'.$text. ' ' . $file->post_title . '</span> <span class="desctext">('.$mime.')</span></a>';
-						else:
-							echo '<a class="downlink" href="'.wp_get_attachment_url($file->ID).'" title="'.$title.'"><i class="fa fa-download"></i> <span class="downtext">'.$text. '</span> <span class="desctext">('.$mime.')</span></a>';
-					endif;
-				}
+			if(!wp_attachment_is_image($file->ID)) {
+				if($filetitle == true):
+					echo '<a class="downlink" href="'.wp_get_attachment_url($file->ID).'" title="'.$title.'"><i class="fa fa-download"></i> <span class="downtext">'.$text. ' ' . $file->post_title . '</span> <span class="desctext">('.$mime.')</span></a>';
+				else:
+					echo '<a class="downlink" href="'.wp_get_attachment_url($file->ID).'" title="'.$title.'"><i class="fa fa-download"></i> <span class="downtext">'.$text. '</span> <span class="desctext">('.$mime.')</span></a>';
+				endif;
+			}
 
 		endforeach;
-		}
 	}
+}
 
 /**
  * GERMINA AREA => PAGE
@@ -95,7 +95,7 @@ function germina_areapage() {
 		100 => 15,
 		92 => 13,
 		94 => 14
-		);
+	);
 	return $areapage[$post->ID];
 }
 
@@ -156,12 +156,12 @@ function germina_getplainterms($postid, $taxonomy, $before = '', $separator = ',
 			}
 
 
-		$termstring = implode( $separator, $termnames );
+			$termstring = implode( $separator, $termnames );
 
 		// $before = sanitize_text_field( $before );
 		// $after = sanitize_text_field( $after );
 
-		return $before . $termstring . $after;
+			return $before . $termstring . $after;
 
 		endif;
 
@@ -259,16 +259,16 @@ function germina_getdocs($postid) {
 	 */
 
 	$args = array(
-			'post_parent' => $postid,
-			'post_status' =>'inherit',
-			'post_type' => 'attachment',
-			'post_mime_type' => array(
-				'application/msword',
-				'application/pdf',
-				'application/vnd.ms-powerpoint',
-				'application/msexcel'
-				)
-			);
+		'post_parent' => $postid,
+		'post_status' =>'inherit',
+		'post_type' => 'attachment',
+		'post_mime_type' => array(
+			'application/msword',
+			'application/pdf',
+			'application/vnd.ms-powerpoint',
+			'application/msexcel'
+		)
+	);
 	$docs = get_children( $args );
 
 	return $docs;
@@ -291,42 +291,42 @@ function germina_aftercontent( $content ) {
 
 		if($docs) {
 
-		foreach($docs as $doc) {
+			foreach($docs as $doc) {
 
-			$fileurl = wp_get_attachment_url( $doc->ID );
-			$filetype = wp_check_filetype( $fileurl );
+				$fileurl = wp_get_attachment_url( $doc->ID );
+				$filetype = wp_check_filetype( $fileurl );
 
-			if($format == 'Miniaturas') {
+				if($format == 'Miniaturas') {
 
-				if( $filetype['ext'] == 'pdf' ) {
+					if( $filetype['ext'] == 'pdf' ) {
 
-					$getpdfimage = germina_pdfpagetopng( $doc->ID, 240 );
-					$pdfimage = "<img src='{$getpdfimage}' alt='{$doc->post_title}'>";
+						$getpdfimage = germina_pdfpagetopng( $doc->ID, 240 );
+						$pdfimage = "<img src='{$getpdfimage}' alt='{$doc->post_title}'>";
 
-					$doctitles[] = "<a href='{$fileurl}' class='attached-file-block attached-pdf-with-cover'><span class='title'><i class='fa fa-download'></i> {$doc->post_title} ({$filetype['ext']})</span>  {$pdfimage}</a>";
+						$doctitles[] = "<a href='{$fileurl}' class='attached-file-block attached-pdf-with-cover'><span class='title'><i class='fa fa-download'></i> {$doc->post_title} ({$filetype['ext']})</span>  {$pdfimage}</a>";
+
+					} else {
+
+						$doctitles[] = "<a href='{$fileurl}' class='attached-file-block attached-file-no-cover'><span class='title'><i class='fa fa-download'></i> {$doc->post_title} ({$filetype['ext']})</span></a>";
+
+					}
+
 
 				} else {
 
-					$doctitles[] = "<a href='{$fileurl}' class='attached-file-block attached-file-no-cover'><span class='title'><i class='fa fa-download'></i> {$doc->post_title} ({$filetype['ext']})</span></a>";
+					$doctitles[] = "<a class='btn btn-default' href='{$fileurl}'><i class='fa fa-download'></i> {$doc->post_title} ({$filetype['ext']})</a>";
 
 				}
 
 
-			} else {
-
-					$doctitles[] = "<a class='btn btn-default' href='{$fileurl}'><i class='fa fa-download'></i> {$doc->post_title} ({$filetype['ext']})</a>";
 
 			}
 
+			$doctitles = implode(' ', $doctitles);
+			$doctitles = "<h4 class='attached-title'>Archivos adjuntos</h4> <div class='attached-to-post {$format}'> {$doctitles}</div>";
 
 
-		}
-
-		$doctitles = implode(' ', $doctitles);
-		$doctitles = "<h4 class='attached-title'>Archivos adjuntos</h4> <div class='attached-to-post {$format}'> {$doctitles}</div>";
-
-
-		$new_content = $content . $doctitles;
+			$new_content = $content . $doctitles;
 
 
 		}
@@ -356,7 +356,7 @@ function germina_boletincontent( $content ) {
 		if($urlboletin) {
 
 			$content = '<iframe class="mailchimp_iframe" width="100%" height="1050" src="' . $urlboletin .'" frameborder="0"></iframe>';
-		
+
 		} else {
 
 			$content = '<p>Falta URL de boletín.</p>';
@@ -465,10 +465,10 @@ function germina_itemtypelabel( $postid, $singleitem = false ) {
 
 function string_limit_words($string, $word_limit)
 {
-  $words = explode(' ', $string, ($word_limit + 1));
-  if(count($words) > $word_limit)
-  array_pop($words);
-  return implode(' ', $words);
+	$words = explode(' ', $string, ($word_limit + 1));
+	if(count($words) > $word_limit)
+		array_pop($words);
+	return implode(' ', $words);
 }
 
 
@@ -478,51 +478,51 @@ function germina_seo() {
 	$somos = get_post(6);
 	$settings 	= get_option( 'germ_options' );
 	$args = array(
-			'fields'=> 'names'
+		'fields'=> 'names'
 	);
 	$keywords = get_terms(array('areas', 'tema'), $args);
 	?>
 	<?php if(is_home()):?>
-	<meta name="description" content="<?php echo $somos->post_excerpt;?> | <?php echo $settings['germ_email'];?> |  <?php echo $settings['germ_fono'];?> | <?php echo $settings['germ_direccion'];?> - <?php echo $settings['germ_comuna'].', '.$settings['germ_ciudad'];?>"/>
+		<meta name="description" content="<?php echo $somos->post_excerpt;?> | <?php echo $settings['germ_email'];?> |  <?php echo $settings['germ_fono'];?> | <?php echo $settings['germ_direccion'];?> - <?php echo $settings['germ_comuna'].', '.$settings['germ_ciudad'];?>"/>
 
-	<meta name="keywords" content="
-	<?php
-	echo implode(', ', $keywords);
-	?>
+		<meta name="keywords" content="
+		<?php
+		echo implode(', ', $keywords);
+		?>
 
-	"/>
-<?php else:?>
-	<meta name="description" content="
-	<?php
+		"/>
+	<?php else:?>
+		<meta name="description" content="
+		<?php
 		if(is_single()){
-		if(!empty($post->post_excerpt)):
-		$meta = strip_tags($post->post_excerpt);
-		$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
-		$meta = substr($meta, 0, 350);
-		else:
-		$meta = strip_tags($post->post_content);
-		$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
-		$meta = substr($meta, 0, 350);
-		endif;
-		echo $meta;
+			if(!empty($post->post_excerpt)):
+				$meta = strip_tags($post->post_excerpt);
+				$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
+				$meta = substr($meta, 0, 350);
+			else:
+				$meta = strip_tags($post->post_content);
+				$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
+				$meta = substr($meta, 0, 350);
+			endif;
+			echo $meta;
 		}
 
 		if(is_page()){
-		$meta = strip_tags($post->post_content);
-		$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
-		$meta = substr($meta, 0, 350);
-		echo $meta;
+			$meta = strip_tags($post->post_content);
+			$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
+			$meta = substr($meta, 0, 350);
+			echo $meta;
 		}
 
 		if(is_category()){
-		$meta = strip_tags(category_description());
-		echo $meta;
+			$meta = strip_tags(category_description());
+			echo $meta;
 
 		}
 
 		if(is_tax()){
-		$meta = strip_tags(term_description());
-		echo $meta;
+			$meta = strip_tags(term_description());
+			echo $meta;
 		}
 
 	?>"/>
@@ -540,93 +540,93 @@ function germina_seo() {
 
 <?php 
 
-	if( is_home()):
-		
-		$og_title = get_bloginfo('name');
+if( is_home()):
 
-	elseif( get_post_type( $post->ID ) === 'boletin'):
+	$og_title = get_bloginfo('name');
 
-		$og_title = '[Boletín ' . strtolower(get_the_time('M Y', $post->ID)) . '] ' . get_the_title($post->ID) ;
+elseif( get_post_type( $post->ID ) === 'boletin'):
 
-	else: 
+	$og_title = '[Boletín ' . strtolower(get_the_time('M Y', $post->ID)) . '] ' . get_the_title($post->ID) ;
 
-		$og_title = get_the_title($post->ID);
-		
-	endif;
+else: 
 
-	
+	$og_title = get_the_title($post->ID);
+
+endif;
+
+
 ?>
 
- <meta property="og:title" content="<?php if($og_title): echo $og_title; else: wp_title();endif;?>"/>
+<meta property="og:title" content="<?php if($og_title): echo $og_title; else: wp_title();endif;?>"/>
 
- <meta property="og:type" content="article"/>
- <meta property="og:url" content="
- <?php if(is_single()|| is_page()){
- echo get_permalink($post->ID);
-	}
-	if(is_category()||is_tax()) {
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="
+<?php if(is_single()|| is_page()){
+	echo get_permalink($post->ID);
+}
+if(is_category()||is_tax()) {
 	echo 'http://'.$_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-		}
-	if(is_home()) {
-		echo bloginfo('url');
-		}
+}
+if(is_home()) {
+	echo bloginfo('url');
+}
 
- ?>"/>
-    <?php if(has_post_thumbnail($post->ID) && get_post_type($post->ID) !== 'boletin') {
-		$imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
-		?>
+?>"/>
+<?php if(has_post_thumbnail($post->ID) && get_post_type($post->ID) !== 'boletin') {
+	$imgsrc = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+	?>
 
-		<meta property="og:image" content="<?php echo $imgsrc[0];?>"/>
+	<meta property="og:image" content="<?php echo $imgsrc[0];?>"/>
 
-		<?php } elseif( get_post_type($post->ID) === 'boletin' ) {?>
+<?php } elseif( get_post_type($post->ID) === 'boletin' ) {?>
 
-			<meta property="og:image" content="<?php echo get_bloginfo('template_url');?>/assets/img/share_boletin.png"/>
-		
-		<?php 
+	<meta property="og:image" content="<?php echo get_bloginfo('template_url');?>/assets/img/share_boletin.png"/>
 
-			}
+	<?php 
 
-		?>
+}
+
+?>
 
 <meta property="og:site_name" content="<?php bloginfo('name');?>"/>
 <meta property="og:description"
-          content="<?php
-		if(is_single()){
-		if(!empty($post->post_excerpt)):
+content="<?php
+if(is_single()){
+	if(!empty($post->post_excerpt)):
 		$meta = strip_tags($post->post_excerpt);
 		$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
 		$meta = substr($meta, 0, 350);
-		else:
+	else:
 		$meta = strip_tags($post->post_content);
 		$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
 		$meta = substr($meta, 0, 350);
-		endif;
-		echo $meta;
-		}
+	endif;
+	echo $meta;
+}
 
-		if(is_page()){
-		$meta = strip_tags($post->post_content);
-		$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
-		$meta = substr($meta, 0, 350);
-		echo $meta;
-		}
+if(is_page()){
+	$meta = strip_tags($post->post_content);
+	$meta = str_replace(array("\n", "\r", "\t"), ' ', $meta);
+	$meta = substr($meta, 0, 350);
+	echo $meta;
+}
 
-		if(is_category()){
-		$meta = strip_tags(category_description());
-		echo $meta;
+if(is_category()){
+	$meta = strip_tags(category_description());
+	echo $meta;
 
-		}
+}
 
-		if(is_tax()){
-		$meta = strip_tags(term_description());
-		echo $meta;
-		}
+if(is_tax()){
+	$meta = strip_tags(term_description());
+	echo $meta;
+}
 
-		if(is_home()){
-			echo bloginfo('description');
-			}
+if(is_home()){
+	echo bloginfo('description');
+}
 
-	?>"/>
+?>"/>
 
 <!--Fin de esas cosas feas-->
 <?php
@@ -667,8 +667,8 @@ function germina_archive_title() {
 }
 
 function theme_queue_js(){
-if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') )
-  	wp_enqueue_script( 'comment-reply' );
+	if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') )
+		wp_enqueue_script( 'comment-reply' );
 }
 add_action('wp_enqueue_scripts', 'theme_queue_js');
 
@@ -679,16 +679,16 @@ function germina_term_image($term_id, $taxonomy, $size) {
 	$term = get_term( $term_id, $taxonomy );
 	$tt_id = 0;
 	if ( isset( $term->term_taxonomy_id ) )
-	    $tt_id = (int) $term->term_taxonomy_id;
+		$tt_id = (int) $term->term_taxonomy_id;
 
 	if(function_exists('taxonomy_image_plugin_get_associations')):
 		$associations = taxonomy_image_plugin_get_associations();
 		$image = '';
 		if ( isset( $associations[ $tt_id ] ) ) {
-		    $attachment_id = (int) $associations[ $tt_id ];
-		    $image = wp_get_attachment_image_src( $attachment_id, $size );
+			$attachment_id = (int) $associations[ $tt_id ];
+			$image = wp_get_attachment_image_src( $attachment_id, $size );
 
-		    return $image;
+			return $image;
 		}
 	endif;
 }
@@ -782,5 +782,55 @@ function germina_getplaincats($postid) {
 	}
 
 	return $catstring;
+
+}
+
+function germina_taxpanel_shortcode($atts) {
+
+	$a = shortcode_atts(array(
+		'taxonomy'	=> 'tema'
+	), $atts);
+
+	return germina_taxpanel_get_content($a['taxonomy']);
+}
+
+add_shortcode('germina_taxonomy_panel', 'germina_taxpanel_shortcode');
+
+function germina_taxpanel_get_content($taxonomy) {
+	$output = '';
+	if($taxonomy) {
+		$taxobj = get_taxonomy( $taxonomy );
+		$taxlabels = get_taxonomy_labels( $taxobj );
+	//var_dump($taxlabels);
+
+		$args = array(
+			'taxonomy' => $taxonomy,
+			'parent'   => 0
+		);
+		$terms = get_terms($args);
+
+		if($terms) {
+			$output .= 	'<div class="panel panel-default panel-taxcontent">';
+			$output .= 	'<div class="panel-heading" role="tab" id="heading-' . $taxonomy .'">';
+			$output .= 	'<h4 class="panel-title">';
+			$output .=  '<a role="button" data-toggle="collapse" data-parent="#taxonomy-accordion" href="#taxpanel-'. $taxonomy . '">Consulta nuestros contenidos según ' . $taxlabels->name .' <i class="fa fa-chevron-down"></i></a>';
+			$output .= '</h4></div>';
+			$output .= '<div class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-'.$taxonomy.'" id="taxpanel-'.$taxonomy.'">';			
+			$output .= '<div class="panel-body">';
+
+			foreach($terms as $term) {
+
+				$output .= '<a href="' . get_term_link( $term->term_id, $taxonomy ) .'" class="btn btn-large btn-filter btn-default" data-reuse="0">' . $term->name . '</a>';
+
+			}
+
+			$output	.= '</div>';
+			$output .= '</div>';
+			$output .= '</div>';
+		}
+	}
+	
+
+	return $output;
 
 }

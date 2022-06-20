@@ -5019,49 +5019,65 @@ button.loadmore {
 .proyects-by-year-nav .btn, .proyects-by-year-nav div.pagination a, div.pagination .proyects-by-year-nav a, .proyects-by-year-nav a#cancel-comment-reply-link {
   margin-bottom: 4px; }
 
+.panel.panel-default.panel-taxcontent .panel-heading {
+  background-color: #d9d9d9; }
+
+.panel.panel-default.panel-taxcontent h4 {
+  margin-bottom: 0; }
+
 .tax-filter .panel-default.active,
 .subterm-filter .panel-default.active,
-.order-filter .panel-default.active {
+.order-filter .panel-default.active,
+.panel-taxcontent .panel-default.active {
   border-color: #a23036; }
 
 .tax-filter .panel-heading,
 .subterm-filter .panel-heading,
-.order-filter .panel-heading {
+.order-filter .panel-heading,
+.panel-taxcontent .panel-heading {
   background-color: white;
   transition: all ease-in 0.2s; }
   .tax-filter .panel-heading h4,
   .subterm-filter .panel-heading h4,
-  .order-filter .panel-heading h4 {
+  .order-filter .panel-heading h4,
+  .panel-taxcontent .panel-heading h4 {
     font-family: "Lato", sans-serif;
     font-weight: 400; }
     .tax-filter .panel-heading h4 a,
     .subterm-filter .panel-heading h4 a,
-    .order-filter .panel-heading h4 a {
+    .order-filter .panel-heading h4 a,
+    .panel-taxcontent .panel-heading h4 a {
       display: flex;
       justify-content: space-between; }
       .tax-filter .panel-heading h4 a i,
       .subterm-filter .panel-heading h4 a i,
-      .order-filter .panel-heading h4 a i {
+      .order-filter .panel-heading h4 a i,
+      .panel-taxcontent .panel-heading h4 a i {
         transition: transform ease-in 0.1s; }
       .tax-filter .panel-heading h4 a:hover, .tax-filter .panel-heading h4 a:focus,
       .subterm-filter .panel-heading h4 a:hover,
       .subterm-filter .panel-heading h4 a:focus,
       .order-filter .panel-heading h4 a:hover,
-      .order-filter .panel-heading h4 a:focus {
+      .order-filter .panel-heading h4 a:focus,
+      .panel-taxcontent .panel-heading h4 a:hover,
+      .panel-taxcontent .panel-heading h4 a:focus {
         text-decoration: none; }
   .tax-filter .panel-heading.active,
   .subterm-filter .panel-heading.active,
-  .order-filter .panel-heading.active {
+  .order-filter .panel-heading.active,
+  .panel-taxcontent .panel-heading.active {
     background-color: #a23036;
     color: white; }
     .tax-filter .panel-heading.active i,
     .subterm-filter .panel-heading.active i,
-    .order-filter .panel-heading.active i {
+    .order-filter .panel-heading.active i,
+    .panel-taxcontent .panel-heading.active i {
       transform: rotate(180deg); }
 
 .tax-filter .panel-body,
 .subterm-filter .panel-body,
-.order-filter .panel-body {
+.order-filter .panel-body,
+.panel-taxcontent .panel-body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap; }
@@ -5073,7 +5089,11 @@ button.loadmore {
   .order-filter .panel-body .btn,
   .order-filter .panel-body div.pagination a,
   div.pagination .order-filter .panel-body a,
-  .order-filter .panel-body a#cancel-comment-reply-link {
+  .order-filter .panel-body a#cancel-comment-reply-link,
+  .panel-taxcontent .panel-body .btn,
+  .panel-taxcontent .panel-body div.pagination a,
+  div.pagination .panel-taxcontent .panel-body a,
+  .panel-taxcontent .panel-body a#cancel-comment-reply-link {
     border-color: #ec5a5e;
     color: #ec5a5e;
     margin: 4px;
@@ -5086,7 +5106,11 @@ button.loadmore {
     .order-filter .panel-body .btn:hover,
     .order-filter .panel-body div.pagination a:hover,
     div.pagination .order-filter .panel-body a:hover,
-    .order-filter .panel-body a#cancel-comment-reply-link:hover {
+    .order-filter .panel-body a#cancel-comment-reply-link:hover,
+    .panel-taxcontent .panel-body .btn:hover,
+    .panel-taxcontent .panel-body div.pagination a:hover,
+    div.pagination .panel-taxcontent .panel-body a:hover,
+    .panel-taxcontent .panel-body a#cancel-comment-reply-link:hover {
       background-color: #a23036;
       color: white;
       border-color: white; }
@@ -5098,7 +5122,11 @@ button.loadmore {
     .order-filter .panel-body .btn.active,
     .order-filter .panel-body div.pagination a.active,
     div.pagination .order-filter .panel-body a.active,
-    .order-filter .panel-body a.active#cancel-comment-reply-link {
+    .order-filter .panel-body a.active#cancel-comment-reply-link,
+    .panel-taxcontent .panel-body .btn.active,
+    .panel-taxcontent .panel-body div.pagination a.active,
+    div.pagination .panel-taxcontent .panel-body a.active,
+    .panel-taxcontent .panel-body a.active#cancel-comment-reply-link {
       background-color: #a23036;
       border-color: white;
       color: white; }
@@ -5110,7 +5138,11 @@ button.loadmore {
     .order-filter .panel-body .btn.loadingbtn,
     .order-filter .panel-body div.pagination a.loadingbtn,
     div.pagination .order-filter .panel-body a.loadingbtn,
-    .order-filter .panel-body a.loadingbtn#cancel-comment-reply-link {
+    .order-filter .panel-body a.loadingbtn#cancel-comment-reply-link,
+    .panel-taxcontent .panel-body .btn.loadingbtn,
+    .panel-taxcontent .panel-body div.pagination a.loadingbtn,
+    div.pagination .panel-taxcontent .panel-body a.loadingbtn,
+    .panel-taxcontent .panel-body a.loadingbtn#cancel-comment-reply-link {
       animation: germinaloading infinite 0.8s; }
 
 .subterm-filter .fa-stack {

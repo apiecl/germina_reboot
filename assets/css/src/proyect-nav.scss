@@ -50,9 +50,19 @@ button.loadmore {
 	margin-bottom: 4px;
 }
 
+.panel.panel-default.panel-taxcontent {
+	.panel-heading {
+		background-color: $grisfondo;
+	}
+	h4 {
+		margin-bottom: 0;
+	}
+}
+
 .tax-filter,
 .subterm-filter,
-.order-filter {
+.order-filter,
+.panel-taxcontent {
 	.panel-default.active {
 		border-color: $darksandia;
 	}
