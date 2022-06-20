@@ -5579,6 +5579,17 @@ header.section-header {
 .page-template-contacto .post-content address p {
   margin-bottom: 6px; }
 
+body.page article.type-page .post-content.main {
+  padding: 0; }
+
+body.page .subcontent {
+  border-bottom: 1px solid #000; }
+  body.page .subcontent header.subheader {
+    background-color: white;
+    margin: 48px 24px 24px; }
+    body.page .subcontent header.subheader h2 {
+      font-size: 28px; }
+
 body.admin-bar .navbar {
   margin-top: 32px; }
 
