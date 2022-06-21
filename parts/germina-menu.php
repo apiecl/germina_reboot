@@ -17,17 +17,11 @@
 				array(
 					'theme_location'   => 'principal',
 					'menu_class'       => 'nav navbar-nav animated fadeIn',
-					'depth'            => 2,
+					'depth'            => 3,
 					'container'        => false,
 					'walker'           => new wp_bootstrap_navwalker()
 					)
-				);?>
-      <!-- <ul class="nav navbar-nav animated fadeIn searchmenu">
-        <li class="menu-item">
-          <a title="Buscar" href="#" class="search-link-top dropdown-toggle" aria-haspopup="true" data-toggle="modal" data-target="#search-modal"><i class="fa fa-search"></i> buscar</a>
-        </li>
-      </ul> -->
-      
+				);?> 
       <div class="visible-xs">
         <div class="redes-menu">
           <?php get_template_part('parts/redes-sociales');?>

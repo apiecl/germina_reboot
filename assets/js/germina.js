@@ -5855,6 +5855,18 @@ $(document).ready(function () {
         $("#childpanel-" + slug).removeClass("hidden");
     });
 
+    $(".dropdown a.dropdown-submenu").on("click", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("dropdown click");
+        let nextDropdown = $(this).next(".dropdown-menu");
+        if (nextDropdown.hasClass("open")) {
+            nextDropdown.hide().removeClass("open");
+        } else {
+            nextDropdown.show().addClass("open");
+        }
+    });
+
     // Wrap IIFE around your code
     (function ($, viewport) {
         $(document).ready(function () {
