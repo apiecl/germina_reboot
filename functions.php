@@ -36,12 +36,10 @@ define( 'GERMINA_VERSION', '1.9.9' );
  * INCLUDES
  */
 
-require_once('lib/search-in-place/codepeople_search_in_place.php');
 require_once('lib/wp-bootstrap-navwalker.php');
 require_once('lib/content-functions.php');
 require_once('lib/template-functions.php');
 require_once('lib/ajax-functions.php');
-require_once('lib/comment-functions.php');
 require_once('lib/shortcodes.php');
 
 /**
@@ -142,12 +140,12 @@ add_action('wp_enqueue_scripts', 'germina_styles');
  */
 function germina_head() {
 		//charset
-		 $output = '<meta charset="utf-8">';
+		 //$output = '<meta charset="utf-8">';
 		//x-ua para edge
-	     $output .= '<meta http-equiv="x-ua-compatible" content="ie=edge">';
+	    //$output .= '<meta http-equiv="x-ua-compatible" content="ie=edge">';
 	    //viewport para móviles
-	     $output .= '<meta name="viewport" content="width=device-width, initial-scale=1">';
-	     $output .= '<script src="https://kit.fontawesome.com/14643ca681.js" crossorigin="anonymous"></script>';
+	    //$output .= '<meta name="viewport" content="width=device-width, initial-scale=1">';
+	     $output = '<script src="https://kit.fontawesome.com/14643ca681.js" crossorigin="anonymous"></script>';
      echo $output;
 }
 

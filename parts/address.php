@@ -15,8 +15,8 @@
 		$fono 		= get_post_meta( $contactoid, 'telefono', true);
 		$fono2		= get_post_meta( $contactoid, 'telefono_2', true);
 		$direccion	= get_post_meta( $contactoid, 'direccion', true);
-		$ciudad	= get_post_meta( $contactoid, 'ciudad', true);
-		$comuna	= get_post_meta( $contactoid, 'comuna', true);
+		$ciudad		= get_post_meta( $contactoid, 'ciudad', true);
+		$comuna		= get_post_meta( $contactoid, 'comuna', true);
 		$email 		= get_post_meta( $contactoid, 'correo', true);
 		$twitter    = get_post_meta( $contactoid, 'twitter', true);
 		$facebook   = get_post_meta( $contactoid, 'facebook', true);

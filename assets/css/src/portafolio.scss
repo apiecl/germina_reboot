@@ -1,5 +1,11 @@
 $portafolio-publicacion-height: 400px;
 
+//new portfolio
+
+body.page-template-portafolio {
+	background-color: $grisfondoclaro;
+}
+
 .home-portafolio {
 	background-color: desaturate($sandia, 10%);
 	box-shadow: 0 0 3px #333;

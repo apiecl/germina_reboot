@@ -23,11 +23,7 @@
 						echo apply_filters( 'the_content', $notfound->post_content );
 					?>
 
-					<p>&nbsp;</p>
-
-					<p><?php get_search_form( true );?></p>
 					
-					<div class="live-search-results"></div>
 
 				</header>
 			</article>

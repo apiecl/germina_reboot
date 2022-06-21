@@ -12,7 +12,7 @@
 <?php get_header();?>
 <?php 
 			$pagedtext = '';
-			$order = $_GET['order'] ? $_GET['order'] : 'descending';
+			$order = isset($_GET['order']) ? $_GET['order'] : 'descending';
 			$paged = get_query_var('paged');
 			$totalpages = $wp_query->max_num_pages;
 			if($totalpages > 1) {
@@ -87,6 +87,7 @@
 			<article class="not_found">
 				<header>
 					<h1>No encontrado</h1>
+					<p>No se encontró contenido</p>
 					<p><?php get_search_form( true );?></p>
 				</header>
 			</article>

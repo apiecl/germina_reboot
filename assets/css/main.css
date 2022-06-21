@@ -4253,6 +4253,9 @@ address {
 .section-home-proyectos {
   background-color: #d9d9d9; }
 
+body.page-template-portafolio {
+  background-color: #f7f7f7; }
+
 .home-portafolio {
   background-color: #e36367;
   box-shadow: 0 0 3px #333;
@@ -5223,7 +5226,8 @@ p.tema, p.year {
 
 .single article.type-post,
 .single article.type-resumen-proyecto,
-.page article.type-page {
+.page article.type-page,
+.single article.type-boletin {
   background-color: white;
   padding: 24px;
   margin-bottom: 24px;
@@ -5232,7 +5236,8 @@ p.tema, p.year {
 @media screen and (max-width: 768px) {
   .single article.type-post,
   .single article.type-resumen-proyecto,
-  .page article.type-page {
+  .page article.type-page,
+  .single article.type-boletin {
     background-color: transparent;
     padding: 0;
     margin-bottom: 24px; }
@@ -5280,6 +5285,15 @@ article header.header-single {
         background-color: #d9d9d9; }
         .single-item-meta-top ul.post-categories li a:hover {
           background-color: #f7f7f7; }
+  .single-item-meta-top .cats {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease-in 0.2s;
+    display: inline-block;
+    padding: 3px 6px;
+    margin: 0 3px 0 0;
+    background-color: #d9d9d9; }
 
 .single-item-meta-bottom {
   font-size: 16px; }

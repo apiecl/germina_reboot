@@ -2,7 +2,8 @@
 
 .single article.type-post,
 .single article.type-resumen-proyecto,
-.page article.type-page {
+.page article.type-page,
+.single article.type-boletin {
 	background-color: white;
 	padding: 24px;
 	margin-bottom: 24px;
@@ -12,7 +13,8 @@
 @media screen and (max-width: $screen-sm) {
 	.single article.type-post,
 	.single article.type-resumen-proyecto,
-	.page article.type-page {
+	.page article.type-page,
+	.single article.type-boletin {
 		background-color: transparent;
 		padding: 0;
 		margin-bottom: 24px;
@@ -80,6 +82,17 @@ article header.header-single {
 				}
 			}
 		}
+	}
+
+	.cats {
+		color: #333;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: all ease-in 0.2s;
+		display: inline-block;
+		padding: 3px 6px;
+		margin: 0 3px 0 0;
+		background-color: $grisfondo;
 	}
 }
 

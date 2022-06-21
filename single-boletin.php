@@ -12,11 +12,10 @@
 
 				<header class="header-single">
 					<div class="single-item-meta-top">
-						<span class="cats">Boletín</span> <i class="fa fa-angle-left"></i> <span class="fecha"><?php the_time('F Y');?></span>
+						<div class="cats">Boletín</div>
 					</div>
 					<h1 class="post-title"><?php the_title();?></h1>
-
-					<?php get_template_part('parts/share');?>
+					<span class="fecha"><?php the_time('F Y');?></span>
 				</header>
 
 
@@ -24,7 +23,7 @@
 
 				<div class="row">
 
-					<div class="<?php echo $content_column;?>">
+					<div>
 
 						<div class="post-content">
 							<?php the_content();?>

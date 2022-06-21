@@ -633,7 +633,7 @@ if(is_home()){
 
 }
 
-add_action('wp_head', 'germina_seo');
+//add_action('wp_head', 'germina_seo');
 
 function germina_archive_title() {
 
@@ -670,7 +670,7 @@ function theme_queue_js(){
 	if ( (!is_admin()) && is_singular() && comments_open() && get_option('thread_comments') )
 		wp_enqueue_script( 'comment-reply' );
 }
-add_action('wp_enqueue_scripts', 'theme_queue_js');
+//add_action('wp_enqueue_scripts', 'theme_queue_js');
 
 function germina_term_image($term_id, $taxonomy, $size) {
 	/**
