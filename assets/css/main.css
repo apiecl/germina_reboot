@@ -274,10 +274,10 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #4496a8;
+  color: #00819c;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #2e6571;
+    color: #004250;
     text-decoration: underline; }
   a:focus {
     outline: 5px auto -webkit-focus-ring-color;
@@ -2211,7 +2211,7 @@ fieldset[disabled] a#cancel-comment-reply-link {
 
 .btn-link {
   font-weight: 400;
-  color: #4496a8;
+  color: #00819c;
   border-radius: 0; }
   .btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled],
   fieldset[disabled] .btn-link {
@@ -2221,7 +2221,7 @@ fieldset[disabled] a#cancel-comment-reply-link {
   .btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active {
     border-color: transparent; }
   .btn-link:hover, .btn-link:focus {
-    color: #2e6571;
+    color: #004250;
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus,
@@ -2777,7 +2777,7 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
         background-color: transparent; }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background-color: #eeeeee;
-    border-color: #4496a8; }
+    border-color: #00819c; }
   .nav .nav-divider {
     height: 1px;
     margin: 10px 0;
@@ -4215,6 +4215,9 @@ address {
   padding: 24px 0; }
   .metodologia h2 {
     font-size: 20px; }
+    @media screen and (min-width: 768px) {
+      .metodologia h2 {
+        font-size: 28px; } }
   .metodologia .metodologia-list {
     display: flex;
     padding: 32px 0;
@@ -4227,7 +4230,11 @@ address {
         .metodologia .metodologia-list li {
           margin: 0 6px; } }
       .metodologia .metodologia-list li img {
-        margin-bottom: 6px; }
+        margin-bottom: 6px;
+        width: 76px; }
+        @media screen and (min-width: 768px) {
+          .metodologia .metodologia-list li img {
+            width: 160px; } }
       .metodologia .metodologia-list li span {
         display: block;
         text-align: left; }
@@ -4236,19 +4243,27 @@ address {
             font-size: 12px; } }
 
 .section-home {
-  padding-bottom: 48px; }
+  padding-bottom: 48px;
+  padding-top: 24px; }
 
 .home-section-title {
   text-align: center;
   padding: 12px 0;
+  color: #cb3c43;
   border-bottom: 1px solid #000;
   border-top: 1px solid #000;
-  background-color: white;
+  background-color: transparent;
   margin-bottom: 48px;
-  margin-top: 0; }
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 24px;
+  max-width: 750px; }
   @media screen and (max-width: 768px) {
     .home-section-title {
-      font-size: 22px; } }
+      font-size: 24px;
+      margin-left: 14px;
+      margin-right: 14px; } }
 
 .section-home-proyectos {
   background-color: #d9d9d9; }
@@ -4623,7 +4638,7 @@ a.block-item-link:hover {
   text-decoration: none; }
 
 .item-meta-top {
-  font-size: 14px;
+  font-size: 13px;
   color: #4da5b8; }
 
 .item-small {
@@ -4652,7 +4667,7 @@ a.block-item-link:hover {
   .item-medium:hover {
     outline: 1px solid #e36367; }
   .item-medium h2 {
-    margin: 0 0 24px 0;
+    margin: 24px 0 24px 0;
     font-size: 24px;
     color: #ec5a5e;
     line-height: 1.5em; }
@@ -4746,20 +4761,6 @@ a.block-item-link:hover {
   text-transform: uppercase;
   display: inline-block;
   padding: 3px; }
-
-.item-medium.item-medium-proyecto {
-  background-color: #cb3c43; }
-  .item-medium.item-medium-proyecto h2 {
-    color: white; }
-  .item-medium.item-medium-proyecto .proyect-item-meta-bottom div {
-    margin-bottom: 6px;
-    color: white; }
-  .item-medium.item-medium-proyecto .proyect-item-meta-bottom span {
-    color: #000; }
-  .item-medium.item-medium-proyecto .proyect-item-meta-bottom i {
-    color: white; }
-  .item-medium.item-medium-proyecto .item-meta-top .item-type i {
-    font-style: normal; }
 
 h1,
 h2,
@@ -5308,7 +5309,7 @@ article header.header-single {
     .single-item-meta-bottom .taxname.ambitos-de-accion {
       background-color: #83659f; }
   .single-item-meta-bottom a {
-    color: #008aa7;
+    color: #00819c;
     text-decoration: underline; }
 
 .post-content ul li {
@@ -5603,6 +5604,22 @@ body.page .subcontent {
     margin: 48px 24px 24px; }
     body.page .subcontent header.subheader h2 {
       font-size: 28px; }
+
+.panel.panel-default.panel-taxonomy-shortcode {
+  transition: all ease-in 0.5s;
+  box-shadow: 0 0 4px #333;
+  border-color: #b9b9b9; }
+  .panel.panel-default.panel-taxonomy-shortcode .panel-heading {
+    background-color: #b9b9b9;
+    border-bottom: 1px solid #b9b9b9; }
+  .panel.panel-default.panel-taxonomy-shortcode.active {
+    border-color: #cb3c43;
+    box-shadow: none; }
+    .panel.panel-default.panel-taxonomy-shortcode.active .panel-heading {
+      border-bottom-color: #cb3c43;
+      background-color: #d9d9d9; }
+    .panel.panel-default.panel-taxonomy-shortcode.active .panel-title {
+      color: #cb3c43; }
 
 body.admin-bar .navbar {
   margin-top: 32px; }
@@ -6046,10 +6063,18 @@ ul.proycol {
   height: 150px;
   margin: 0 auto;
   transition: color 0.7s linear; }
+  @media screen and (max-width: 768px) {
+    .integrante .imgwrap {
+      width: 120px;
+      height: 120px; } }
 
 .integrante .imgwrap img {
   width: 150px;
   height: 150px; }
+  @media screen and (max-width: 768px) {
+    .integrante .imgwrap img {
+      width: 120px;
+      height: 120px; } }
 
 .integrante h4 {
   font-size: 14px;
@@ -6091,10 +6116,7 @@ article.integrante-equipo header.header-equipo {
 
 .equipo-datos {
   font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap; }
+  text-align: left; }
 
 .equipo-datos p a {
   display: inline-block;
@@ -6102,7 +6124,7 @@ article.integrante-equipo header.header-equipo {
   padding: 12px;
   border: 1px solid #cb3c43;
   border-radius: 10px;
-  margin: 12px;
+  margin: 12px 12px 12px 0;
   color: #cb3c43;
   font-size: 16px; }
 
@@ -6143,11 +6165,16 @@ article.integrante-equipo header.header-equipo {
   max-width: 100%;
   height: auto; }
 
+p.label-button-equipo {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0; }
+
 footer.germina-footer,
 .redes-menu {
   background-color: #cb3c43;
   color: white;
-  text-align: right; }
+  text-align: left; }
   footer.germina-footer h4,
   .redes-menu h4 {
     margin-top: 24px; }
@@ -6216,6 +6243,13 @@ p.search-results-count {
     position: relative; }
     .panel.panel-search input:focus-visible {
       outline: 1px solid #cb3c43; }
+
+@media screen and (max-width: 768px) {
+  h4.panel-section.panel-section-search {
+    margin: 0;
+    background-color: white;
+    border-color: #d9d9d9;
+    color: #cb3c43; } }
 
 .noresultszone {
   max-width: 450px;

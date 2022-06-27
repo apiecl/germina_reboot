@@ -7,7 +7,7 @@ a.block-item-link:hover {
 }
 
 .item-meta-top {
-	font-size: 14px;
+	font-size: 13px;
 	color: $pelorous;
 }
 
@@ -48,7 +48,7 @@ a.block-item-link:hover {
 	}
 
 	h2 {
-		margin: 0 0 24px 0;
+		margin: 24px 0 24px 0;
 		font-size: 24px;
 		color: $sandia;
 		line-height: 1.5em;
@@ -178,29 +178,29 @@ a.block-item-link:hover {
 	padding: 3px;
 }
 
-.item-medium.item-medium-proyecto {
-	background-color: $newsandia;
-	h2 {
-		color: white;
-	}
-	.proyect-item-meta-bottom {
-		div {
-			margin-bottom: 6px;
-			color: white;
-		}
-		span {
-			color: #000;
-		}
-		i {
-			color: white;
-		}
-	}
+// .item-medium.item-medium-proyecto {
+// 	background-color: $newsandia;
+// 	h2 {
+// 		color: white;
+// 	}
+// 	.proyect-item-meta-bottom {
+// 		div {
+// 			margin-bottom: 6px;
+// 			color: white;
+// 		}
+// 		span {
+// 			color: #000;
+// 		}
+// 		i {
+// 			color: white;
+// 		}
+// 	}
 
-	.item-meta-top {
-		.item-type {
-			i {
-				font-style: normal;
-			}
-		}
-	}
-}
+// 	.item-meta-top {
+// 		.item-type {
+// 			i {
+// 				font-style: normal;
+// 			}
+// 		}
+// 	}
+// }

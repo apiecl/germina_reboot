@@ -35,7 +35,7 @@
 
 				<h4>Teléfono</h4>
 
-				<p class="address-button"><a href="tel:<?php echo $fono;?>"><i class="fa fa-phone"></i><?php echo $fono; ?></a></p>
+				
 
 				<?php if ( $fono2 ) : ?>
 					<p class="address-button"><a href="tel:<?php echo $fono2;?>"><i class="fa fa-mobile fa-fw"></i><?php echo $fono2;?></a></p>

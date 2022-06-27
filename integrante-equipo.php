@@ -35,17 +35,20 @@ Template Name: Integrante Equipo
 
 					<div class="equipo-datos">
 									<?php if(get_post_meta($post->ID, 'correo', true)):?>
+										<p class="label-button-equipo">Correo electrónico</p>
 										<p>
 											<a class="eqcorreo" href="mailto:<?php echo get_post_meta($post->ID, 'correo', true);?>" title="Escribir un correo a <?php the_title();?>"><i class="fa fa-envelope"></i> <?php echo get_post_meta($post->ID, 'correo', true);?></a>
 										</p>
 									<?php endif;?>
 
+									<p class="label-button-equipo">Descargar currículum en formato PDF</p>
 									<p>
 										<?php germina_get_post_attachments('Descargar Curriculum Vitae', 'Currículum');?>
 									</p>	
 
 									
 										<?php if(get_post_meta($post->ID, 'linkedin', true)):?>
+										<p class="label-button-equipo">Enlace a perfil en LinkedIn</p>
 										<p>
 											<a class="linklinkedin" href="<?php echo get_post_meta($post->ID, 'linkedin', true);?>" target="_blank" title="Perfil en LinkedIn de <?php the_title();?>"><i class="fa fa-linkedin"></i> Linkedin</a>
 										</p>

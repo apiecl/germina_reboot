@@ -117,3 +117,24 @@ body.page .subcontent {
 		}
 	}
 }
+
+.panel.panel-default.panel-taxonomy-shortcode {
+	transition: all ease-in 0.5s;
+	box-shadow: 0 0 4px #333;
+	border-color: #b9b9b9;
+	.panel-heading {
+		background-color: #b9b9b9;
+		border-bottom: 1px solid #b9b9b9;
+	}
+	&.active {
+		border-color: $newsandia;
+		box-shadow: none;
+		.panel-heading {
+			border-bottom-color: $newsandia;
+			background-color: $grisfondo;
+		}
+		.panel-title {
+			color: $newsandia;
+		}
+	}
+}

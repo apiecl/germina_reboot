@@ -51,11 +51,19 @@
 	//border:1px solid $sandia;
 	margin: 0 auto;
 	transition: color 0.7s linear;
+	@media screen and (max-width: $screen-sm) {
+		width: 120px;
+		height: 120px;
+	}
 }
 
 .integrante .imgwrap img {
 	width: 150px;
 	height: 150px;
+	@media screen and (max-width: $screen-sm) {
+		width: 120px;
+		height: 120px;
+	}
 }
 
 .integrante h4 {
@@ -113,10 +121,7 @@ article.integrante-equipo header.header-equipo {
 
 .equipo-datos {
 	font-size: 14px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
+	text-align: left;
 }
 
 .equipo-datos p {
@@ -126,7 +131,7 @@ article.integrante-equipo header.header-equipo {
 		padding: 12px;
 		border: 1px solid $newsandia;
 		border-radius: 10px;
-		margin: 12px;
+		margin: 12px 12px 12px 0;
 		color: $newsandia;
 		font-size: 16px;
 	}
@@ -187,4 +192,10 @@ article.integrante-equipo header.header-equipo {
 .team-column-mini .integrante .imgwrap img {
 	max-width: 100%;
 	height: auto;
+}
+
+p.label-button-equipo {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 0;
 }

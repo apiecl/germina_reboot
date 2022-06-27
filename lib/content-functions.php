@@ -810,7 +810,7 @@ function germina_taxpanel_get_content($taxonomy) {
 		$terms = get_terms($args);
 
 		if($terms) {
-			$output .= 	'<div class="panel panel-default panel-taxcontent">';
+			$output .= 	'<div id="panel-taxonomy-' . $taxonomy . '" class="panel-taxonomy-shortcode panel panel-default panel-taxcontent">';
 			$output .= 	'<div class="panel-heading" role="tab" id="heading-' . $taxonomy .'">';
 			$output .= 	'<h4 class="panel-title">';
 			$output .=  '<a role="button" data-toggle="collapse" data-parent="#taxonomy-accordion" href="#taxpanel-'. $taxonomy . '">Consulta nuestros contenidos según ' . $taxlabels->name .' <i class="fa fa-chevron-down"></i></a>';

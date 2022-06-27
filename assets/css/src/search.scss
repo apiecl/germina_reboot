@@ -45,6 +45,15 @@ p.search-results-count {
 	}
 }
 
+@media screen and(max-width: $screen-sm) {
+	h4.panel-section.panel-section-search {
+		margin: 0;
+		background-color: white;
+		border-color: $grisfondo;
+		color: $newsandia;
+	}
+}
+
 .noresultszone {
 	max-width: 450px;
 	margin: 24px auto;

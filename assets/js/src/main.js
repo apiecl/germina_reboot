@@ -104,6 +104,14 @@ $(document).ready(function () {
         $(".panel-default.active").removeClass("active");
     });
 
+    $(".panel-taxonomy-shortcode").on("shown.bs.collapse", function () {
+        $(this).addClass("active");
+    });
+
+    $(".panel-taxonomy-shortcode").on("hide.bs.collapse", function () {
+        $(this).removeClass("active");
+    });
+
     $('a[data-toggle="showparent"]').on("click", function () {
         $("#taxonomy-accordion").show();
         $(".subpanel").not(".hidden").addClass("hidden");

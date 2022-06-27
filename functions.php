@@ -23,7 +23,7 @@ define( 'GERMINA_CATNOVEDADES', 16 );
 define( 'GERMINA_ARTICULOS', 6 );
 define( 'FACEBOOK_PAGE', 'https://web.facebook.com/Germina-conocimiento-para-la-acci%C3%B3n-2157914764440494/' );
 define( 'LINKEDIN_PAGE', 'https://www.linkedin.com/company/11536225/' );
-define( 'GERMINA_VERSION', '1.9.9' );
+define( 'GERMINA_VERSION', '2.0.1' );
 
 /**
  * LIBRARIES
