@@ -5753,9 +5753,9 @@ $(document).ready(function () {
     var videobj = $(".germina-video-container video.video-germina");
 
     var proyectlist = $("div.full-proylist");
-    var ptypenavitems = $("div.ptype-nav a");
+    var ptypenavitems = $("div.ptype-nav a.btn-typefilter");
 
-    var typebuttons = $("div.ptype-nav a");
+    var typebuttons = $("div.ptype-nav a.btn-typefilter");
 
     let logocolor = $("img.logo-color");
     let logoblanco = $("img.logo-blanco");
@@ -5783,6 +5783,8 @@ $(document).ready(function () {
 
     //Filter type in taxview
 
+    var allfilter = $('.ptype-nav a[data-filter="all"]');
+
     ptypenavitems.on("click", function () {
         var tofilter = $(this).attr("data-filter");
         var taxitems = $("div.tax-item-medium");
@@ -5795,9 +5797,18 @@ $(document).ready(function () {
 
             $('div[data-type="' + tofilter + '"]').show();
 
+            allfilter.removeClass("active");
             ptypenavitems.removeClass("active");
+
             $(this).toggleClass("active");
         }
+    });
+
+    allfilter.on("click", function () {
+        var taxitems = $("div.tax-item-medium");
+        ptypenavitems.removeClass("active");
+        taxitems.show();
+        $(this).addClass("active");
     });
 
     //Ajax calls for proyects
@@ -5861,6 +5872,25 @@ $(document).ready(function () {
         let slug = $(this).attr("data-termslug");
         $("#taxonomy-accordion").hide();
         $("#childpanel-" + slug).removeClass("hidden");
+    });
+
+    goBack = $("a.goback");
+    goBack.hide();
+
+    $(window).on("scroll", function () {
+        offset = window.pageYOffset;
+
+        if (offset > 300) {
+            goBack.fadeIn();
+        }
+        if (offset < 300) {
+            goBack.fadeOut();
+        }
+    });
+
+    goBack.on("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
     });
 
     $(".dropdown a.dropdown-submenu").on("click", function (e) {

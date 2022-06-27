@@ -155,3 +155,12 @@ button.loadmore {
 		}
 	}
 }
+
+#taxonomy-accordion.panel-group.tax-filter {
+	margin-bottom: 0;
+	padding-bottom: 0;
+
+	@media screen and (max-width: $screen-sm) {
+		margin-top: 12px;
+	}
+}

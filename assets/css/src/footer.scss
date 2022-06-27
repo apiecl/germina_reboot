@@ -45,3 +45,27 @@ footer.germina-footer,
 		margin-top: 4px;
 	}
 }
+
+footer.germina-footer {
+	margin-top: 48px;
+
+	.logofooter {
+		margin-top: 24px;
+		padding: 12px;
+		background-color: white;
+		max-width: 240px;
+		border-radius: 4px;
+	}
+}
+
+a.goback {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	color: #000;
+	border: 2px solid #333;
+	border-radius: 4px;
+	background-color: rgba(88, 88, 87, 0.6);
+	padding: 12px 24px;
+	font-size: 24px;
+}

@@ -11,3 +11,4 @@
 <?php wp_body_open();?>
 
 <?php get_template_part( 'parts/germina-menu' );?>
+<span id="top"></span>

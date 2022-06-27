@@ -5170,6 +5170,13 @@ button.loadmore {
   background-color: #cb3c43;
   color: white; }
 
+#taxonomy-accordion.panel-group.tax-filter {
+  margin-bottom: 0;
+  padding-bottom: 0; }
+  @media screen and (max-width: 768px) {
+    #taxonomy-accordion.panel-group.tax-filter {
+      margin-top: 12px; } }
+
 .proyect-image {
   margin-right: -14px;
   padding-right: 0; }
@@ -6211,6 +6218,26 @@ footer.germina-footer,
   .redes-menu img {
     margin-top: 4px; }
 
+footer.germina-footer {
+  margin-top: 48px; }
+  footer.germina-footer .logofooter {
+    margin-top: 24px;
+    padding: 12px;
+    background-color: white;
+    max-width: 240px;
+    border-radius: 4px; }
+
+a.goback {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #000;
+  border: 2px solid #333;
+  border-radius: 4px;
+  background-color: rgba(88, 88, 87, 0.6);
+  padding: 12px 24px;
+  font-size: 24px; }
+
 .search-section-header span {
   color: #333; }
 
@@ -6499,3 +6526,20 @@ article.comment h2.comment-author {
 .boletin-bigimg img {
   max-width: 100%;
   height: auto; }
+
+.germina-mailchimp-subscribe {
+  background-color: white;
+  padding: 24px;
+  margin-top: 12px;
+  margin-bottom: 12px; }
+  .germina-mailchimp-subscribe h2 {
+    color: #cb3c43;
+    font-size: 22px;
+    margin-top: 0; }
+  .germina-mailchimp-subscribe p {
+    color: #cb3c43; }
+  .germina-mailchimp-subscribe .btn-subscribe {
+    background-color: white;
+    border-color: #cb3c43;
+    margin-top: 12px;
+    color: #cb3c43; }

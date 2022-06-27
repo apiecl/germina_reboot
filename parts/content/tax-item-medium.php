@@ -1,10 +1,10 @@
 <?php 
 	$type = $args['type'];
-	$label = $args['typelabel'];
+	//$label = $args['typelabel'];
 	$area = $args['post_area'];
 	$title = $args['post_title'];
 	$temas = $args['post_temas'];
-	$post_thumbnail = $args['post_thumbnail'];
+	$post_thumbnail = isset($args['post_thumbnail']) ? $args['post_thumbnail'] : null;
 	$image_class = $post_thumbnail ? 'with-image' : 'no-image';
  ?>
 

@@ -38,24 +38,9 @@
 			</header>
 		</div>
 		
-		<div class="col-md-4 col-md-offset-1 filter-column" data-id="filter-nav">
-			<h4 class="filter-heading-toggle" data-target="#order-accordion">Ordenar por <span class="labelorder"><?php echo $order == 'descending' ? 'recientes' : 'antiguos';?></span><i class="fa fa-chevron-up"></i></h4>
-			<div class="panel-group order-filter" id="order-accordion" role="tablist" aria-multiselectable="true">
-				<div class="panel panel-default">
-					<div class="panel-heading <?php echo $order == 'descending'? 'active' : ''?>" role="tab" id="heading-descending">
-						<h4 class="panel-title">
-							<a href="<?php echo add_query_arg('order', 'descending')?>" role="button">Más recientes</a>
-						</h4>
-					</div>
-				</div>
-				<div class="panel panel-default">
-					<div class="panel-heading <?php echo $order == 'ascending'? 'active' : ''?>" role="tab" id="heading-ascending">
-						<h4 class="panel-title">
-							<a href="<?php echo add_query_arg('order', 'ascending')?>" role="button">Más antiguos</a>
-						</h4>
-					</div>
-				</div>
-			</div>
+		<div class="col-md-4 col-md-offset-1">
+			<?php cur_get_template('date-sorter.php', array('class' => 'filter-column'), '/parts/');?>
+			<?php cur_get_template('mailchimp.php', array('class' => 'hidden-xs'), '/parts/');?>
 		</div>
 
 		<div class="content col-md-7">
@@ -92,6 +77,8 @@
 				</header>
 			</article>
 		<?php endif;?>
+
+		<?php cur_get_template('mailchimp.php', array('class' => 'visible-xs'), '/parts/');?>
 		
 		</div>
 	</div>

@@ -11,6 +11,7 @@ General Taxonomy Template
 		<div class="col-md-4 col-md-offset-1 filter-column" data-id="taxonomy-nav">
 				<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">Filtrar <i class="fa fa-chevron-down"></i></h4>
 				<?php get_template_part('parts/content/taxonomy-filter');?>	
+				<?php cur_get_template('date-sorter.php', array('class' => ''), '/parts/');?>
 		</div>
 	
 	<div class="content col-md-7">
@@ -25,9 +26,10 @@ General Taxonomy Template
 
 				<div class="ptype-nav">
 					<div class="btn-group btn-group-xs">
-						<a href="#" data-filter="novedades" class="btn btn-default btn-xs">Novedades</a>
-						<a href="#" data-filter="publicaciones" class="btn btn-default btn-xs">Centro de documentación</a>
-						<a href="#" data-filter="resumen-proyecto" class="btn btn-default btn-xs">Proyectos</a>
+						<a href="#" data-filter="novedades" class="btn-typefilter btn btn-default btn-xs">Novedades</a>
+						<a href="#" data-filter="publicaciones" class="btn-typefilter btn btn-default btn-xs">Centro de documentación</a>
+						<a href="#" data-filter="resumen-proyecto" class="btn-typefilter btn btn-default btn-xs">Proyectos</a>
+						<a href="#" data-filter="all" class="btn btn-default btn-xs active">Todos</a>
 					</div>
 				</div>
 
