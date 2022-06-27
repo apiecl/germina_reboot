@@ -64,7 +64,7 @@
 				</li>
 				<li>
 					<img src="<?php bloginfo('template_url');?>/assets/img/dialogo_de_saberes.svg" alt="Diálogo de Saberes">
-					<span>Dialogo de sáberes</span>
+					<span>Dialogo de saberes</span>
 				</li>
 			</ul>
 		</div>
