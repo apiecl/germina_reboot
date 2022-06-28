@@ -204,6 +204,7 @@ $(document).ready(function () {
                     let dataTarget = $($(this).attr("data-target"));
                     $(this).toggleClass("active");
                     dataTarget.toggleClass("active");
+                    $("p.search-results-count").toggleClass("active");
                 });
             }
 
