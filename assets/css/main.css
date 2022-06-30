@@ -2764,7 +2764,7 @@ div.pagination .input-group-btn:first-child > .btn-group:not(:first-child) > a,
     .nav > li > a {
       position: relative;
       display: block;
-      padding: 10px 10px; }
+      padding: 10px 5px; }
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
         background-color: #eeeeee; }
