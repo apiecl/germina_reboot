@@ -79,6 +79,36 @@ header.section-header {
 	margin: 48px 0 72px 0;
 }
 
+.page-template-contacto {
+	header {
+		padding: 12px 0;
+		max-width: 600px;
+		margin: 24px auto;
+		h1.post-title {
+			text-align: center;
+			margin: 0;
+		}
+
+		border-top: 1px solid $grisoscuro;
+		border-bottom: 1px solid $grisoscuro;
+	}
+
+	.content .post-content {
+		address {
+			p {
+				margin-bottom: 24px;
+			}
+			i {
+				color: $newsandia;
+			}
+		}
+	}
+
+	.germina-mailchimp-subscribe {
+		padding: 0;
+	}
+}
+
 @media screen and (max-width: $screen-sm) {
 	.page-template-contacto article.type-page {
 		margin: 0;

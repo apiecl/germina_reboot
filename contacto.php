@@ -18,13 +18,19 @@ Template Name: Contacto
 
 <div class="container">
 	<div class="row">
+
+		<header>
+			<h1 class="post-title"><?php the_title();?></h1>
+		</header>
+
+
 		<div class="content col-md-8 col-md-offset-2">
 
-		<?php if(have_posts()): while(have_posts()): the_post();?>
+			<?php if(have_posts()): while(have_posts()): the_post();?>
 
-			<article <?php post_class();?> >
+				<article <?php post_class();?> >
 
-				<?php
+					<?php
 						/**
 						 * Settings from the controlpanel
 						 */
@@ -42,66 +48,63 @@ Template Name: Contacto
 						$enlace_direccion = get_post_meta( $contactoid, 'enlace_direccion', true);
 						?>
 
-				<div class="post-content row">
+						<div class="post-content row">
 
-					<div class="col-md-6">
+							<div class="col-md-6">
 
-						<header>
-							<h1 class="post-title"><?php the_title();?></h1>
-						</header>
+								
+								<?php the_content();?>
 
-						<?php the_content();?>
+								<address>
+									<p>
+										<a target="_blank" href="<?php echo $enlace_direccion;?>"><i class="fa fa-map-marker"></i> <?php echo $direccion;?> - <?php echo $comuna;?> - <?php echo $ciudad;?></a>
+									</p>
+									<p>
+										<i class="fa fa-phone"></i> <a href="tel:<?php echo $fono;?>"><?php echo $fono;?></a>
+									</p>
+									<?php if($fono2):?>
+										<p>
+											<i class="fa fa-mobile"></i> <a href="tel:<?php echo $fono2;?>"><?php echo $fono2;?></a>
+										</p>
+									<?php endif;?>
+									<p>
+										<i class="fa fa-envelope"></i> <a href="mailto:<?php echo $email;?>"><?php echo $email;?></a>
+									</p>
+									<p>
+										<a target="_blank" href="<?php echo $facebook;?>"><i class="fa fa-facebook-square"></i> Facebook </a>
+									</p>
+									<p>
+										<a target="_blank" href="<?php echo $linkedin;?>"><i class="fa fa-linkedin"></i> Linkedin </a>
+									</p>
 
-						<address>
-							<p>
-								<a target="_blank" href="<?php echo $enlace_direccion;?>"><i class="fa fa-map-marker"></i> <?php echo $direccion;?> - <?php echo $comuna;?> - <?php echo $ciudad;?></a>
-							</p>
-							<p>
-								<i class="fa fa-phone"></i> <a href="tel:<?php echo $fono;?>"><?php echo $fono;?></a>
-							</p>
-							<?php if($fono2):?>
-							<p>
-								<i class="fa fa-mobile"></i> <a href="tel:<?php echo $fono2;?>"><?php echo $fono2;?></a>
-							</p>
-							<?php endif;?>
-							<p>
-								<i class="fa fa-envelope"></i> <a href="mailto:<?php echo $email;?>"><?php echo $email;?></a>
-							</p>
-							<p>
-								<a target="_blank" href="<?php echo $facebook;?>"><i class="fa fa-facebook-square"></i> Facebook </a>
-							</p>
-							<p>
-								<a target="_blank" href="<?php echo $linkedin;?>"><i class="fa fa-linkedin"></i> Linkedin </a>
-							</p>
+								</address>
+							</div>
 
-						</address>
-					</div>
+							<div class="col-md-6 mailchimp-box">
 
-					<div class="col-md-6 mailchimp-box">
+								<h3 class="section-description-title">Suscríbete a nuestro boletín</h3>
 
-						<h3 class="section-description-title">Suscríbete a nuestro boletín</h3>
+								<?php get_template_part('parts/mailchimp');?>
 
-						<?php get_template_part('parts/mailchimp');?>
+							</div>
 
-					</div>
+						</div>
 
-				</div>
+						<footer class="tax">
 
-				<footer class="tax">
+						</footer>
 
-				</footer>
+					</article>
 
-			</article>
-
-		<?php endwhile;?>
-		<?php else:?>
-			<article class="not_found">
-				<header>
-					<h1>No encontrado</h1>
-					<p><?php get_search_form( true );?></p>
-				</header>
-			</article>
-		<?php endif;?>
+				<?php endwhile;?>
+			<?php else:?>
+				<article class="not_found">
+					<header>
+						<h1>No encontrado</h1>
+						<p><?php get_search_form( true );?></p>
+					</header>
+				</article>
+			<?php endif;?>
 
 		</div>
 	</div>

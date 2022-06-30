@@ -5589,6 +5589,25 @@ header.section-header {
   border: 1px solid #ccc;
   margin: 48px 0 72px 0; }
 
+.page-template-contacto header {
+  padding: 12px 0;
+  max-width: 600px;
+  margin: 24px auto;
+  border-top: 1px solid #313130;
+  border-bottom: 1px solid #313130; }
+  .page-template-contacto header h1.post-title {
+    text-align: center;
+    margin: 0; }
+
+.page-template-contacto .content .post-content address p {
+  margin-bottom: 24px; }
+
+.page-template-contacto .content .post-content address i {
+  color: #cb3c43; }
+
+.page-template-contacto .germina-mailchimp-subscribe {
+  padding: 0; }
+
 @media screen and (max-width: 768px) {
   .page-template-contacto article.type-page {
     margin: 0;
