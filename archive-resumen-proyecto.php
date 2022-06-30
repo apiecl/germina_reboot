@@ -2,6 +2,8 @@
 /*
 * Template Name: Archivo Proyectos
 */
+
+$nolasts = 6;
 ?>
 
 <?php get_header();?>
@@ -23,7 +25,7 @@
 		<div class="content col-md-7">
 
 			<h2 class="section-description-title taxtitle">Últimos proyectos</h2>
-
+			<p class="search-results-count project-results-count" data-item="proyectos" data-item-singular="proyecto" ><strong>Últimos <?php echo $nolasts;?> proyectos</strong></p>
 			<div class="full-proylist row">
 				<!-- Ajax call for proyects -->
 				<!-- Llamada inicial de los últimos proyectos -->
@@ -32,7 +34,7 @@
 
 					$args = array(
 								'post_type' => 'resumen-proyecto',
-								'numberposts' => 6,
+								'numberposts' => $nolasts,
 								'post_status' => 'publish'
 							);
 

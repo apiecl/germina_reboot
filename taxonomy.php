@@ -16,7 +16,8 @@ General Taxonomy Template
 	
 	<div class="content col-md-7">
 
-		<h2 class="section-description-title taxtitle"></h2>
+		
+		
 
 		<div class="full-proylist row">
 			<!-- Ajax call for proyects -->
@@ -24,19 +25,13 @@ General Taxonomy Template
 
 				<h2 class="section-description-title"><?php single_term_title( );?></h2>
 
-				<div class="ptype-nav">
-					<div class="btn-group btn-group-xs">
-						<a href="#" data-filter="novedades" class="btn-typefilter btn btn-default btn-xs">Novedades</a>
-						<a href="#" data-filter="publicaciones" class="btn-typefilter btn btn-default btn-xs">Centro de documentación</a>
-						<a href="#" data-filter="resumen-proyecto" class="btn-typefilter btn btn-default btn-xs">Proyectos</a>
-						<a href="#" data-filter="all" class="btn btn-default btn-xs active">Todos</a>
-					</div>
-				</div>
+				<?php cur_get_template('typefilter.php', array(), 'parts/');?>
 
+				<p class="search-results-count taxonomy-results-count"><strong><?php echo $wp_query->post_count;?> contenidos</strong></p>
 
 				<?php if(have_posts()): while(have_posts()): the_post();
 
-							//$compiler = include( get_template_directory() . '/lib/mustache-compiler.php');
+					
 
 					$args = array(
 						'id' => $post->ID,
@@ -58,11 +53,17 @@ General Taxonomy Template
 						$args['post_thumbnail'] = $thumbsrc[0];
 					endif;
 
-									//echo $compiler->render('tax-item-medium', $data);
+					//echo $compiler->render('tax-item-medium', $data);
 					cur_get_template('tax-item-medium.php', $args, 'parts/content');
 
 				endwhile;?>
 			<?php endif;?>
+
+				<div class="pagination">	
+					<div class="nav-next"><?php previous_posts_link( '<i class="fa fa-angle-left"></i> Más recientes' ); ?></div>
+					<p class="pagination-info"><?php echo $pagedtext;?></p>
+					<div class="nav-previous"><?php next_posts_link( 'Más antiguos <i class="fa fa-angle-right"></i>' ); ?></div>
+				</div>
 
 		</div>
 

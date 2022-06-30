@@ -69,7 +69,20 @@ function germina_loadprojects(element) {
 
             var content = JSON.parse(response);
 
+            let projectCount = $("p.project-results-count");
+            let itemlabel = projectCount.attr("data-item-plural");
+            let itemlabelsingular = projectCount.attr("data-item-singular");
+
             if (content.items !== undefined) {
+                console.log(content);
+
+                projectCount
+                    .empty()
+                    .append(
+                        `<strong> ${content.total} ${
+                            content.total > 1 ? itemlabel : itemlabelsingular
+                        }</strong>`
+                    );
                 content.items.map((item) => {
                     proyectlist.append(`                       
                             <div class="proyect-item-medium animated zoomIn ${
@@ -105,6 +118,7 @@ function germina_loadprojects(element) {
                         .fadeIn();
                 }
             } else {
+                projectCount.empty().append("0 " + itemlabel);
                 proyectlist.append(
                     `<div class='col-md-12 proyect-items-wrapper'>
                         <div class="not-found-message">No se encontraron contenidos</div>

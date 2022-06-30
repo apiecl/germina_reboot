@@ -32,17 +32,24 @@
 			
 
 			<?php get_template_part('parts/content/taxonomy-filter');?>
+			<?php cur_get_template('date-sorter.php', array('class' => 'filter-column'), '/parts/');?>
 		</div>
 
 		<div class="content col-md-7">
 		
-		<p class="search-results-count"><?php echo (get_query_var('s') ? '<span>' . $count . '</span> resultados para: <strong>' . get_query_var('s') . '</strong>' : '');?></p>
+		<?php if( get_query_var('s')) { ?>
+			<p class="search-results-count"><?php echo (get_query_var('s') ? '<span>' . $count . '</span> resultados para: <strong>' . get_query_var('s') . '</strong>' : '');?></p>
+			<?php cur_get_template('typefilter.php', array(), 'parts/');?>
+		<?php };?>
+
+		
 
 		<?php if ( have_posts() && get_query_var('s') ) : while ( have_posts() ) : the_post();?>
 			
 			<?php 
 				$args = array(
-					'id' => $post->ID,
+					'id' 	=> $post->ID,
+					'type'	=> germina_itemtype($post->ID)
 					);
 
 				cur_get_template('item-medium.php', $args, '/parts/content/');

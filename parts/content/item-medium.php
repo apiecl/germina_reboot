@@ -5,10 +5,11 @@
  */
 
 $item_id = $args['id'];
+$type = $args['type'];
 
 ?>
 
-<div class="item-medium">
+<div class="item-medium item-<?php echo $type;?> animated zoomIn" data-type="<?php echo $type;?>">
 	<a class="block-item-link" href="<?php echo get_permalink($item_id);?>" title="<?php echo get_the_title($item_id);?>">
 		
 		<?php if(is_search()):?>

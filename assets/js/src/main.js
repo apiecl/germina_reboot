@@ -23,7 +23,11 @@ $(document).ready(function () {
     typebuttons.each(function (index, element) {
         var filter = $(element).attr("data-filter");
         var countelements = $(
-            'div.tax-item-medium[data-type="' + filter + '"]'
+            'div.tax-item-medium[data-type="' +
+                filter +
+                '"], div.item-medium[data-type="' +
+                filter +
+                '"]'
         ).length;
 
         if (countelements < 1) {
@@ -47,27 +51,47 @@ $(document).ready(function () {
 
     ptypenavitems.on("click", function () {
         var tofilter = $(this).attr("data-filter");
-        var taxitems = $("div.tax-item-medium");
+        var tofilterlabel = $(this).attr("data-filter-label");
+        var taxitems = $("div.tax-item-medium, div.item-medium");
+        var total = taxitems.length;
+        let taxCount = $("p.taxonomy-results-count");
 
         if ($(this).hasClass("active")) {
             taxitems.show();
             $(this).removeClass("active");
+            taxCount
+                .empty()
+                .append(`<strong>${total} ${tofilterlabel}</strong>`);
         } else {
             taxitems.hide();
+            console.log(
+                $('div[data-type="' + tofilter + '"]').length,
+                "numero articulos"
+            );
 
+            let noFiltered = $('div[data-type="' + tofilter + '"]').length;
             $('div[data-type="' + tofilter + '"]').show();
 
             allfilter.removeClass("active");
             ptypenavitems.removeClass("active");
+
+            taxCount
+                .empty()
+                .append(`<strong>${noFiltered} ${tofilterlabel}</strong>`);
 
             $(this).toggleClass("active");
         }
     });
 
     allfilter.on("click", function () {
-        var taxitems = $("div.tax-item-medium");
+        console.log("all");
+        let taxCount = $("p.taxonomy-results-count");
+        var taxitems = $("div.tax-item-medium, div.item-medium");
         ptypenavitems.removeClass("active");
         taxitems.show();
+        taxCount
+            .empty()
+            .append(`<strong>${taxitems.length} contenidos</strong>`);
         $(this).addClass("active");
     });
 

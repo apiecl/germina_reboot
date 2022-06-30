@@ -14,7 +14,7 @@
 	<h4 class="panel-section panel-section-search">Todo sobre</h4>
 	<?php
 	$current_term = get_queried_object();
-	$taxonomies = ['tema', 'ambitos_de_accion', 'areas'];
+	$taxonomies = ['areas', 'ambitos_de_accion','tema'];
 	foreach($taxonomies as $taxonomy):
 		$taxobj = get_taxonomy( $taxonomy );
 		$taxlabels = get_taxonomy_labels( $taxobj );

@@ -7,6 +7,7 @@
 <?php get_header();
 	$category = $wp_query->query_vars['category_name'];
 	$categoryobj = get_category_by_slug( $category );
+	$nolasts = 6;
 ?>
 
 <div class="container archive-proyectos">
@@ -26,8 +27,8 @@
 		</div>
 		<div class="content col-md-7">
 
-			<h2 class="section-description-title taxtitle"><?php echo $category == 'publicaciones' ? 'Últimas publicaciones' : $categoryobj->name;?></h2>
-
+			<h2 class="section-description-title taxtitle"><?php echo $category == 'publicaciones' ? 'Últimos documentos' : "Documentos de " . $categoryobj->name;?></h2>
+			<p class="search-results-count project-results-count" data-item-singular="documento" data-item-plural="documentos"><strong>Últimos <?php echo $nolasts;?> documentos</strong></p>
 			<div class="full-proylist row">
 				<!-- Ajax call for proyects -->
 				<!-- Llamada inicial de los últimos proyectos -->
@@ -36,7 +37,7 @@
 
 					$args = array(
 								'post_type' 	=> 'post',
-								'numberposts' 	=> 6,
+								'numberposts' 	=> $nolasts,
 								'post_status' 	=> 'publish',
 								'tax_query'		=> array(
 													array(

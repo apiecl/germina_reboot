@@ -53,7 +53,7 @@
 
 			<div class="col-md-6 col-sm-12 col-md-pull-6">
 
-				<img class="logofooter" src="<?php bloginfo('template_url');?>/assets/img/germina_color_slogan.svg" alt="<?php bloginfo('name');?>">
+				<img class="logofooter" src="<?php bloginfo('template_url');?>/assets/img/germina_normal_sinlema.svg" alt="<?php bloginfo('name');?>">
 
 
 				<h4>Redes Sociales</h4>

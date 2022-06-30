@@ -6253,6 +6253,8 @@ p.search-results-count {
   border-color: #cb3c43;
   margin: 0 0 12px 0;
   transition: all ease-in 0.3s; }
+  p.search-results-count.taxonomy-results-count {
+    margin-top: 12px; }
   @media screen and (max-width: 768px) {
     p.search-results-count {
       border-width: 1px 1px 1px 1px;
@@ -6399,6 +6401,9 @@ p.search-results-count {
   display: inline-block;
   float: right;
   margin: 12px 0; }
+
+body.search .ptype-nav {
+  margin-bottom: 24px; }
 
 .ptype-nav {
   font-size: 14px; }
