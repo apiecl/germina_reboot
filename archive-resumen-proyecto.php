@@ -25,7 +25,7 @@ $nolasts = 6;
 		<div class="content col-md-7">
 
 			<h2 class="section-description-title taxtitle">Últimos proyectos</h2>
-			<p class="search-results-count project-results-count" data-item="proyectos" data-item-singular="proyecto" ><strong>Últimos <?php echo $nolasts;?> proyectos</strong></p>
+			<p class="search-results-count project-results-count" data-item="proyectos" data-item-singular="proyecto"  data-item-plural="proyectos"><strong>Últimos <?php echo $nolasts;?> proyectos</strong></p>
 			<div class="full-proylist row">
 				<!-- Ajax call for proyects -->
 				<!-- Llamada inicial de los últimos proyectos -->

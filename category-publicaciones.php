@@ -24,6 +24,7 @@
 				Filtrar por <i class="fa fa-chevron-down"></i>
 			</h4>
 			<?php get_template_part('parts/content/documents-filter');?>
+			<?php cur_get_template('date-sorter-ajax.php', array('class' => ''), '/parts/');?>
 		</div>
 		<div class="content col-md-7">
 
