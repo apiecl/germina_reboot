@@ -52,7 +52,7 @@ Template Name: Contacto
 
 							<div class="col-md-6">
 
-								
+
 								<?php the_content();?>
 
 								<address>
@@ -81,8 +81,6 @@ Template Name: Contacto
 							</div>
 
 							<div class="col-md-6 mailchimp-box">
-
-								<h3 class="section-description-title">Suscríbete a nuestro boletín</h3>
 
 								<?php get_template_part('parts/mailchimp');?>
 
