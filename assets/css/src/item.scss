@@ -176,6 +176,9 @@ a.block-item-link:hover {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 3px;
+	i {
+		font-style: normal;
+	}
 }
 
 // .item-medium.item-medium-proyecto {

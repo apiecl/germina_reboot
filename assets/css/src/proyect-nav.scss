@@ -121,6 +121,12 @@ button.loadmore {
 	}
 }
 
+.panel-taxcontent.active {
+	i {
+		transform: rotate(180deg);
+	}
+}
+
 .subterm-filter {
 	.fa-stack {
 		line-height: 0.9em;

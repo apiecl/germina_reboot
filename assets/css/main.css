@@ -4761,6 +4761,8 @@ a.block-item-link:hover {
   text-transform: uppercase;
   display: inline-block;
   padding: 3px; }
+  .item-type i {
+    font-style: normal; }
 
 h1,
 h2,
@@ -5148,6 +5150,9 @@ button.loadmore {
     div.pagination .panel-taxcontent .panel-body a.loadingbtn,
     .panel-taxcontent .panel-body a.loadingbtn#cancel-comment-reply-link {
       animation: germinaloading infinite 0.8s; }
+
+.panel-taxcontent.active i {
+  transform: rotate(180deg); }
 
 .subterm-filter .fa-stack {
   line-height: 0.9em;
@@ -5862,7 +5867,7 @@ nav.navbar-fixed-top.unfolded {
 @media (min-width: 768px) {
   .navbar-nav {
     float: left;
-    margin-left: 27px; }
+    margin-left: 10px; }
     .navbar-nav > li {
       float: left; }
       .navbar-nav > li > a {

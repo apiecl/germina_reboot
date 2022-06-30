@@ -53,7 +53,9 @@
 
 						$childterms = get_terms($childtermargs);
 						if($childterms) {
-
+								//pongo además el parent para que pueda ser clickeable
+								$childtermsarray[$term->term_id][] = $term;
+								
 							foreach($childterms as $childterm) {
 								$childtermsarray[$term->term_id][] = $childterm;
 							}
