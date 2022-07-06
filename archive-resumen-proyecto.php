@@ -35,6 +35,7 @@ $nolasts = 6;
 					$args = array(
 								'post_type' => 'resumen-proyecto',
 								'numberposts' => $nolasts,
+								'posts_per_page' => $nolasts,
 								'post_status' => 'publish'
 							);
 

@@ -64,7 +64,7 @@
 				</li>
 				<li>
 					<img src="<?php bloginfo('template_url');?>/assets/img/dialogo_de_saberes.svg" alt="Diálogo de Saberes">
-					<span>Dialogo de saberes</span>
+					<span>Diálogo de saberes</span>
 				</li>
 			</ul>
 		</div>
@@ -86,7 +86,7 @@
 
 		<?php 
 		$args = array(
-			'title' 		=> 'Proyectos',
+			'title' 		=> 'Portafolio',
 			'subtitle' 		=> 'Más recientes',
 			'menu_name'		=> 'portafolio',
 			'content_type'	=> 'proyectos',

@@ -23,7 +23,7 @@ define( 'GERMINA_CATNOVEDADES', 16 );
 define( 'GERMINA_ARTICULOS', 6 );
 define( 'FACEBOOK_PAGE', 'https://web.facebook.com/Germina-conocimiento-para-la-acci%C3%B3n-2157914764440494/' );
 define( 'LINKEDIN_PAGE', 'https://www.linkedin.com/company/11536225/' );
-define( 'GERMINA_VERSION', '2.0.7' );
+define( 'GERMINA_VERSION', '2.0.8' );
 
 /**
  * LIBRARIES
@@ -207,7 +207,7 @@ add_action( 'pre_get_posts', 'germina_include_custom_post_types_in_search_result
 
 function germina_disable_pagination($query) {
 	//disables pagination limit in archives and search
-	if( $query->is_archive() || $query->is_search() ) {
+	if( !$query->is_post_type_archive() && $query->is_archive() || $query->is_search() ) {
 		$query->set('posts_per_page', -1);
 	}
 }
