@@ -59,9 +59,7 @@ Template Name: Contacto
 									<p>
 										<a target="_blank" href="<?php echo $enlace_direccion;?>"><i class="fa fa-map-marker"></i> <?php echo $direccion;?> - <?php echo $comuna;?> - <?php echo $ciudad;?></a>
 									</p>
-									<p>
-										<i class="fa fa-phone"></i> <a href="tel:<?php echo $fono;?>"><?php echo $fono;?></a>
-									</p>
+									
 									<?php if($fono2):?>
 										<p>
 											<i class="fa fa-mobile"></i> <a href="tel:<?php echo $fono2;?>"><?php echo $fono2;?></a>
