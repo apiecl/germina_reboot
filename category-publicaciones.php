@@ -35,7 +35,7 @@
 				<!-- Llamada inicial de los últimos proyectos -->
 
 				<?php
-
+					
 					$args = array(
 								'post_type' 	=> 'post',
 								'numberposts' 	=> $nolasts,

@@ -4090,13 +4090,21 @@ a img.aligncenter {
   max-width: 100%; }
   @media screen and (min-width: 992px) {
     .presentation {
-      margin-top: 50px; } }
+      margin-top: 6px; } }
   @media screen and (max-width: 768px) {
     .presentation {
       margin-bottom: 32px; } }
 
+.row.intro {
+  padding: 24px 0 48px 0; }
+
+.pretitulo {
+  text-transform: uppercase;
+  font-size: 24px; }
+
 .presentation h2 {
-  font-weight: normal; }
+  font-weight: normal;
+  margin-top: 6px; }
 
 .presentation img {
   max-width: 100%; }
@@ -4113,7 +4121,17 @@ a img.aligncenter {
   animation-timing-function: ease;
   animation-fill-mode: forwards; }
   .presentation-logohome h1 {
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: 72px 0 48px 0;
+    font-size: 48px; }
+    .presentation-logohome h1 span {
+      color: #c13946;
+      display: inline-block;
+      height: 48px;
+      width: 7.5px;
+      margin: 0 2px;
+      border-bottom: 9px solid #f7f7f7;
+      background-color: #c13946; }
   @media screen and (max-width: 768px) {
     .presentation-logohome {
       width: 240px;

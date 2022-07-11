@@ -16,12 +16,14 @@
 		$somos_id = 6;
 		$somos = get_post( $somos_id );
 		$desc = get_post_meta( $somos_id, 'texto_presentacion_home', true );
+		$pretitulo_home = get_post_meta( $somos_id, 'pre_titulo_home', true);
 		?>
 
 
 		<div class="presentation col-md-4 col-xs-12 col-md-offset-1">
 			<div class="presentation-logohome">
-				<h1><?php bloginfo('name');?></h1>
+				<h2 class="pretitulo"><?php echo $pretitulo_home;?></h2>
+				<h1>GERM<span></span>NA</h1>
 				<div class="textdesc">
 					<?php echo apply_filters('the_content', $desc);?>
 				</div>
@@ -37,11 +39,11 @@
 
 	</div>
 
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-md-10 col-md-offset-1 definition-container">
 			<h2 class="definition animated fadeIn"><?php echo $somos->post_excerpt;?></h2>
 		</div>
-	</div>
+	</div> -->
 
 </div><!--end first container-->
 

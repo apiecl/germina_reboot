@@ -9,7 +9,7 @@
 	text-align: center;
 	max-width: 100%;
 	@media screen and (min-width: $screen-md) {
-		margin-top: 50px;
+		margin-top: 6px;
 	}
 
 	@media screen and (max-width: $screen-sm) {
@@ -17,8 +17,18 @@
 	}
 }
 
+.row.intro {
+	padding: 24px 0 48px 0;
+}
+
+.pretitulo {
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
 .presentation h2 {
 	font-weight: normal;
+	margin-top: 6px;
 	//text-shadow:1px 1px 1px #333;
 }
 
@@ -39,6 +49,17 @@
 	animation-fill-mode: forwards;
 	h1 {
 		text-transform: uppercase;
+		margin: 72px 0 48px 0;
+		font-size: 48px;
+		span {
+			color: $newsandia;
+			display: inline-block;
+			height: 48px;
+			width: 7.5px;
+			margin: 0 2px;
+			border-bottom: 9px solid #f7f7f7;
+			background-color: $newsandia;
+		}
 	}
 
 	@media screen and (max-width: $screen-sm) {
