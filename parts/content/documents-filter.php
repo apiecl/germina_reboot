@@ -54,7 +54,9 @@
 						$childterms = get_terms($childtermargs);
 						if($childterms) {
 								//pongo además el parent para que pueda ser clickeable
-								//$childtermsarray[$term->term_id][] = $term;
+								$parentinchildterm = clone $term;
+								$parentinchildterm->name = 'Todos';
+								$childtermsarray[$term->term_id][] = $parentinchildterm;
 								
 							foreach($childterms as $childterm) {
 								$childtermsarray[$term->term_id][] = $childterm;
@@ -103,7 +105,7 @@
 				<?php foreach($childtermsarray[$key] as $childterm) {
 					?>
 
-					<a href="#" class="btn btn-large btn-filter btn-default proyect-call" data-type="post" data-reuse="0" data-term="<?php echo $childterm->term_id;?>" data-tax="<?php echo $childterm->taxonomy;?>"><?php echo $childterm->name;?></a>
+					<a href="#" class="btn btn-large btn-filter btn-default proyect-call" data-item-template="document" data-type="post" data-reuse="0" data-term="<?php echo $childterm->term_id;?>" data-tax="<?php echo $childterm->taxonomy;?>"><?php echo $childterm->name;?></a>
 
 					<?php
 				}?>
