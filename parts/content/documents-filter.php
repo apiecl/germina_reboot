@@ -38,7 +38,7 @@
 		<div class="panel panel-default">		
 			<div class="panel-heading" role="tab" id="heading-<?php echo $taxonomy;?>">
 				<h4 class="panel-title">
-					<a role="button" data-toggle="collapse" data-type="post" data-parent="#taxonomy-accordion" href="#taxpanel-<?php echo $taxonomy;?>"><?php echo $taxonomy == 'category' ? 'Formato' : $taxlabels->name;?> <i class="fa fa-chevron-down"></i></a>
+					<a role="button" data-toggle="collapse" data-type="post" data-parent="#taxonomy-accordion" href="#taxpanel-<?php echo $taxonomy;?>"><?php echo $taxonomy == 'category' ? 'Formato' : $taxlabels->singular_name;?> <i class="fa fa-chevron-down"></i></a>
 				</h4>
 			</div>
 
@@ -54,7 +54,7 @@
 						$childterms = get_terms($childtermargs);
 						if($childterms) {
 								//pongo además el parent para que pueda ser clickeable
-								$childtermsarray[$term->term_id][] = $term;
+								//$childtermsarray[$term->term_id][] = $term;
 								
 							foreach($childterms as $childterm) {
 								$childtermsarray[$term->term_id][] = $childterm;

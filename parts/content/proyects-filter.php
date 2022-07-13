@@ -27,7 +27,7 @@
 		<div class="panel panel-default">		
 			<div class="panel-heading" role="tab" id="heading-<?php echo $taxonomy;?>">
 				<h4 class="panel-title">
-					<a role="button" data-toggle="collapse" data-parent="#taxonomy-accordion" href="#taxpanel-<?php echo $taxonomy;?>"><?php echo $taxlabels->name;?> <i class="fa fa-chevron-down"></i></a>
+					<a role="button" data-toggle="collapse" data-parent="#taxonomy-accordion" href="#taxpanel-<?php echo $taxonomy;?>"><?php echo $taxlabels->singular_name;?> <i class="fa fa-chevron-down"></i></a>
 				</h4>
 			</div>
 

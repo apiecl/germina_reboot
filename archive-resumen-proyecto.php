@@ -8,13 +8,12 @@ $nolasts = 6;
 
 <?php get_header();?>
 
-<div class="container archive-proyectos">
-	<div class="row">
-		<div class="col-md-12">
-			<header class="section-header">
+<header class="section-header">
 				<h1>Proyectos</h1>
 			</header>	
-		</div>
+
+<div class="container archive-proyectos">
+	<div class="row">
 	
 		<div class="col-md-4 col-md-offset-1 filter-column" data-id="proyect-nav">
 			<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">

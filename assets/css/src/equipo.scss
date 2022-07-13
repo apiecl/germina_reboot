@@ -20,6 +20,17 @@
 	}
 }
 
+.sub-content {
+	h2 {
+		margin-top: 0;
+		padding-top: 12px;
+		border-top: 6px solid $crayonpurple;
+		@media screen and (max-width: $screen-md) {
+			font-size: 24px;
+		}
+	}
+}
+
 .sub-content h3 {
 	color: $gris;
 	margin-bottom: 24px;
@@ -87,11 +98,6 @@
 .integrante:hover .imgwrap,
 .integrante:hover h4 {
 	animation: pulse 0.7s;
-}
-
-.sub-content.colaboran {
-	border-top: 1px dotted $gris;
-	margin-top: 24px;
 }
 
 .sub-content h3 {

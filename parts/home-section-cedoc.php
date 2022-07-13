@@ -1,5 +1,7 @@
 <section class="section-home section-home-<?php echo $args['content_type'];?>">
-	<h3 class="home-section-title"><?php echo $args['title'];?></h3>
+	<?php if(is_home()):?>
+		<h3 class="home-section-title"><?php echo $args['title'];?></h3>
+	<?php endif;?>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">

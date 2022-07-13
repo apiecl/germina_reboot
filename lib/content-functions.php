@@ -813,7 +813,7 @@ function germina_taxpanel_get_content($taxonomy) {
 			$output .= 	'<div id="panel-taxonomy-' . $taxonomy . '" class="panel-taxonomy-shortcode panel panel-default panel-taxcontent">';
 			$output .= 	'<div class="panel-heading" role="tab" id="heading-' . $taxonomy .'">';
 			$output .= 	'<h4 class="panel-title">';
-			$output .=  '<a role="button" data-toggle="collapse" data-parent="#taxonomy-accordion" href="#taxpanel-'. $taxonomy . '">Consulta nuestros contenidos según ' . $taxlabels->name .' <i class="fa fa-chevron-down"></i></a>';
+			$output .=  '<a role="button" data-toggle="collapse" data-parent="#taxonomy-accordion" href="#taxpanel-'. $taxonomy . '">Consulta nuestros contenidos según ' . $taxlabels->singular_name .' <i class="fa fa-chevron-down"></i></a>';
 			$output .= '</h4></div>';
 			$output .= '<div class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-'.$taxonomy.'" id="taxpanel-'.$taxonomy.'">';			
 			$output .= '<div class="panel-body">';

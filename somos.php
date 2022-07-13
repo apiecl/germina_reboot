@@ -6,6 +6,10 @@
 ?>
 <?php get_header();?>
 
+<header class="section-header">
+	<h1 class="post-title"><?php the_title();?></h1>
+</header>
+
 <div class="container">
 	<div class="row">
 		<div class="content col-md-8 col-md-offset-2">
@@ -13,12 +17,6 @@
 			<?php if(have_posts()): while(have_posts()): the_post();?>
 
 				<article <?php post_class();?> >
-
-					<header>
-						<h1 class="post-title"><?php the_title();?></h1>
-					</header>
-
-
 
 					<div class="post-content">
 						<?php the_content();?>
@@ -32,7 +30,7 @@
 					<?php $equipo = get_post(20);?>
 					
 
-					<div class="sub-content-equipo row">
+					<div class="sub-content sub-content-equipo row">
 						<header>
 							<h2><?php echo $equipo->post_title;?></h2>
 						</header>
@@ -43,25 +41,25 @@
 							</div>
 							
 							<?php
-								$args = array(
-									'child_of' => 20,
-									'numberposts' => -1,
-									'sort_column' => 'menu_order'
+							$args = array(
+								'child_of' => 20,
+								'numberposts' => -1,
+								'sort_column' => 'menu_order'
+							);
+
+							$equipos = get_pages($args);
+
+							foreach($equipos as $equipo){
+								$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($equipo->ID), '200x200');
+								?>
+								<?php
+								$targs = array(
+									'id' => $equipo->ID,
+									'img' => $thumb[0]
 								);
-
-								$equipos = get_pages($args);
-
-								foreach($equipos as $equipo){
-									$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($equipo->ID), '200x200');
-									?>
-									<?php
-									$targs = array(
-										'id' => $equipo->ID,
-										'img' => $thumb[0]
-									);
-									cur_get_template('team-item.php', $targs, '/parts/content/');?>
-									<?php
-								}
+								cur_get_template('team-item.php', $targs, '/parts/content/');?>
+								<?php
+							}
 							?>
 							
 						</div>

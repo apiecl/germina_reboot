@@ -46,6 +46,33 @@ footer.germina-footer,
 	}
 }
 
+.address-in-contact {
+	display: flex;
+	a {
+		color: $newsandia;
+		display: inline-block;
+		background-color: white;
+		border-radius: 4px;
+		//box-shadow: 0 0 6px $darksandia;
+		margin: 12px 8px 12px 0;
+		padding: 12px;
+		font-size: 18px;
+		border: 1px solid $newsandia;
+		i {
+			font-size: 24px;
+		}
+		&:hover {
+			text-decoration: none;
+			color: white;
+			border: 1px solid white;
+			background-color: $newsandia;
+			i {
+				color: white !important;
+			}
+		}
+	}
+}
+
 footer.germina-footer {
 	margin-top: 48px;
 

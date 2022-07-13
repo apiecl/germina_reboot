@@ -35,6 +35,10 @@ if($thumbnail_src) {
 				<?php germina_theplainterms( $proyect_id, 'tema', '<span>Temas:</span> ', ', ' );?>
 			</div>
 		</div>
-		<img src="<?php echo $thumbnail_src;?>" alt="<?php echo get_the_title($proyect_id);?>">
+		
+		<?php if(has_post_thumbnail($proyect_id)):?>
+			<img src="<?php echo $thumbnail_src;?>" alt="<?php echo get_the_title($proyect_id);?>">
+		<?php endif;?>
+		
 	</a>
 </div>

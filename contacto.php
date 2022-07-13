@@ -16,12 +16,14 @@ Template Name: Contacto
 ?>
 <?php get_header();?>
 
+<header class="section-header">
+			<h1><?php the_title();?></h1>
+		</header>
+
 <div class="container">
 	<div class="row">
 
-		<header>
-			<h1 class="post-title"><?php the_title();?></h1>
-		</header>
+		
 
 
 		<div class="content col-md-8 col-md-offset-2">
@@ -45,6 +47,8 @@ Template Name: Contacto
 						$twitter    = get_post_meta( $contactoid, 'twitter', true);
 						$facebook   = get_post_meta( $contactoid, 'facebook', true);
 						$linkedin   = get_post_meta( $contactoid, 'linkedin', true);
+						$instagram   = get_post_meta( $contactoid, 'instagram', true);
+$youtube   = get_post_meta( $contactoid, 'youtube', true);
 						$enlace_direccion = get_post_meta( $contactoid, 'enlace_direccion', true);
 						?>
 
@@ -68,12 +72,11 @@ Template Name: Contacto
 									<p>
 										<i class="fa fa-envelope"></i> <a href="mailto:<?php echo $email;?>"><?php echo $email;?></a>
 									</p>
-									<p>
-										<a target="_blank" href="<?php echo $facebook;?>"><i class="fa fa-facebook-square"></i> Facebook </a>
-									</p>
-									<p>
-										<a target="_blank" href="<?php echo $linkedin;?>"><i class="fa fa-linkedin"></i> Linkedin </a>
-									</p>
+									
+									<div class="address-in-contact">
+										<?php get_template_part('parts/redes-sociales');?>
+									</div>
+									
 
 								</address>
 							</div>

@@ -25,7 +25,7 @@ Template Name: Equipo
 		</div>
 
 			
-				<div class="sub-content-equipo row">
+				<div class="sub-content sub-content-equipo row">
 
 					<div class="flex-container">
 					<?php

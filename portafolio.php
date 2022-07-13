@@ -7,6 +7,10 @@
 
 <?php get_header();?>
 
+<header class="section-header">
+	<h1>Portafolio</h1>
+</header>
+
 <div class="container">
 	<div class="row">
 		<div class="content col-md-12">
