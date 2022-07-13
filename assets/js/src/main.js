@@ -19,6 +19,9 @@ $(document).ready(function () {
 
     let logocolor = $("img.logo-color");
     let logoblanco = $("img.logo-blanco");
+    let dateSorterAjax = $(".date-sorter-ajax");
+
+    dateSorterAjax.hide();
 
     typebuttons.each(function (index, element) {
         var filter = $(element).attr("data-filter");
@@ -103,6 +106,16 @@ $(document).ready(function () {
         if ($(this).hasClass("loading") !== true) {
             $(this).addClass("loading");
 
+            //para el resorter
+            if ($(this).hasClass("ajax-sort-button")) {
+                $(".full-proylist.row").empty();
+                $(".order-filter .panel-heading").removeClass("active");
+                $(this).parent().parent().addClass("active");
+                $("span.labelorder")
+                    .empty()
+                    .text($(this).attr("data-sort-label"));
+                $();
+            }
             germina_loadprojects($(this));
         } //End comprobation of loading class
     });
@@ -135,7 +148,7 @@ $(document).ready(function () {
     });
 
     $("#taxonomy-accordion").on("hide.bs.collapse", function () {
-        $(".panel-heading").removeClass("active");
+        $(".tax-filter .panel-heading").removeClass("active");
         $(".panel-default.active").removeClass("active");
     });
 

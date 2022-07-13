@@ -5629,6 +5629,11 @@ WebFontConfig = {
 
 function germina_loadprojects(element) {
     let proyectlist = $("div.full-proylist");
+    let dateSorterAjax = $(".date-sorter-ajax");
+    let selectedOrder = $(".panel-heading.active .ajax-sort-button").attr(
+        "data-sort"
+    );
+    let sortButton = $(".ajax-sort-button");
     let proyectsPerPage = parseInt(germina.proyects_per_page);
     let linkitem = element;
     let termid = element.attr("data-term");
@@ -5644,11 +5649,11 @@ function germina_loadprojects(element) {
         ? element.attr("data-item-template")
         : "item-medium";
 
-    console.log(itemTemplate);
+    console.log(selectedOrder);
 
     $(".proyect-call").removeClass("active");
 
-    console.log(reuse);
+    //console.log(reuse);
 
     if (reuse !== 0) {
         curOffset = proyectsPerPage * reuse;
@@ -5659,7 +5664,16 @@ function germina_loadprojects(element) {
     }
 
     linkitem.addClass("loadingbtn");
-    console.log("offset", curOffset);
+    //console.log("offset", curOffset);
+
+    sortButton.attr({
+        "data-term": termid,
+        "data-offset": curOffset,
+        "data-type": itemtype,
+        "data-tax": tax,
+        "data-item-template": itemTemplate,
+    });
+
     $.ajax({
         url: germina.ajax_url,
         type: "POST",
@@ -5669,6 +5683,7 @@ function germina_loadprojects(element) {
             tax: tax,
             offset: curOffset,
             itemtype: itemtype,
+            order: selectedOrder,
         },
         success: function (response) {
             if (reuse === 0) {
@@ -5676,6 +5691,7 @@ function germina_loadprojects(element) {
             }
 
             $(".filter-heading-toggle").click();
+            dateSorterAjax.fadeIn();
 
             var content = JSON.parse(response);
 
@@ -5683,7 +5699,7 @@ function germina_loadprojects(element) {
             let itemlabel = projectCount.attr("data-item-plural");
             let itemlabelsingular = projectCount.attr("data-item-singular");
             let proyectItemMedium = (item) => {
-                console.log(item.format);
+                //console.log(item.format);
                 return `                       
                             <div class="proyect-item-medium animated zoomIn ${
                                 item.post_thumbnail && "with-image"
@@ -5726,7 +5742,7 @@ function germina_loadprojects(element) {
             };
 
             if (content.items !== undefined) {
-                console.log(content);
+                //console.log(content);
 
                 projectCount
                     .empty()
@@ -5742,7 +5758,7 @@ function germina_loadprojects(element) {
                             : proyectItemMedium(item)
                     );
                 });
-                console.log("server offset", content.offset);
+                //console.log("server offset", content.offset);
                 if (content.isfinalquery === "remaining") {
                     loadmore
                         .attr("data-term", content["term_id"])
@@ -5800,6 +5816,9 @@ $(document).ready(function () {
 
     let logocolor = $("img.logo-color");
     let logoblanco = $("img.logo-blanco");
+    let dateSorterAjax = $(".date-sorter-ajax");
+
+    dateSorterAjax.hide();
 
     typebuttons.each(function (index, element) {
         var filter = $(element).attr("data-filter");
@@ -5884,6 +5903,16 @@ $(document).ready(function () {
         if ($(this).hasClass("loading") !== true) {
             $(this).addClass("loading");
 
+            //para el resorter
+            if ($(this).hasClass("ajax-sort-button")) {
+                $(".full-proylist.row").empty();
+                $(".order-filter .panel-heading").removeClass("active");
+                $(this).parent().parent().addClass("active");
+                $("span.labelorder")
+                    .empty()
+                    .text($(this).attr("data-sort-label"));
+                $();
+            }
             germina_loadprojects($(this));
         } //End comprobation of loading class
     });
@@ -5916,7 +5945,7 @@ $(document).ready(function () {
     });
 
     $("#taxonomy-accordion").on("hide.bs.collapse", function () {
-        $(".panel-heading").removeClass("active");
+        $(".tax-filter .panel-heading").removeClass("active");
         $(".panel-default.active").removeClass("active");
     });
 

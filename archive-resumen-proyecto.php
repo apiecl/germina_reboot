@@ -20,6 +20,7 @@ $nolasts = 6;
 				Filtrar por <i class="fa fa-chevron-up"></i>
 			</h4>
 			<?php get_template_part('parts/content/proyects-filter');?>
+			<?php cur_get_template('date-sorter-ajax.php', array('class' => ''), '/parts/');?>
 		</div>
 		<div class="content col-md-7">
 

@@ -21,10 +21,13 @@ function germina_proyects_by_term() {
 	$offset = $_POST['offset'];
 	$output = '';
 	$type = $_POST['itemtype'];
+	$order = $_POST['order'];
 
 	$countargs = array(
 		'post_type' => $type,
 		'posts_per_page' => -1,
+		'orderby'	=> 'date',
+		'order'		=> $order == 'ascending' ? 'ASC' : 'DESC',
 		'tax_query'	=> array(
 				array(
 					'taxonomy' 	=> $tax,
@@ -57,7 +60,7 @@ function germina_proyects_by_term() {
 				'post_type' => $type,
 				'numberposts' => 5,
 				'orderby' => 'date',
-				'order' => 'DESC',
+				'order'		=> $order == 'ascending' ? 'ASC' : 'DESC',
 				'offset' => $offset
 			);
 

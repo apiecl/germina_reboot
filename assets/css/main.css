@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700,400&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;700&display=swap";
 /*!
  * Bootstrap v3.4.1 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -5961,7 +5961,7 @@ nav.navbar-fixed-top.unfolded {
 .navbar-nav li a {
   font-size: 15px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   color: #ec5a5e; }
 
 .navbar-brand {
