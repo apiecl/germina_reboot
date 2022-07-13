@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@700,400&display=swap";
 /*!
  * Bootstrap v3.4.1 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -4286,6 +4286,18 @@ address {
 .section-home-proyectos {
   background-color: #d9d9d9; }
 
+.home .section-home-proyectos .item-meta-top .item-type {
+  background-color: transparent;
+  text-transform: none;
+  color: #008aa7; }
+
+.home .section-home-proyectos .proyect-item-meta-bottom .temas,
+.home .section-home-proyectos .proyect-item-meta-bottom .years {
+  color: #333; }
+  .home .section-home-proyectos .proyect-item-meta-bottom .temas i,
+  .home .section-home-proyectos .proyect-item-meta-bottom .years i {
+    color: #333; }
+
 body.page-template-portafolio {
   background-color: #f7f7f7; }
 
@@ -4713,6 +4725,20 @@ a.block-item-link:hover {
     @media screen and (max-width: 768px) {
       .item-medium.with-image a h2 {
         padding-right: 120px; } }
+
+.archive.category .item-medium.item-post a h2,
+.archive.category .item-medium.item-boletin a h2,
+.archive.post-type-archive .item-medium.item-post a h2,
+.archive.post-type-archive .item-medium.item-boletin a h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #333; }
+
+.archive.category .item-medium.item-post .item-meta-bottom .date,
+.archive.category .item-medium.item-boletin .item-meta-bottom .date,
+.archive.post-type-archive .item-medium.item-post .item-meta-bottom .date,
+.archive.post-type-archive .item-medium.item-boletin .item-meta-bottom .date {
+  color: #008aa7; }
 
 .item-large {
   margin-bottom: 24px;
@@ -5487,20 +5513,46 @@ a.sharebutton:hover {
   margin-bottom: 6px;
   color: #313130; }
 
-.publicaciones-wrapper .publicacion-item-medium {
-  float: left;
-  margin-right: 28px;
-  margin-bottom: 28px;
-  overflow: hidden;
-  width: 220px; }
-
-@media screen and (max-width: 768px) {
-  .publicaciones-wrapper .publicacion-item-medium {
-    text-align: center;
-    width: 100%;
-    float: none; }
-  .publicaciones-wrapper .publicacion-item-medium a {
-    margin: 0 auto 12px auto; } }
+.archive.category-publicaciones .full-proylist.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -5px; }
+  .archive.category-publicaciones .full-proylist.row .document-item-medium {
+    width: 208px;
+    height: 400px;
+    margin: 6px;
+    overflow: hidden;
+    outline: 1px solid #ccc;
+    background-color: white;
+    padding: 0;
+    transition: all linear 0.4s; }
+    .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper {
+      text-align: center;
+      height: 269px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f7f7f7;
+      border-bottom: 1px solid #ccc; }
+      .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper span {
+        display: block;
+        color: #333;
+        margin-top: 6px; }
+      .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper i {
+        color: #585857;
+        font-size: 72px; }
+    .archive.category-publicaciones .full-proylist.row .document-item-medium img {
+      max-width: 100%; }
+    .archive.category-publicaciones .full-proylist.row .document-item-medium h4 {
+      font-weight: normal;
+      color: #333;
+      font-size: 16px;
+      padding: 12px;
+      transition: all linear 0.4s; }
+    .archive.category-publicaciones .full-proylist.row .document-item-medium:hover {
+      outline: 1px solid #e36367; }
+      .archive.category-publicaciones .full-proylist.row .document-item-medium:hover h4 {
+        color: #c13946; }
 
 .publicacion-item-medium {
   position: relative;

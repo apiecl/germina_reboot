@@ -93,6 +93,26 @@ a.block-item-link:hover {
 	}
 }
 
+.archive.category,
+.archive.post-type-archive {
+	.item-medium.item-post,
+	.item-medium.item-boletin {
+		a {
+			h2 {
+				margin-top: 0;
+				margin-bottom: 12px;
+				color: #333;
+			}
+		}
+
+		.item-meta-bottom {
+			.date {
+				color: $celeste;
+			}
+		}
+	}
+}
+
 //Item large (en portada)
 
 .item-large {

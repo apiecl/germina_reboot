@@ -14,6 +14,66 @@ function germina_authors() {
 	endif;
 }
 
+function germina_docformatlabel($docid) {
+	$output = '<div class="icon-wrapper"><div>';
+
+	if(in_category('articulos', $docid)):
+		$output .= '<i class="fa fa-lines"></i>';
+		$output .= '<span>Artículo</span>';
+	elseif(in_category('audiovisual', $docid)):
+		$output .= '<i class="fa fa-video"></i>';
+		$output .= '<span>Audiovisual</span>';
+	elseif(in_category('guias', $docid)):
+		$output .= '<i class="fa fa-guia"></i>';
+		$output .= '<span>Guía</span>';
+	elseif(in_category('imagenes', $docid)):
+		$output .= '<i class="fa fa-image"></i>';
+		$output .= '<span>Imágenes</span>';
+	elseif(in_category('libros')):
+		$output .= '<i class="fa fa-book"></i>';
+		$output .= '<span>Libro</span>';
+	elseif(in_category('capitulos-de-libros')):
+		$output .= '<i class="fa fa-book-open"></i>';
+		$output .= '<span>Capítulo de libro</span>';
+	endif;
+
+	$output .= '</div></div>';
+
+	return $output;
+}
+
+function germina_ajaxdocformatlabel($docid) {
+	//$output = '<div class="icon-wrapper"><div>';
+	$output = '';
+
+	if(in_category('articulos', $docid)):
+		$iconclass .= 'fa fa-file-lines';
+		$output .= '<span>Artículo</span>';
+	elseif(in_category('audiovisual', $docid)):
+		$iconclass .= 'fa fa-video';
+		$output .= '<span>Audiovisual</span>';
+	elseif(in_category('guias', $docid)):
+		$iconclass .= 'fa fa-guia';
+		$output .= '<span>Guía</span>';
+	elseif(in_category('imagenes', $docid)):
+		$iconclass .= 'fa fa-image';
+		$output .= '<span>Imágenes</span>';
+	elseif(in_category('libros')):
+		$iconclass .= 'fa fa-book';
+		$output .= '<span>Libro</span>';
+	elseif(in_category('capitulos-de-libros')):
+		$iconclass .= 'fa fa-book-open';
+		$output .= '<span>Capítulo de libro</span>';
+	endif;
+
+	//$output .= '</div></div>';
+
+	return array(
+			'content' => $output,
+			'icon' => $iconclass
+			);
+}
+
 function germina_plainauthors($postid, $prefix) {
 	/**
 	 * Devuelve los autores en texto plano y con separadores apropiados.
@@ -644,7 +704,7 @@ function germina_archive_title() {
 	} elseif(is_post_type_archive( )) {
 
 		$postobj = get_post_type_object( get_query_var('post_type') );
-		$postname = $postobj->labels->name;
+		$postname = $postobj->labels->singular_name;
 
 		return $postname;
 

@@ -57,7 +57,7 @@
 					<span>Acciones Colaborativas</span>
 				</li>
 				<li>
-					<img src="<?php bloginfo('template_url');?>/assets/img/desarrollo_incremental.svg" alt="Desarrollo Incremental">
+					<img src="<?php bloginfo('template_url');?>/assets/img/desarrollo_incremental_b.svg" alt="Desarrollo Incremental">
 					<span>Desarrollo Incremental</span>
 				</li>
 				<li>

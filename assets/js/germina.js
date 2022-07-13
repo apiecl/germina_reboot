@@ -5640,8 +5640,11 @@ function germina_loadprojects(element) {
     let itemtype = element.attr("data-type")
         ? element.attr("data-type")
         : "resumen-proyecto";
+    let itemTemplate = element.attr("data-item-template")
+        ? element.attr("data-item-template")
+        : "item-medium";
 
-    console.log(itemtype);
+    console.log(itemTemplate);
 
     $(".proyect-call").removeClass("active");
 
@@ -5679,19 +5682,9 @@ function germina_loadprojects(element) {
             let projectCount = $("p.project-results-count");
             let itemlabel = projectCount.attr("data-item-plural");
             let itemlabelsingular = projectCount.attr("data-item-singular");
-
-            if (content.items !== undefined) {
-                console.log(content);
-
-                projectCount
-                    .empty()
-                    .append(
-                        `<strong> ${content.total} ${
-                            content.total > 1 ? itemlabel : itemlabelsingular
-                        }</strong>`
-                    );
-                content.items.map((item) => {
-                    proyectlist.append(`                       
+            let proyectItemMedium = (item) => {
+                console.log(item.format);
+                return `                       
                             <div class="proyect-item-medium animated zoomIn ${
                                 item.post_thumbnail && "with-image"
                             }">
@@ -5713,7 +5706,41 @@ function germina_loadprojects(element) {
                                 }
                                 </a>
                             </div>             
-                        `);
+                        `;
+            };
+            let documentItemMedium = (item) => {
+                let icon = item.format.icon;
+                return `<div class="document-item-medium zoomIn">
+                <a class="block-item-link" href="${item.post_link}" title="${
+                    item.post_title
+                }">
+                             ${
+                                 item.doc_thumbnail
+                                     ? `<img src="${item.doc_thumbnail}" alt="${item.post_title}">`
+                                     : `<div class="icon-wrapper"><div><i class="${icon}"></i> ${item.format.content}</div></div>`
+                             }
+
+                    <h4>${item.post_title}</h4>    
+                </a>
+                </div>`;
+            };
+
+            if (content.items !== undefined) {
+                console.log(content);
+
+                projectCount
+                    .empty()
+                    .append(
+                        `<strong> ${content.total} ${
+                            content.total > 1 ? itemlabel : itemlabelsingular
+                        }</strong>`
+                    );
+                content.items.map((item) => {
+                    proyectlist.append(
+                        itemTemplate === "document"
+                            ? documentItemMedium(item)
+                            : proyectItemMedium(item)
+                    );
                 });
                 console.log("server offset", content.offset);
                 if (content.isfinalquery === "remaining") {

@@ -36,9 +36,6 @@ if($totalpages > 1) {
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			
-		</div>
 		
 		<div class="col-md-4 col-md-offset-1">
 			<?php cur_get_template('date-sorter.php', array('class' => 'filter-column'), '/parts/');?>
@@ -46,22 +43,19 @@ if($totalpages > 1) {
 		</div>
 
 		<div class="content col-md-7">
-			
-			
-
-			
 
 			<?php if ( $wp_query->have_posts() ) : while ($wp_query->have_posts() ) : the_post();?>
-				
+
 				<?php 
 				$args = array(
-					'id' => $post->ID,
+					'id' 	=> $post->ID,
+					'type' 	=> get_post_type($post->ID)
 				);
 
 				cur_get_template('item-medium.php', $args, '/parts/content/');
 				
 				?>
-				
+
 			<?php endwhile;?>
 
 			<div class="pagination">	

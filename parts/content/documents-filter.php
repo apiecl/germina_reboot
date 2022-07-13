@@ -38,7 +38,7 @@
 		<div class="panel panel-default">		
 			<div class="panel-heading" role="tab" id="heading-<?php echo $taxonomy;?>">
 				<h4 class="panel-title">
-					<a role="button" data-toggle="collapse" data-type="post" data-parent="#taxonomy-accordion" href="#taxpanel-<?php echo $taxonomy;?>"><?php echo $taxonomy == 'category' ? 'Formato' : $taxlabels->singular_name;?> <i class="fa fa-chevron-down"></i></a>
+					<a role="button" data-toggle="collapse" data-type="post" data-item-template="document" data-parent="#taxonomy-accordion" href="#taxpanel-<?php echo $taxonomy;?>"><?php echo $taxonomy == 'category' ? 'Formato' : $taxlabels->singular_name;?> <i class="fa fa-chevron-down"></i></a>
 				</h4>
 			</div>
 
@@ -63,7 +63,7 @@
 						}
 
 						?>
-						<a href="#" data-type="post" class="btn btn-large btn-filter btn-default <?php echo $childterms ? 'childterms-call' : 'proyect-call';?>" data-reuse="0" data-termslug="<?php echo $term->slug;?>" data-term="<?php echo $term->term_id;?>" data-tax="<?php echo $taxonomy;?>"><?php echo $term->name;?> <?php echo $childterms ? '<i class="fa fa-chevron-down"></i>' : '' ;?></a>
+						<a href="#" data-type="post" data-item-template="document" class="btn btn-large btn-filter btn-default <?php echo $childterms ? 'childterms-call' : 'proyect-call';?>" data-reuse="0" data-termslug="<?php echo $term->slug;?>" data-term="<?php echo $term->term_id;?>" data-tax="<?php echo $taxonomy;?>"><?php echo $term->name;?> <?php echo $childterms ? '<i class="fa fa-chevron-down"></i>' : '' ;?></a>
 						<?php
 
 

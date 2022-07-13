@@ -264,3 +264,23 @@ address {
 .section-home-proyectos {
 	background-color: $grisfondo;
 }
+
+.home .section-home-proyectos {
+	.item-meta-top {
+		.item-type {
+			background-color: transparent;
+			text-transform: none;
+			color: $celeste;
+		}
+	}
+
+	.proyect-item-meta-bottom {
+		.temas,
+		.years {
+			color: #333;
+			i {
+				color: #333;
+			}
+		}
+	}
+}

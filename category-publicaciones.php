@@ -57,7 +57,7 @@
 						
 						$args['id'] = $lastproyect->ID;
 						$args['year'] = germina_getplainterms( $lastproyect->ID, 'year', '', ' • ');
-						cur_get_template('proyect-item-medium.php', $args, 'parts/content/');
+						cur_get_template('document-item-medium.php', $args, 'parts/content/');
 
 					}
 

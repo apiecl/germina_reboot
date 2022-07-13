@@ -105,16 +105,20 @@ function germina_proyects_by_term() {
 
 		$thumbnail_id = get_post_thumbnail_id( $proyect->ID );
 		$thumbnail_img = wp_get_attachment_image_src( $thumbnail_id, '120x120' );
+		$doc_img = wp_get_attachment_image_src( $thumbnail_id, '360x466' );
+		$doc_src = ($doc_img ? $doc_img[0] : '');
 		$thumbnail_src = ($thumbnail_img ? $thumbnail_img[0] : '');
 		
 		$proyect_items['items'][] = array(
-							'post_title' => $proyect->post_title,
-							'post_id' => $proyect->ID,
-							'post_link' => get_permalink($proyect->ID),
-							'post_area' => germina_getplainterms($proyect->ID, 'areas', '', ' . '),
-							'post_temas' => germina_getplainterms($proyect->ID, 'tema', '', ' . ' ),
-							'post_year' => germina_getplainterms($proyect->ID, 'year', '', ' . '),
-							'post_thumbnail' => $thumbnail_src
+							'post_title' 		=> $proyect->post_title,
+							'post_id' 			=> $proyect->ID,
+							'post_link' 		=> get_permalink($proyect->ID),
+							'post_area' 		=> germina_getplainterms($proyect->ID, 'areas', '', ' . '),
+							'post_temas' 		=> germina_getplainterms($proyect->ID, 'tema', '', ' . ' ),
+							'post_year' 		=> germina_getplainterms($proyect->ID, 'year', '', ' . '),
+							'post_thumbnail' 	=> $thumbnail_src,
+							'doc_thumbnail'	 	=> $doc_src,
+							'format'		 	=> germina_ajaxdocformatlabel($proyect->ID),
 						);	
 
 	}
