@@ -27,6 +27,14 @@ header.section-header {
 	}
 }
 
+.home .section-header {
+	background-color: transparent;
+	margin-top: -24px;
+	h3 {
+		margin-top: 0;
+	}
+}
+
 header.header-equipo {
 	text-align: center;
 	h1 {

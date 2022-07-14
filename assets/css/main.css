@@ -5617,6 +5617,12 @@ header.section-header {
       header.section-header h2 {
         font-size: 27px; } }
 
+.home .section-header {
+  background-color: transparent;
+  margin-top: -24px; }
+  .home .section-header h3 {
+    margin-top: 0; }
+
 header.header-equipo {
   text-align: center; }
   header.header-equipo h1 {

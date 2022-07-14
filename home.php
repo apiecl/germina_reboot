@@ -48,9 +48,11 @@
 </div><!--end first container-->
 
 <section class="metodologia">
+	<header class="section-header">
+		<h3 class="post-title">Metodología de Trabajo</h3>
+	</header>
 	<div class="container">
 		<div class="row">
-			<h2>Metodología de Trabajo</h2>
 			<ul class="metodologia-list">
 				<li>
 					<img src="<?php bloginfo('template_url');?>/assets/img/acciones_colaborativas.svg" alt="Acciones Colaborativas">

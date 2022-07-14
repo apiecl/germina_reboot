@@ -1,6 +1,8 @@
 <section class="section-home section-home-<?php echo $args['content_type'];?>">
 	<?php if(is_home()):?>
-		<h3 class="home-section-title"><?php echo $args['title'];?></h3>
+		<header class="section-header">
+			<h3 class="post-title"><?php echo $args['title'];?></h3>
+		</header>
 	<?php endif;?>
 	<div class="container">
 		<div class="row">
