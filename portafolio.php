@@ -22,7 +22,7 @@
 					'subtitle' 		=> 'Más recientes',
 					'menu_name'		=> 'portafolio',
 					'content_type'	=> 'portafolio',
-					'max_items'		=> 4
+					'max_items'		=> 30
 				);
 
 				cur_get_template( 'home-section-cedoc.php', $args, 'parts/' );
