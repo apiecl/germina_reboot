@@ -23,7 +23,7 @@ define( 'GERMINA_CATNOVEDADES', 16 );
 define( 'GERMINA_ARTICULOS', 6 );
 define( 'FACEBOOK_PAGE', 'https://web.facebook.com/Germina-conocimiento-para-la-acci%C3%B3n-2157914764440494/' );
 define( 'LINKEDIN_PAGE', 'https://www.linkedin.com/company/11536225/' );
-define( 'GERMINA_VERSION', '2.1.7' );
+define( 'GERMINA_VERSION', '2.1.9' );
 
 /**
  * LIBRARIES
@@ -100,12 +100,15 @@ function germina_scripts() {
 		wp_enqueue_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js', array(), '3.6.0', true );
 	}
 
+	wp_enqueue_script( 'masonry', get_bloginfo('template_url') . '/assets/js/masonry.pkgd.min.js', array('jquery', 'imagesLoaded'), '4.2.2', false );
+	wp_enqueue_script('imagesLoaded', get_bloginfo('template_url') . '/assets/js/imagesloaded.pkgd.min.js', array('jquery'), '5.0.0', false);
+
 	if(is_home() || is_page( 'somos' ) ) {
 
 		wp_enqueue_script( 'videojs', '//vjs.zencdn.net/5.8.8/video.js', array(), '5.8.8', true );
 	}
 
-	wp_enqueue_script( 'mainjs', get_bloginfo('template_url') . '/assets/js/germina.js', array('jquery'), GERMINA_VERSION, true );
+	wp_enqueue_script( 'mainjs', get_bloginfo('template_url') . '/assets/js/germina.js', array('jquery', 'masonry', 'imagesLoaded'), GERMINA_VERSION, true );
 
 	//Fonts information
 	//

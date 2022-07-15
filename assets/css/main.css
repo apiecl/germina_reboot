@@ -5513,22 +5513,31 @@ a.sharebutton:hover {
   margin-bottom: 6px;
   color: #313130; }
 
+.lastproys {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; }
+
 .archive.category-publicaciones .full-proylist.row {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
   margin-left: -5px; }
   .archive.category-publicaciones .full-proylist.row .document-item-medium {
     width: 208px;
-    height: 400px;
-    margin: 6px;
-    overflow: hidden;
+    height: auto;
+    margin: 6px 6px 12px;
     outline: 1px solid #ccc;
     background-color: white;
     padding: 0;
     transition: all linear 0.4s; }
+    @media screen and (max-width: 768px) {
+      .archive.category-publicaciones .full-proylist.row .document-item-medium {
+        width: 46%; } }
     .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper {
       text-align: center;
-      height: 269px;
+      height: 169px;
       display: flex;
       align-items: center;
       justify-content: center;

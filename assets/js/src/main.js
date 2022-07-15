@@ -98,6 +98,21 @@ $(document).ready(function () {
         $(this).addClass("active");
     });
 
+    let $grid = $(".archive.category-publicaciones .full-proylist.row");
+    // let $pregrid = $(".lastproys").masonry({
+    //     itemSelector: ".document-item-medium",
+    //     columnWidth: 208,
+    // });
+    //masonry in docs
+    // let $grid = $(".archive.category-publicaciones .full-proylist.row").masonry(
+    //     {
+    //         itemSelector: ".document-item-medium",
+    //     }
+    // );
+    // $pregrid.imagesLoaded().progress(function () {
+    //     $pregrid.masonry("layout");
+    // });
+
     //Ajax calls for proyects
 
     $("body").on("click", ".proyect-call", function () {
@@ -116,7 +131,7 @@ $(document).ready(function () {
                     .text($(this).attr("data-sort-label"));
                 $();
             }
-            germina_loadprojects($(this));
+            germina_loadprojects($(this), $grid);
         } //End comprobation of loading class
     });
 
@@ -247,32 +262,29 @@ $(document).ready(function () {
 
             // Executes in SM, MD and LG breakpoints
             if (viewport.is(">=sm")) {
-                console.log("proyectos-home");
-                // $(".proyectos-home, .full-proylist").masonry({
-                //     itemSelector: ".proyect-item-box",
+                // console.log("proyectos-home");
+                // // $(".proyectos-home, .full-proylist").masonry({
+                // //     itemSelector: ".proyect-item-box",
+                // // });
+                // var $grid = $(".full-publist-items").imagesLoaded(function () {
+                //     $grid.masonry({
+                //         itemSelector: ".col-md-6",
+                //     });
                 // });
-
-                var $grid = $(".full-publist-items").imagesLoaded(function () {
-                    $grid.masonry({
-                        itemSelector: ".col-md-6",
-                    });
-                });
-
-                var $pubgrid = $(".publicaciones-wrapper").imagesLoaded(
-                    function () {
-                        $pubgrid.masonry({
-                            itemSelector: ".publicacion-item-medium",
-                        });
-                    }
-                );
-
-                var $attachedgrid = $(
-                    "div.attached-to-post.Miniaturas"
-                ).imagesLoaded(function () {
-                    $attachedgrid.masonry({
-                        itemSelector: ".attached-file-block",
-                    });
-                });
+                // var $pubgrid = $(".publicaciones-wrapper").imagesLoaded(
+                //     function () {
+                //         $pubgrid.masonry({
+                //             itemSelector: ".publicacion-item-medium",
+                //         });
+                //     }
+                // );
+                // var $attachedgrid = $(
+                //     "div.attached-to-post.Miniaturas"
+                // ).imagesLoaded(function () {
+                //     $attachedgrid.masonry({
+                //         itemSelector: ".attached-file-block",
+                //     });
+                // });
             }
 
             // Executes in XS and SM breakpoints

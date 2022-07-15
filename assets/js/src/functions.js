@@ -5,8 +5,10 @@
 WebFontConfig = {
     google: { families: germina.fonts },
     active: function () {
-        var e = jQuery(".proyectos-home, .full-proylist");
-        e.masonry("layout");
+        // var e = $(".archive.category-publicaciones .full-proylist.row");
+        // var pre = $(".lastproys");
+        // e.masonry("layout");
+        // pre.masonry("layout");
     },
 };
 (function () {
@@ -20,7 +22,7 @@ WebFontConfig = {
 
 //Loader para proyectos
 
-function germina_loadprojects(element) {
+function germina_loadprojects(element, $masonrygrid) {
     let proyectlist = $("div.full-proylist");
     let dateSorterAjax = $(".date-sorter-ajax");
     let selectedOrder = $(".panel-heading.active .ajax-sort-button").attr(
@@ -144,13 +146,34 @@ function germina_loadprojects(element) {
                             content.total > 1 ? itemlabel : itemlabelsingular
                         }</strong>`
                     );
+
+                let elementsArr = [];
                 content.items.map((item) => {
-                    proyectlist.append(
-                        itemTemplate === "document"
-                            ? documentItemMedium(item)
-                            : proyectItemMedium(item)
-                    );
+                    if (itemTemplate === "document") {
+                        let element = documentItemMedium(item);
+                        elementsArr.push(element);
+                    } else {
+                        proyectlist.append(
+                            itemTemplate === "document"
+                                ? documentItemMedium(item)
+                                : proyectItemMedium(item)
+                        );
+                    }
                 });
+
+                if (itemTemplate == "document") {
+                    proyectlist.masonry("destroy");
+                    console.log("adding", elementsArr);
+                    let $elements = $(elementsArr);
+                    proyectlist.append(elementsArr).masonry();
+                    proyectlist.masonry("layout");
+                    proyectlist.imagesLoaded().progress(function () {
+                        proyectlist.masonry("layout");
+                    });
+                    //$masonrygrid.append(elementsArr);
+                    //$masonrygrid.masonry("layout");
+                }
+
                 //console.log("server offset", content.offset);
                 if (content.isfinalquery === "remaining") {
                     loadmore

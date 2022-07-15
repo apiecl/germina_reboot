@@ -5612,8 +5612,10 @@ if (typeof module !== 'undefined' && module.exports) {
 WebFontConfig = {
     google: { families: germina.fonts },
     active: function () {
-        var e = jQuery(".proyectos-home, .full-proylist");
-        e.masonry("layout");
+        // var e = $(".archive.category-publicaciones .full-proylist.row");
+        // var pre = $(".lastproys");
+        // e.masonry("layout");
+        // pre.masonry("layout");
     },
 };
 (function () {
@@ -5627,7 +5629,7 @@ WebFontConfig = {
 
 //Loader para proyectos
 
-function germina_loadprojects(element) {
+function germina_loadprojects(element, $masonrygrid) {
     let proyectlist = $("div.full-proylist");
     let dateSorterAjax = $(".date-sorter-ajax");
     let selectedOrder = $(".panel-heading.active .ajax-sort-button").attr(
@@ -5751,13 +5753,34 @@ function germina_loadprojects(element) {
                             content.total > 1 ? itemlabel : itemlabelsingular
                         }</strong>`
                     );
+
+                let elementsArr = [];
                 content.items.map((item) => {
-                    proyectlist.append(
-                        itemTemplate === "document"
-                            ? documentItemMedium(item)
-                            : proyectItemMedium(item)
-                    );
+                    if (itemTemplate === "document") {
+                        let element = documentItemMedium(item);
+                        elementsArr.push(element);
+                    } else {
+                        proyectlist.append(
+                            itemTemplate === "document"
+                                ? documentItemMedium(item)
+                                : proyectItemMedium(item)
+                        );
+                    }
                 });
+
+                if (itemTemplate == "document") {
+                    proyectlist.masonry("destroy");
+                    console.log("adding", elementsArr);
+                    let $elements = $(elementsArr);
+                    proyectlist.append(elementsArr).masonry();
+                    proyectlist.masonry("layout");
+                    proyectlist.imagesLoaded().progress(function () {
+                        proyectlist.masonry("layout");
+                    });
+                    //$masonrygrid.append(elementsArr);
+                    //$masonrygrid.masonry("layout");
+                }
+
                 //console.log("server offset", content.offset);
                 if (content.isfinalquery === "remaining") {
                     loadmore
@@ -5895,6 +5918,21 @@ $(document).ready(function () {
         $(this).addClass("active");
     });
 
+    let $grid = $(".archive.category-publicaciones .full-proylist.row");
+    // let $pregrid = $(".lastproys").masonry({
+    //     itemSelector: ".document-item-medium",
+    //     columnWidth: 208,
+    // });
+    //masonry in docs
+    // let $grid = $(".archive.category-publicaciones .full-proylist.row").masonry(
+    //     {
+    //         itemSelector: ".document-item-medium",
+    //     }
+    // );
+    // $pregrid.imagesLoaded().progress(function () {
+    //     $pregrid.masonry("layout");
+    // });
+
     //Ajax calls for proyects
 
     $("body").on("click", ".proyect-call", function () {
@@ -5913,7 +5951,7 @@ $(document).ready(function () {
                     .text($(this).attr("data-sort-label"));
                 $();
             }
-            germina_loadprojects($(this));
+            germina_loadprojects($(this), $grid);
         } //End comprobation of loading class
     });
 
@@ -6044,32 +6082,29 @@ $(document).ready(function () {
 
             // Executes in SM, MD and LG breakpoints
             if (viewport.is(">=sm")) {
-                console.log("proyectos-home");
-                // $(".proyectos-home, .full-proylist").masonry({
-                //     itemSelector: ".proyect-item-box",
+                // console.log("proyectos-home");
+                // // $(".proyectos-home, .full-proylist").masonry({
+                // //     itemSelector: ".proyect-item-box",
+                // // });
+                // var $grid = $(".full-publist-items").imagesLoaded(function () {
+                //     $grid.masonry({
+                //         itemSelector: ".col-md-6",
+                //     });
                 // });
-
-                var $grid = $(".full-publist-items").imagesLoaded(function () {
-                    $grid.masonry({
-                        itemSelector: ".col-md-6",
-                    });
-                });
-
-                var $pubgrid = $(".publicaciones-wrapper").imagesLoaded(
-                    function () {
-                        $pubgrid.masonry({
-                            itemSelector: ".publicacion-item-medium",
-                        });
-                    }
-                );
-
-                var $attachedgrid = $(
-                    "div.attached-to-post.Miniaturas"
-                ).imagesLoaded(function () {
-                    $attachedgrid.masonry({
-                        itemSelector: ".attached-file-block",
-                    });
-                });
+                // var $pubgrid = $(".publicaciones-wrapper").imagesLoaded(
+                //     function () {
+                //         $pubgrid.masonry({
+                //             itemSelector: ".publicacion-item-medium",
+                //         });
+                //     }
+                // );
+                // var $attachedgrid = $(
+                //     "div.attached-to-post.Miniaturas"
+                // ).imagesLoaded(function () {
+                //     $attachedgrid.masonry({
+                //         itemSelector: ".attached-file-block",
+                //     });
+                // });
             }
 
             // Executes in XS and SM breakpoints
