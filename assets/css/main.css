@@ -5364,6 +5364,10 @@ article header.header-single {
     color: white; }
     .single-item-meta-bottom .taxname.ambitos-de-accion {
       background-color: #83659f; }
+    .single-item-meta-bottom .taxname.tema {
+      background-color: #313130; }
+    .single-item-meta-bottom .taxname.germina_year {
+      background-color: #566f32; }
   .single-item-meta-bottom a {
     color: #00819c;
     text-decoration: underline; }
