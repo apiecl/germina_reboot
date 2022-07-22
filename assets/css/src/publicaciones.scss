@@ -86,3 +86,27 @@
 		}
 	}
 }
+
+.archive.category-publicaciones
+	.full-proylist.row
+	.document-item-medium
+	.document-item-medium-bottom {
+	.icon-wrapper {
+		display: inline-block;
+		margin-bottom: 12px;
+		padding-left: 12px;
+		height: 26px;
+		background-color: transparent;
+		border: 0;
+		text-align: left;
+		i {
+			display: inline-block;
+			color: #333;
+			font-size: 22px;
+			margin-right: 6px;
+		}
+		span {
+			display: inline-block;
+		}
+	}
+}

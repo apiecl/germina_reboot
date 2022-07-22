@@ -30,7 +30,12 @@ if($thumbnail_src) {
 				<?php echo germina_docformatlabel($proyect_id);?>
 			<?php endif;?>
 
-		<h4><?php echo get_the_title($proyect_id);?></h4>	
+		<h4><?php echo get_the_title($proyect_id);?></h4>
+		<?php if(has_post_thumbnail($proyect_id)):?>
+			<div class="document-item-medium-bottom">
+				<?php echo germina_docformatlabel($proyect_id);?>
+			</div>
+		<?php endif;?>	
 		
 	</a>
 

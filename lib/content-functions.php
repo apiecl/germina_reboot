@@ -18,7 +18,7 @@ function germina_docformatlabel($docid) {
 	$output = '<div class="icon-wrapper"><div>';
 
 	if(in_category('articulos', $docid)):
-		$output .= '<i class="fa fa-lines"></i>';
+		$output .= '<i class="fa fa-file-lines fa-solid"></i>';
 		$output .= '<span>Artículo</span>';
 	elseif(in_category('audiovisual', $docid)):
 		$output .= '<i class="fa fa-video"></i>';
@@ -50,16 +50,16 @@ function germina_ajaxdocformatlabel($docid) {
 		$iconclass .= 'fa fa-file-lines';
 		$output .= '<span>Artículo</span>';
 	elseif(in_category('audiovisual', $docid)):
-		$iconclass .= 'fa fa-video';
+		$iconclass .= 'fa fa-solid fa-video';
 		$output .= '<span>Audiovisual</span>';
 	elseif(in_category('guias', $docid)):
-		$iconclass .= 'fa fa-guia';
+		$iconclass .= 'fa fa-solid fa-guia';
 		$output .= '<span>Guía</span>';
 	elseif(in_category('imagenes', $docid)):
-		$iconclass .= 'fa fa-image';
+		$iconclass .= 'fa fa-solid fa-image';
 		$output .= '<span>Imágenes</span>';
 	elseif(in_category('libros')):
-		$iconclass .= 'fa fa-book';
+		$iconclass .= 'fa fa-solid fa-book';
 		$output .= '<span>Libro</span>';
 	elseif(in_category('capitulos-de-libros')):
 		$iconclass .= 'fa fa-book-open';
@@ -187,7 +187,9 @@ function germina_theplainterms($postid, $taxonomy, $before = '', $separator = ',
 
 	if($terms):
 		foreach($terms as $term) {
-			$termnames[] = '<i>' . $term->name . '</i>';
+			if( count( get_term_children( $term->term_id, $taxonomy )) === 0) {
+				$termnames[] = '<i>' . $term->name . '</i>';
+			}
 		}
 
 		$termstring = implode($separator, $termnames);
@@ -212,7 +214,9 @@ function germina_getplainterms($postid, $taxonomy, $before = '', $separator = ',
 		if($terms):
 
 			foreach($terms as $term) {
-				$termnames[] = '<i>' . $term->name . '</i>';
+				if( count( get_term_children( $term->term_id, $taxonomy )) === 0) {
+					$termnames[] = '<i>' . $term->name . '</i>';
+				}
 			}
 
 

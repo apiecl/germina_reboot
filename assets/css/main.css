@@ -5311,6 +5311,8 @@ p.tema, p.year {
   .post-content img {
     max-width: 100%;
     height: auto; }
+  .post-content a {
+    color: #00819c; }
 
 .post-content p {
   margin-bottom: 1.45em; }
@@ -5566,6 +5568,22 @@ a.sharebutton:hover {
       outline: 1px solid #e36367; }
       .archive.category-publicaciones .full-proylist.row .document-item-medium:hover h4 {
         color: #c13946; }
+
+.archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  height: 26px;
+  background-color: transparent;
+  border: 0;
+  text-align: left; }
+  .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i {
+    display: inline-block;
+    color: #333;
+    font-size: 22px;
+    margin-right: 6px; }
+  .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper span {
+    display: inline-block; }
 
 .publicacion-item-medium {
   position: relative;
