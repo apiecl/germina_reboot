@@ -24,7 +24,7 @@ function germina_docformatlabel($docid) {
 		$output .= '<i class="fa fa-video"></i>';
 		$output .= '<span>Audiovisual</span>';
 	elseif(in_category('guias', $docid)):
-		$output .= '<i class="fa fa-guia"></i>';
+		$output .= '<i class="icon-guia"></i>';
 		$output .= '<span>Guía</span>';
 	elseif(in_category('imagenes', $docid)):
 		$output .= '<i class="fa fa-image"></i>';
@@ -53,7 +53,7 @@ function germina_ajaxdocformatlabel($docid) {
 		$iconclass .= 'fa fa-solid fa-video';
 		$output .= '<span>Audiovisual</span>';
 	elseif(in_category('guias', $docid)):
-		$iconclass .= 'fa fa-solid fa-guia';
+		$iconclass .= 'icon-guia';
 		$output .= '<span>Guía</span>';
 	elseif(in_category('imagenes', $docid)):
 		$iconclass .= 'fa fa-solid fa-image';

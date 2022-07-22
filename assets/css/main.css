@@ -5582,6 +5582,13 @@ a.sharebutton:hover {
     color: #333;
     font-size: 22px;
     margin-right: 6px; }
+    .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i.icon-guia {
+      width: 18px;
+      height: 23px;
+      vertical-align: text-bottom;
+      background-image: url(../img/icon_guia.svg);
+      background-repeat: no-repeat;
+      background-size: cover; }
   .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper span {
     display: inline-block; }
 

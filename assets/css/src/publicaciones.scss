@@ -104,6 +104,14 @@
 			color: #333;
 			font-size: 22px;
 			margin-right: 6px;
+			&.icon-guia {
+				width: 18px;
+				height: 23px;
+				vertical-align: text-bottom;
+				background-image: url(../img/icon_guia.svg);
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
 		}
 		span {
 			display: inline-block;
