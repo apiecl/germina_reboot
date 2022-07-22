@@ -439,7 +439,7 @@ function germina_itemtype( $postid ) {
 	} elseif(in_category( 'publicaciones', $postid ) ) {
 		//Devuelve categoría
 		return 'publicaciones';
-	} elseif(in_category( 'novedades', $postid ) ) {
+	} elseif(in_category( 'novedades', $postid ) || in_category('noticias', $postid) ) {
 
 		return 'novedades';
 

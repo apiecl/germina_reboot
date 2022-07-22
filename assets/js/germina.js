@@ -5821,7 +5821,7 @@ function germina_loadprojects(element, $masonrygrid) {
 //main js file
 //stuff here
 $(document).ready(function () {
-    console.log("scripts germina v");
+    console.log("scripts germina version " + germina.version);
     var body = $("body");
     var brand = $("a.navbar-brand");
     var navbarwrap = $("nav.navbar-fixed-top");
