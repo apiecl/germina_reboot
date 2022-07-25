@@ -43,6 +43,11 @@
 						$childterms = get_terms($childtermargs);
 						if($childterms) {
 
+							//pongo además el parent para que pueda ser clickeable
+								$parentinchildterm = clone $term;
+								$parentinchildterm->name = 'Todos';
+								$childtermsarray[$term->term_id][] = $parentinchildterm;
+
 							foreach($childterms as $childterm) {
 								$childtermsarray[$term->term_id][] = $childterm;
 							}

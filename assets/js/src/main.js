@@ -183,6 +183,7 @@ $(document).ready(function () {
     $(".childterms-call").on("click", function () {
         let slug = $(this).attr("data-termslug");
         $("#taxonomy-accordion").hide();
+        console.log(slug);
         $("#childpanel-" + slug).removeClass("hidden");
     });
 
