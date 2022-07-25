@@ -95,6 +95,19 @@
 						</div>
 					</div>
 
+					<div class="sub-content sub-content-alianzas row">
+						<?php 
+							$alianzas = get_post(3436);
+						?>
+						<header>
+							<h2>Alianzas</h2>
+						</header>
+						
+						<div class="flex-container">
+							<?php echo apply_filters('the_content', $alianzas->post_content);?>
+						</div>
+					</div>
+
 				</article>
 
 			<?php endwhile;?>

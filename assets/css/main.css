@@ -5525,12 +5525,14 @@ a.sharebutton:hover {
   flex-wrap: wrap;
   align-items: flex-start; }
 
-.archive.category-publicaciones .full-proylist.row {
+.archive.category-publicaciones .full-proylist.row,
+.archive.category .full-proylist.row {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   margin-left: -5px; }
-  .archive.category-publicaciones .full-proylist.row .document-item-medium {
+  .archive.category-publicaciones .full-proylist.row .document-item-medium,
+  .archive.category .full-proylist.row .document-item-medium {
     width: 208px;
     height: auto;
     margin: 6px 6px 12px;
@@ -5539,9 +5541,11 @@ a.sharebutton:hover {
     padding: 0;
     transition: all linear 0.4s; }
     @media screen and (max-width: 768px) {
-      .archive.category-publicaciones .full-proylist.row .document-item-medium {
+      .archive.category-publicaciones .full-proylist.row .document-item-medium,
+      .archive.category .full-proylist.row .document-item-medium {
         width: 46%; } }
-    .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper {
+    .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper,
+    .archive.category .full-proylist.row .document-item-medium .icon-wrapper {
       text-align: center;
       height: 169px;
       display: flex;
@@ -5549,27 +5553,34 @@ a.sharebutton:hover {
       justify-content: center;
       background-color: #f7f7f7;
       border-bottom: 1px solid #ccc; }
-      .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper span {
+      .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper span,
+      .archive.category .full-proylist.row .document-item-medium .icon-wrapper span {
         display: block;
         color: #333;
         margin-top: 6px; }
-      .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper i {
+      .archive.category-publicaciones .full-proylist.row .document-item-medium .icon-wrapper i,
+      .archive.category .full-proylist.row .document-item-medium .icon-wrapper i {
         color: #585857;
         font-size: 72px; }
-    .archive.category-publicaciones .full-proylist.row .document-item-medium img {
+    .archive.category-publicaciones .full-proylist.row .document-item-medium img,
+    .archive.category .full-proylist.row .document-item-medium img {
       max-width: 100%; }
-    .archive.category-publicaciones .full-proylist.row .document-item-medium h4 {
+    .archive.category-publicaciones .full-proylist.row .document-item-medium h4,
+    .archive.category .full-proylist.row .document-item-medium h4 {
       font-weight: normal;
       color: #333;
       font-size: 16px;
       padding: 12px;
       transition: all linear 0.4s; }
-    .archive.category-publicaciones .full-proylist.row .document-item-medium:hover {
+    .archive.category-publicaciones .full-proylist.row .document-item-medium:hover,
+    .archive.category .full-proylist.row .document-item-medium:hover {
       outline: 1px solid #e36367; }
-      .archive.category-publicaciones .full-proylist.row .document-item-medium:hover h4 {
+      .archive.category-publicaciones .full-proylist.row .document-item-medium:hover h4,
+      .archive.category .full-proylist.row .document-item-medium:hover h4 {
         color: #c13946; }
 
-.archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper {
+.archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper,
+.archive.category .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper {
   display: inline-block;
   margin-bottom: 12px;
   padding-left: 12px;
@@ -5577,19 +5588,22 @@ a.sharebutton:hover {
   background-color: transparent;
   border: 0;
   text-align: left; }
-  .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i {
+  .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i,
+  .archive.category .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i {
     display: inline-block;
     color: #333;
     font-size: 22px;
     margin-right: 6px; }
-    .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i.icon-guia {
+    .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i.icon-guia,
+    .archive.category .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper i.icon-guia {
       width: 18px;
       height: 23px;
       vertical-align: text-bottom;
       background-image: url(../img/icon_guia.svg);
       background-repeat: no-repeat;
       background-size: cover; }
-  .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper span {
+  .archive.category-publicaciones .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper span,
+  .archive.category .full-proylist.row .document-item-medium .document-item-medium-bottom .icon-wrapper span {
     display: inline-block; }
 
 .publicacion-item-medium {
@@ -5752,6 +5766,28 @@ body.page-template-lo-que-hacemos article.type-page {
   margin: 0; }
   body.page-template-lo-que-hacemos article.type-page .subcontent.first header.subheader h2 {
     margin-top: 0; }
+
+@media screen and (min-width: 768px) {
+  .sub-content-alianzas {
+    border-top: 24px solid #f7f7f7; } }
+
+.sub-content-alianzas h2 {
+  text-align: center; }
+
+.sub-content-alianzas .wp-block-gallery.has-nested-images {
+  flex-grow: 0;
+  padding: 36px 0; }
+  .sub-content-alianzas .wp-block-gallery.has-nested-images figure.wp-block-image {
+    padding: 12px 24px 64px 24px; }
+    .sub-content-alianzas .wp-block-gallery.has-nested-images figure.wp-block-image img {
+      width: 130px !important; }
+      @media screen and (max-width: 768px) {
+        .sub-content-alianzas .wp-block-gallery.has-nested-images figure.wp-block-image img {
+          width: 120px !important; } }
+    .sub-content-alianzas .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+      background: transparent;
+      color: #333;
+      font-size: 16px; }
 
 body.admin-bar .navbar {
   margin-top: 32px; }
@@ -6182,14 +6218,10 @@ ul.proycol {
   text-align: center; }
 
 .sub-content-equipo .flex-container,
-.sub-content.colaboran .flex-container {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
+.sub-content.colaboran .flex-container,
+.sub-content-alianzas .flex-container {
   display: flex;
   flex-flow: row wrap;
-  -webkit-flex-flow: row wrap;
   justify-content: center;
   clear: both; }
 

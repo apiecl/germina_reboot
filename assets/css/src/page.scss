@@ -176,3 +176,33 @@ body.page-template-lo-que-hacemos {
 		}
 	}
 }
+
+.sub-content-alianzas {
+	@media screen and (min-width: $screen-sm) {
+		border-top: 24px solid $grisfondoclaro;
+	}
+
+	h2 {
+		text-align: center;
+	}
+
+	.wp-block-gallery.has-nested-images {
+		flex-grow: 0;
+		padding: 36px 0;
+		figure.wp-block-image {
+			padding: 12px 24px 64px 24px;
+			img {
+				width: 130px !important;
+				@media screen and (max-width: $screen-sm) {
+					width: 120px !important;
+				}
+			}
+
+			figcaption {
+				background: transparent;
+				color: #333;
+				font-size: 16px;
+			}
+		}
+	}
+}

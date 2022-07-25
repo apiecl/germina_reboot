@@ -38,14 +38,10 @@
 }
 
 .sub-content-equipo .flex-container,
-.sub-content.colaboran .flex-container {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
+.sub-content.colaboran .flex-container,
+.sub-content-alianzas .flex-container {
 	display: flex;
 	flex-flow: row wrap;
-	-webkit-flex-flow: row wrap;
 	justify-content: center;
 	clear: both;
 }
