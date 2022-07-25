@@ -58,10 +58,10 @@ function germina_ajaxdocformatlabel($docid) {
 	elseif(in_category('imagenes', $docid)):
 		$iconclass .= 'fa fa-solid fa-image';
 		$output .= '<span>Imágenes</span>';
-	elseif(in_category('libros')):
+	elseif(in_category('libros', $docid)):
 		$iconclass .= 'fa fa-solid fa-book';
 		$output .= '<span>Libro</span>';
-	elseif(in_category('capitulos-de-libros')):
+	elseif(in_category('capitulos-de-libros', $docid)):
 		$iconclass .= 'fa fa-book-open';
 		$output .= '<span>Capítulo de libro</span>';
 	endif;

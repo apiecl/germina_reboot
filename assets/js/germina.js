@@ -5739,10 +5739,15 @@ function germina_loadprojects(element, $masonrygrid) {
                              }
 
                     <h4>${item.post_title}</h4>    
-                    <div class="document-item-medium-bottom">
-                        <div class="icon-wrapper"><div><i class="${icon}"></i> ${
-                    item.format.content
-                }</div></div>
+                    ${
+                        item.doc_thumbnail &&
+                        `<div class="document-item-medium-bottom">
+                        <div class="icon-wrapper"><div><i class="${icon}"></i> 
+                        ${item.format.content}
+                        </div>
+                    </div>`
+                    }
+                    
                     </div>
                 </a>
                 </div>`;
