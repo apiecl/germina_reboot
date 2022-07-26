@@ -26,17 +26,17 @@
 	font-size: 24px;
 }
 
-.germina-presentation-home h2 {
+.presentation h2 {
 	font-weight: normal;
 	margin-top: 6px;
 	//text-shadow:1px 1px 1px #333;
 }
 
-.germina-presentation-home img {
+.presentation img {
 	max-width: 100%;
 }
 
-.germina-presentation-home-logohome {
+.presentation-logohome {
 	position: relative;
 	width: 360px;
 	height: 159px;
@@ -49,7 +49,7 @@
 	animation-fill-mode: forwards;
 	h1 {
 		text-transform: uppercase;
-		margin: 88px 0 48px 0;
+		margin: 68px 0 48px 0;
 		font-size: 48px;
 		span {
 			color: $newsandia;
@@ -101,7 +101,7 @@
 	}
 }
 
-.germina-presentation-home-logohome:hover .animated-element-bottom {
+.presentation-logohome:hover .animated-element-bottom {
 }
 
 @keyframes logofade {

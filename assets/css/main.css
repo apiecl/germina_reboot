@@ -4083,16 +4083,16 @@ a img.aligncenter {
   z-index: 100000;
   /* Above WP toolbar. */ }
 
-.presentation {
+.germina-presentation-home {
   padding: 0;
   color: #3d3d3d;
   text-align: center;
   max-width: 100%; }
   @media screen and (min-width: 992px) {
-    .presentation {
+    .germina-presentation-home {
       margin-top: 6px; } }
   @media screen and (max-width: 768px) {
-    .presentation {
+    .germina-presentation-home {
       margin-bottom: 32px; } }
 
 .row.intro {
@@ -4122,7 +4122,7 @@ a img.aligncenter {
   animation-fill-mode: forwards; }
   .presentation-logohome h1 {
     text-transform: uppercase;
-    margin: 88px 0 48px 0;
+    margin: 68px 0 48px 0;
     font-size: 48px; }
     .presentation-logohome h1 span {
       color: #c13946;
