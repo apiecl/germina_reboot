@@ -23,7 +23,9 @@
 						echo apply_filters( 'the_content', $notfound->post_content );
 					?>
 
-					
+					<div class="notfound-searchform">
+						<?php echo get_search_form();?>
+					</div>
 
 				</header>
 			</article>

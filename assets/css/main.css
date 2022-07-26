@@ -6596,6 +6596,20 @@ p.search-results-count {
 body.search .ptype-nav {
   margin-bottom: 24px; }
 
+.notfound-searchform {
+  position: relative; }
+  .notfound-searchform form {
+    position: relative; }
+    .notfound-searchform form input {
+      border-radius: 30px;
+      padding-left: 48px; }
+    .notfound-searchform form i {
+      position: absolute;
+      left: 12px;
+      top: 22px;
+      color: #575756;
+      font-size: 28px; }
+
 .ptype-nav {
   font-size: 14px; }
 
