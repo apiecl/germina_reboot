@@ -148,9 +148,17 @@ body.page .subcontent.first header.subheader {
 	transition: all ease-in 0.5s;
 	box-shadow: 0 0 4px #333;
 	border-color: #b9b9b9;
+	border-radius: 0;
 	.panel-heading {
 		background-color: #b9b9b9;
 		border-bottom: 1px solid #b9b9b9;
+		border-radius: 0;
+		h4 {
+			font-size: 18px;
+		}
+		a {
+			color: #333;
+		}
 	}
 	&.active {
 		border-color: $newsandia;
@@ -158,6 +166,11 @@ body.page .subcontent.first header.subheader {
 		.panel-heading {
 			border-bottom-color: $newsandia;
 			background-color: $grisfondo;
+			h4 {
+				a {
+					color: $newsandia;
+				}
+			}
 		}
 		.panel-title {
 			color: $newsandia;

@@ -5749,16 +5749,24 @@ body.page .subcontent.first header.subheader {
 .panel.panel-default.panel-taxonomy-shortcode {
   transition: all ease-in 0.5s;
   box-shadow: 0 0 4px #333;
-  border-color: #b9b9b9; }
+  border-color: #b9b9b9;
+  border-radius: 0; }
   .panel.panel-default.panel-taxonomy-shortcode .panel-heading {
     background-color: #b9b9b9;
-    border-bottom: 1px solid #b9b9b9; }
+    border-bottom: 1px solid #b9b9b9;
+    border-radius: 0; }
+    .panel.panel-default.panel-taxonomy-shortcode .panel-heading h4 {
+      font-size: 18px; }
+    .panel.panel-default.panel-taxonomy-shortcode .panel-heading a {
+      color: #333; }
   .panel.panel-default.panel-taxonomy-shortcode.active {
     border-color: #c13946;
     box-shadow: none; }
     .panel.panel-default.panel-taxonomy-shortcode.active .panel-heading {
       border-bottom-color: #c13946;
       background-color: #d9d9d9; }
+      .panel.panel-default.panel-taxonomy-shortcode.active .panel-heading h4 a {
+        color: #c13946; }
     .panel.panel-default.panel-taxonomy-shortcode.active .panel-title {
       color: #c13946; }
 
@@ -6284,7 +6292,8 @@ article.integrante-equipo header.header-equipo {
 
 .equipo-datos {
   font-size: 14px;
-  text-align: left; }
+  text-align: left;
+  padding: 0 24px 24px 24px; }
 
 .equipo-datos p a {
   display: inline-block;
