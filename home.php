@@ -20,7 +20,7 @@
 		?>
 
 
-		<div class="presentation col-md-4 col-xs-12 col-md-offset-1">
+		<div class="germina-presentation-home col-md-4 col-xs-12 col-md-offset-1">
 			<div class="presentation-logohome">
 				<h2 class="pretitulo"><?php echo $pretitulo_home;?></h2>
 				<h1>GERM<span></span>NA</h1>

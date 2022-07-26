@@ -3,7 +3,7 @@
 @media screen and (min-width: $screen-md) {
 }
 
-.presentation {
+.germina-presentation-home {
 	padding: 0;
 	color: darken($gris, 10%);
 	text-align: center;
@@ -26,17 +26,17 @@
 	font-size: 24px;
 }
 
-.presentation h2 {
+.germina-presentation-home h2 {
 	font-weight: normal;
 	margin-top: 6px;
 	//text-shadow:1px 1px 1px #333;
 }
 
-.presentation img {
+.germina-presentation-home img {
 	max-width: 100%;
 }
 
-.presentation-logohome {
+.germina-presentation-home-logohome {
 	position: relative;
 	width: 360px;
 	height: 159px;
@@ -101,7 +101,7 @@
 	}
 }
 
-.presentation-logohome:hover .animated-element-bottom {
+.germina-presentation-home-logohome:hover .animated-element-bottom {
 }
 
 @keyframes logofade {
