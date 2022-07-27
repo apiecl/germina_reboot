@@ -135,6 +135,15 @@ article header.header-single {
 	margin-bottom: 12px;
 }
 
+.post-content ol li {
+	margin-bottom: 12px;
+}
+
+.post-content ol,
+.post-content ul {
+	margin: 24px 0;
+}
+
 .post-content ul li:before {
 	content: "\f140";
 	color: $sunset;
