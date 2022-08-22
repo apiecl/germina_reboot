@@ -67,7 +67,7 @@ General Taxonomy Template
 
 		</div>
 
-		<button class="proyect-call btn btn-info loadmore hidden" data-reuse="1"><i class="fa fa-plus"></i> Cargar más proyectos</button>
+		<!-- <button class="proyect-call btn btn-info loadmore hidden" data-reuse="1"><i class="fa fa-plus"></i> Cargar más proyectos</button> -->
 	</div>
 </div>
 

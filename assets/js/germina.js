@@ -5652,7 +5652,7 @@ function germina_loadprojects(element, $masonrygrid) {
         : "item-medium";
 
     console.log(selectedOrder);
-
+    $("span.clean").removeClass("hidden");
     $(".proyect-call").removeClass("active");
 
     //console.log(reuse);
@@ -6046,6 +6046,18 @@ $(document).ready(function () {
         } else {
             nextDropdown.show().addClass("open");
         }
+    });
+
+    $(".btn-parent-term").on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass("expanded");
+        let subTerms = $(this).next(".subterms");
+        subTerms.toggleClass("active");
+    });
+
+    $("span.clean").on("click", function () {
+        console.log("cleaning");
+        window.location.reload();
     });
 
     // Wrap IIFE around your code

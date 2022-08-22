@@ -170,3 +170,17 @@ button.loadmore {
 		margin-top: 0;
 	}
 }
+
+span.clean {
+	text-transform: none;
+	padding: 3px 6px;
+	border: 1px solid $newsandia;
+	border-radius: 3px;
+	font-size: 12px;
+	cursor: pointer;
+	margin-left: 90px;
+	&:hover {
+		background-color: $newsandia;
+		color: white;
+	}
+}

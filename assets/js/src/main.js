@@ -218,6 +218,18 @@ $(document).ready(function () {
         }
     });
 
+    $(".btn-parent-term").on("click", function (e) {
+        e.preventDefault();
+        $(this).toggleClass("expanded");
+        let subTerms = $(this).next(".subterms");
+        subTerms.toggleClass("active");
+    });
+
+    $("span.clean").on("click", function () {
+        console.log("cleaning");
+        window.location.reload();
+    });
+
     // Wrap IIFE around your code
     (function ($, viewport) {
         $(document).ready(function () {

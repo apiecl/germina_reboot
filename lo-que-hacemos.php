@@ -56,9 +56,11 @@
 
 					?>
 
-
+					<?php get_template_part('parts/metodologia-boxes');?>
 
 				</article>
+
+				
 
 			<?php endwhile;?>
 		<?php else:?>

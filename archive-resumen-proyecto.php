@@ -3,7 +3,16 @@
 * Template Name: Archivo Proyectos
 */
 
-$nolasts = 6;
+$nolasts = -1;
+$args = array(
+								'post_type' => 'resumen-proyecto',
+								'numberposts' => $nolasts,
+								'posts_per_page' => $nolasts,
+								'post_status' => 'publish'
+							);
+
+					$lastproyects = get_posts( $args );
+					$countproyects = count($lastproyects);
 ?>
 
 <?php get_header();?>
@@ -17,7 +26,7 @@ $nolasts = 6;
 	
 		<div class="col-md-4 col-md-offset-1 filter-column" data-id="proyect-nav">
 			<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">
-				Filtrar por <i class="fa fa-chevron-up"></i>
+				Filtrar por  <span class="clean hidden">Limpiar filtros</span><i class="fa fa-chevron-up"></i> 
 			</h4>
 			<?php get_template_part('parts/content/proyects-filter');?>
 			<?php cur_get_template('date-sorter-ajax.php', array('class' => ''), '/parts/');?>
@@ -25,21 +34,14 @@ $nolasts = 6;
 		<div class="content col-md-7">
 
 			<h2 class="section-description-title taxtitle">Últimos proyectos</h2>
-			<p class="search-results-count project-results-count" data-item="proyectos" data-item-singular="proyecto"  data-item-plural="proyectos"><strong>Últimos <?php echo $nolasts;?> proyectos</strong></p>
+			<p class="search-results-count project-results-count" data-item="proyectos" data-item-singular="proyecto"  data-item-plural="proyectos"><strong><?php echo $countproyects;?> proyectos</strong></p>
 			<div class="full-proylist row">
 				<!-- Ajax call for proyects -->
 				<!-- Llamada inicial de los últimos proyectos -->
 
 				<?php
 
-					$args = array(
-								'post_type' => 'resumen-proyecto',
-								'numberposts' => $nolasts,
-								'posts_per_page' => $nolasts,
-								'post_status' => 'publish'
-							);
-
-					$lastproyects = get_posts( $args );
+					
 
 					foreach( $lastproyects as $lastproyect ) {
 						
@@ -52,7 +54,7 @@ $nolasts = 6;
 				?>
 			</div>
 
-			<button class="proyect-call btn btn-info loadmore hidden" data-reuse="1"><i class="fa fa-plus"></i> Cargar más proyectos</button>
+			<!-- <button class="proyect-call btn btn-info loadmore hidden" data-reuse="1"><i class="fa fa-plus"></i> Cargar más proyectos</button> -->
 
 		</div>
 

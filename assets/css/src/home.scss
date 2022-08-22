@@ -234,6 +234,25 @@ address {
 			}
 		}
 	}
+
+	&.inside {
+		.container {
+			max-width: 100%;
+		}
+		.metodologia-list {
+			img {
+				@media screen and (min-width: $screen-sm) {
+					width: 76px;
+				}
+			}
+
+			li {
+				span {
+					text-align: center;
+				}
+			}
+		}
+	}
 }
 
 .section-home {

@@ -4259,6 +4259,13 @@ address {
         @media screen and (max-width: 768px) {
           .metodologia .metodologia-list li span {
             font-size: 12px; } }
+  .metodologia.inside .container {
+    max-width: 100%; }
+  @media screen and (min-width: 768px) {
+    .metodologia.inside .metodologia-list img {
+      width: 76px; } }
+  .metodologia.inside .metodologia-list li span {
+    text-align: center; }
 
 .section-home {
   padding-bottom: 48px;
@@ -4698,7 +4705,7 @@ a.block-item-link:hover {
     outline: 1px solid #e36367; }
   .item-medium h2 {
     margin: 24px 0 24px 0;
-    font-size: 24px;
+    font-size: 20px;
     color: #ec5a5e;
     line-height: 1.5em; }
     @media screen and (max-width: 768px) {
@@ -5225,6 +5232,18 @@ button.loadmore {
   @media screen and (max-width: 768px) {
     #taxonomy-accordion.panel-group.tax-filter {
       margin-top: 0; } }
+
+span.clean {
+  text-transform: none;
+  padding: 3px 6px;
+  border: 1px solid #c13946;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 90px; }
+  span.clean:hover {
+    background-color: #c13946;
+    color: white; }
 
 .proyect-image {
   margin-right: -14px;
@@ -5776,6 +5795,31 @@ body.page .subcontent.first header.subheader {
         color: #c13946; }
     .panel.panel-default.panel-taxonomy-shortcode.active .panel-title {
       color: #c13946; }
+  .panel.panel-default.panel-taxonomy-shortcode a.btn-parent-term i {
+    transition: all ease-in 0.3s;
+    transform: rotate(0); }
+  .panel.panel-default.panel-taxonomy-shortcode a.btn-parent-term.expanded i {
+    transform: rotate(180deg) !important; }
+  .panel.panel-default.panel-taxonomy-shortcode .subterms {
+    visibility: hidden;
+    display: flex;
+    opacity: 0;
+    max-height: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #f7f7f7;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in 0.3s; }
+    .panel.panel-default.panel-taxonomy-shortcode .subterms.active {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+      height: auto;
+      max-height: 100%;
+      padding: 12px 0;
+      margin: 6px 0 20px 0; }
 
 body.page-template-lo-que-hacemos article.type-page {
   margin: 0; }

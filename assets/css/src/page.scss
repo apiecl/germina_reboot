@@ -176,6 +176,42 @@ body.page .subcontent.first header.subheader {
 			color: $newsandia;
 		}
 	}
+
+	a.btn-parent-term {
+		i {
+			transition: all ease-in 0.3s;
+			transform: rotate(0);
+		}
+		&.expanded {
+			i {
+				transform: rotate(180deg) !important;
+			}
+		}
+	}
+
+	.subterms {
+		visibility: hidden;
+		display: flex;
+		opacity: 0;
+		max-height: 0;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		background-color: $grisfondoclaro;
+		align-items: center;
+		justify-content: center;
+		transition: all ease-in 0.3s;
+
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			display: flex;
+			height: auto;
+			max-height: 100%;
+			padding: 12px 0;
+			margin: 6px 0 20px 0;
+		}
+	}
 }
 
 body.page-template-lo-que-hacemos {

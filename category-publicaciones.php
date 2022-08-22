@@ -7,8 +7,29 @@
 <?php get_header();
 	$category = $wp_query->query_vars['category_name'];
 	$categoryobj = get_category_by_slug( $category );
-	$nolasts = 6;
+	$nolasts = -1;
 ?>
+
+<?php
+					
+					$args = array(
+								'post_type' 	=> 'post',
+								'numberposts' 	=> $nolasts,
+								'posts_per_page'=> -1,
+								'post_status' 	=> 'publish',
+								'tax_query'		=> array(
+													array(
+														'taxonomy' 	=> 'category',
+														'field'   	=> 'slug',
+														'terms'		=> $category
+														)
+													)
+							);
+
+					$lastproyects = get_posts( $args );
+					$countproyects = count($lastproyects);
+
+					?>
 
 
 	<header class="section-header">
@@ -23,7 +44,7 @@
 		
 		<div class="col-md-4 col-md-offset-1 filter-column" data-id="proyect-nav">
 			<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">
-				Filtrar por <i class="fa fa-chevron-down"></i>
+				Filtrar por <span class="clean hidden">Limpiar filtros</span><i class="fa fa-chevron-down"></i>
 			</h4>
 			<?php get_template_part('parts/content/documents-filter');?>
 			<?php cur_get_template('date-sorter-ajax.php', array('class' => ''), '/parts/');?>
@@ -31,27 +52,14 @@
 		<div class="content col-md-7">
 
 			<h2 class="section-description-title taxtitle"><?php echo $category == 'publicaciones' ? 'Últimos documentos' : "Documentos de " . $categoryobj->name;?></h2>
-			<p class="search-results-count project-results-count" data-item-singular="documento" data-item-plural="documentos"><strong>Últimos <?php echo $nolasts;?> documentos</strong></p>
+			<p class="search-results-count project-results-count" data-item-singular="documento" data-item-plural="documentos"><strong><?php echo $countproyects;?> documentos</strong></p>
 			<div class="full-proylist row">
 				<!-- Ajax call for proyects -->
 				<!-- Llamada inicial de los últimos proyectos -->
 				<div class="lastproys">
-				<?php
-					
-					$args = array(
-								'post_type' 	=> 'post',
-								'numberposts' 	=> $nolasts,
-								'post_status' 	=> 'publish',
-								'tax_query'		=> array(
-													array(
-														'taxonomy' 	=> 'category',
-														'field'   	=> 'slug',
-														'terms'		=> $category
-														)
-													)
-							);
+				
 
-					$lastproyects = get_posts( $args );
+					<?php
 
 					foreach( $lastproyects as $lastproyect ) {
 						

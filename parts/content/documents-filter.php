@@ -12,7 +12,7 @@
 	<?php
 	$current_term = get_queried_object();
 	$childtermsarray = [];
-	$taxonomies = ['areas', 'ambitos_de_accion','tema','category'];
+	$taxonomies = ['tema','category'];
 	foreach($taxonomies as $taxonomy):
 		$taxobj = get_taxonomy( $taxonomy );
 		$taxlabels = get_taxonomy_labels( $taxobj );

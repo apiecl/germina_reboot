@@ -883,8 +883,45 @@ function germina_taxpanel_get_content($taxonomy) {
 			$output .= '<div class="panel-body">';
 
 			foreach($terms as $term) {
+				$childtermargs = array(
+					'taxonomy' 	=> $taxonomy,
+					'parent'	=> $term->term_id
+				);
 
-				$output .= '<a href="' . get_term_link( $term->term_id, $taxonomy ) .'" class="btn btn-large btn-filter btn-default" data-reuse="0">' . $term->name . '</a>';
+				$childterms = get_terms($childtermargs);
+				
+				if($childterms) {
+					$parentinchildterm = clone $term;
+					$parentinchildterm->name = 'Todos';
+					$childtermsarray[$term->term_id][] = $parentinchildterm;
+				}
+
+				foreach($childterms as $childterm) {
+								$childtermsarray[$term->term_id][] = $childterm;
+							}
+
+
+				if($childterms) {
+
+					$output .= '<a href="#" class="btn btn-large btn-filter btn-default btn-parent-term" data-reuse="0">' . $term->name . ' <i class="fa fa-chevron-down"></i></a>';
+
+					$output .= '<div class="subterms">';
+
+					$output .= '<a href="' . get_term_link( $term->term_id, $taxonomy ) .'" class="btn btn-large btn-filter btn-default" data-reuse="0">Todo</a>';
+
+					foreach($childterms as $childterm) {
+
+						$output .= '<a href="' . get_term_link( $childterm->term_id, $taxonomy ) .'" class="btn btn-large btn-filter btn-default" data-reuse="0">' . $childterm->name . '</a>';
+
+					}
+
+					$output .= '</div>';
+
+				} else {
+
+					$output .= '<a href="' . get_term_link( $term->term_id, $taxonomy ) .'" class="btn btn-large btn-filter btn-default" data-reuse="0">' . $term->name . '</a>';
+
+				}
 
 			}
 

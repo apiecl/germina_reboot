@@ -58,7 +58,7 @@ function germina_proyects_by_term() {
 
 	$args = array(
 				'post_type' => $type,
-				'numberposts' => 5,
+				'numberposts' => -1,
 				'orderby' => 'date',
 				'order'		=> $order == 'ascending' ? 'ASC' : 'DESC',
 				'offset' => $offset

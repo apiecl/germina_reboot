@@ -45,7 +45,7 @@ function germina_loadprojects(element, $masonrygrid) {
         : "item-medium";
 
     console.log(selectedOrder);
-
+    $("span.clean").removeClass("hidden");
     $(".proyect-call").removeClass("active");
 
     //console.log(reuse);
