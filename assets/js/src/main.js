@@ -225,9 +225,27 @@ $(document).ready(function () {
         subTerms.toggleClass("active");
     });
 
+    let searchField = $("input.search-field");
+
+    if (searchField.val().length > 0) {
+        $("span.clean").removeClass("hidden");
+    }
+
+    searchField.on("change", function () {
+        if ($(this).val().length > 0) {
+            $("span.clean").removeClass("hidden");
+        } else {
+            $("span.clean").addClass("hidden");
+        }
+    });
+
     $("span.clean").on("click", function () {
         console.log("cleaning");
-        window.location.reload();
+        if ($(this).attr("data-clean") == "clean-search") {
+            window.location = germina.main_url + "/buscar";
+        } else {
+            window.location.reload();
+        }
     });
 
     // Wrap IIFE around your code

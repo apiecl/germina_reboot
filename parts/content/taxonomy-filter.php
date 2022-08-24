@@ -11,7 +11,7 @@
 	<div class="panel panel-default panel-search">
 		<?php echo get_search_form();?>	
 	</div>
-	<h4 class="panel-section panel-section-search">Todo sobre</h4>
+	<h4 class="panel-section panel-section-search">Todo sobre </h4>
 	<?php
 	$current_term = get_queried_object();
 	$taxonomies = ['areas', 'ambitos_de_accion','tema'];

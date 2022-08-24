@@ -24,7 +24,7 @@ $count = $wp_query->found_posts;
 		
 		<div class="content col-md-4 col-md-offset-1">
 			<h4 class="filter-heading-toggle" data-target="#taxonomy-accordion">
-				Buscar <i class="fa fa-chevron-up"></i>
+				Buscar <span class="clean hidden" data-clean="clean-search">Limpiar búsqueda</span><i class="fa fa-chevron-up"></i>
 			</h4>
 			
 			
@@ -65,8 +65,11 @@ $count = $wp_query->found_posts;
 
 	<?php else : ?>
 		<article class="not_found">
-
-			<?php if ( (strlen(get_query_var('s')) > 0 && have_posts()) || !get_query_var('s')) : while (have_posts()) : the_post();?>
+			<?php 
+				$query_var = get_query_var('s');
+				
+			?>
+			<?php if ( !is_search()) : while (have_posts()) : the_post();?>
 			
 			<div class="noresultszone">
 				<?php the_content();?>
