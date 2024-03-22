@@ -25,8 +25,22 @@
 				<h2 class="pretitulo"><?php echo $pretitulo_home;?></h2>
 				<h1>GERM<span></span>NA</h1>
 				<div class="textdesc">
-					<?php echo apply_filters('the_content', $desc);?>
-				</div>
+				 <?php
+   				 // Obtener el valor del párrafo personalizado desde el Personalizador
+   				 $parrafo_personalizado = get_theme_mod('parrafo_personalizado', '');
+
+   				 // Obtener el valor del texto fuerte personalizado desde el Personalizador
+    			$bold_personalizado = get_theme_mod('bold_personalizado', '');
+
+   				 // Verificar si hay un párrafo personalizado y mostrarlo, de lo contrario, mostrar el valor predeterminado
+   				 if ($parrafo_personalizado || $bold_personalizado) {
+    			    echo '<p>' . wp_kses_post($parrafo_personalizado) . '<br><strong>' . esc_html($bold_personalizado) . '</strong></p>';
+  				  } else {
+   			     // Si no hay párrafo personalizado ni texto fuerte personalizado, mostrar el contenido original
+   			     echo apply_filters('the_content', $desc);
+  				  }
+   				 ?>
+			</div>
 			</div>
 		</div>
 
@@ -68,7 +82,7 @@
 			'subtitle' 		=> 'Más recientes',
 			'menu_name'		=> 'portafolio',
 			'content_type'	=> 'proyectos',
-			'max_items'		=> 4
+			'max_items'		=> 100
 			);
 
 		cur_get_template( 'home-section-cedoc.php', $args, 'parts/' );

@@ -1,7 +1,6 @@
 {
     "require": {
         "mustache/mustache": "~2.5",
-	"league/flysystem": "^3.24",
         "league/flysystem-sftp-v3": "^3.23"
     }
 }

@@ -218,3 +218,39 @@ function germina_disable_pagination($query) {
 }
 
 add_action( 'pre_get_posts', 'germina_disable_pagination');
+
+function agregar_opciones_personalizadas($wp_customize) {
+    // Esto crea una sección en los controles de personalizar
+    $wp_customize->add_section('seccion_home', array(
+        'title' => 'Cambio párrafo',
+        'priority' => 30,
+    ));
+
+    // Es un campo personalizado para el párrafo
+    $wp_customize->add_setting('parrafo_personalizado', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('parrafo_personalizado', array(
+        'label' => 'Párrafo Personalizado',
+        'section' => 'seccion_home',
+        'type' => 'textarea',
+    ));
+
+    // Campo personalizado para el texto bold
+    $wp_customize->add_setting('bold_personalizado', array(
+        'default' => '',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('bold_personalizado', array(
+        'label' => 'Texto Fuerte Personalizado',
+        'section' => 'seccion_home',
+        'type' => 'text',
+    ));
+}
+
+add_action('customize_register', 'agregar_opciones_personalizadas');
+
+

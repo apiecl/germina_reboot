@@ -12,3 +12,20 @@
 
 <?php get_template_part( 'parts/germina-menu' );?>
 <span id="top"></span>
+
+<script>
+	$(document).ready(function() {
+		$('textdesc > p:first-child').contents().filter(	function() {
+			return this.nodeType === 3;
+		}).remove();
+
+		$('textdesc > p:first-child').prepend('CAMBIO DE FRASE');
+	});
+</script>
+
+<script>
+	$(document).ready(function() {
+		$('textdesc strong'),text('cambio');
+	});
+
+</script>
